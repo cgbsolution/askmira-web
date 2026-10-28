@@ -19,6 +19,10 @@ export const INTERESTS = [
   { value: "performance", label: "Performance" },
   { value: "engagement", label: "Engagement" },
   { value: "ai", label: "Ask Mira AI" },
+  { value: "expenses", label: "Expense Genie" },
+  { value: "helpdesk", label: "CGB Helpdesk" },
+  { value: "crm", label: "Saleinx CRM" },
+  { value: "procurement", label: "ProcureFlow" },
 ] as const;
 
 export const TOPICS = [

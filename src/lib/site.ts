@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
   name: "AskMira",
   title: "AskMira — HR, payroll and culture for Indian companies",
   description:
-    "AskMira runs attendance, leave, payroll and statutory filings for Indian companies, and gives every employee one place to ask, apply and be recognised.",
+    "AskMira runs attendance, leave, payroll and statutory filings for Indian companies, and connects HR to hiring, expenses, support, sales and procurement apps.",
   /** This website's public address — canonical URLs, sitemap, Open Graph. */
   url: trimSlash(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3200"),
   /** The AskMira portal ("Sign in"). */
@@ -54,4 +54,4 @@ export const siteConfig: SiteConfig = {
 export const signInUrl = `${siteConfig.appUrl}/signin`;
 
 /** Routes whose hero is the dark band, so the header starts in its light-on-dark state. */
-export const DARK_HERO_ROUTES = new Set(["/", "/platform", "/ai", "/demo"]);
+export const DARK_HERO_ROUTES = new Set(["/", "/platform", "/ai", "/demo", "/connected-platform"]);

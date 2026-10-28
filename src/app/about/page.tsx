@@ -82,7 +82,7 @@ export default function AboutPage() {
               Connected to the products around it
             </h2>
             <p className="mt-4 max-w-3xl text-lead text-ink-700">
-              AskMira connects in one click to AnytimeHire for hiring, ExpenseGenie for expenses and CGB Helpdesk for IT
+              AskMira connects in one click to AnytimeHire for hiring, Expense Genie for expenses and CGB Helpdesk for IT
               tickets and assets — so a company already using them sees everything in one place, with one sign-in.
             </p>
           </div>

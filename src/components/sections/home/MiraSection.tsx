@@ -13,8 +13,8 @@ const POINTS = [
   },
   {
     icon: Fingerprint,
-    title: "Works as you, never more",
-    body: "It looks up people, leave, attendance and reports with exactly the asker's permissions.",
+    title: "Works as you, across your apps",
+    body: "It looks up people, leave and reports — and jobs, expense claims and tickets in connected apps — with exactly the asker's permissions.",
   },
   {
     icon: ShieldCheck,

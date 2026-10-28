@@ -12,6 +12,7 @@ export type MenuGroup = { title: string; items: MenuItem[] };
 
 export type SiteMenus = {
   product: MenuItem[];
+  apps: MenuItem[];
   features: MenuGroup[];
   solutions: MenuGroup[];
   resources: MenuItem[];

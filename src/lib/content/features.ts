@@ -492,7 +492,7 @@ export const features: Feature[] = [
         body: "Expenses fit around your payroll and the tools you already use.",
         points: [
           "Salary reimbursements paid through the payroll run",
-          "Already on ExpenseGenie? Connect it and see claims inside AskMira",
+          "Already on Expense Genie? Connect it and see claims inside AskMira",
           "Exports for finance at month end",
         ],
         mockup: "workflow",
@@ -505,7 +505,7 @@ export const features: Feature[] = [
     ],
     faqs: [
       { q: "Can reimbursements be paid with salary?", a: "Yes. Approved salary reimbursements are picked up by the next payroll run." },
-      { q: "We already use ExpenseGenie. Do we have to switch?", a: "No. Connect ExpenseGenie and its claims, approvals and totals appear inside AskMira." },
+      { q: "We already use Expense Genie. Do we have to switch?", a: "No. Connect Expense Genie and its claims, approvals and totals appear inside AskMira." },
     ],
     related: ["payroll", "workflows", "analytics"],
     seoTitle: "Expense and travel management",

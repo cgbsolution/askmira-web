@@ -4,6 +4,7 @@ import {
   LayoutDashboard,
   Megaphone,
   MessageCircleQuestion,
+  Network,
   Newspaper,
   Plug,
   ShieldCheck,
@@ -11,6 +12,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import { platformApps } from "./ecosystem";
 import { features, FEATURE_GROUPS } from "./features";
 import { solutions } from "./solutions";
 
@@ -18,11 +20,19 @@ export type NavLink = { title: string; href: string; description?: string; icon?
 
 /** Product: the platform-level pages. */
 export const productLinks: NavLink[] = [
-  { title: "Platform overview", href: "/platform", description: "How the modules fit together on one record.", icon: LayoutDashboard },
-  { title: "Ask Mira AI", href: "/ai", description: "An HR companion that answers and acts — with guardrails.", icon: Sparkles },
+  { title: "Platform overview", href: "/platform", description: "How the HRMS modules fit together on one record.", icon: LayoutDashboard },
+  { title: "Connected platform", href: "/connected-platform", description: "HRMS plus hiring, expenses, support, sales and procurement.", icon: Network },
+  { title: "Ask Mira AI", href: "/ai", description: "Answers across HR and your connected apps, with guardrails.", icon: Sparkles },
   { title: "Integrations", href: "/integrations", description: "Devices, banks, identity, AI assistants and an API.", icon: Plug },
   { title: "Security & privacy", href: "/security", description: "Isolation, audit, sign-in controls and DPDP.", icon: ShieldCheck },
   { title: "What's new", href: "/resources/product-updates", description: "Recent product updates.", icon: Megaphone },
+];
+
+/** The business apps around the HRMS, each with how it connects. */
+export const appLinks: NavLink[] = [
+  ...platformApps
+    .filter((a) => a.key !== "hrms" && a.key !== "mira")
+    .map((a) => ({ title: a.name, href: a.href, description: a.kind, icon: a.icon })),
 ];
 
 /** Features: the twelve module pages, grouped as in the mega menu. */
@@ -52,6 +62,7 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
     title: "Product",
     links: [
       { title: "Platform overview", href: "/platform" },
+      { title: "Connected platform", href: "/connected-platform" },
       { title: "Ask Mira AI", href: "/ai" },
       { title: "Integrations", href: "/integrations" },
       { title: "Security & privacy", href: "/security" },

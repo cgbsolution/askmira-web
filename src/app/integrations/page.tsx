@@ -117,7 +117,7 @@ export default function IntegrationsPage() {
       </section>
 
       <section id="developers" className="section-y bg-ink-950 text-white" aria-labelledby="dev-heading">
-        <div className="container-site grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="container-site grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div className="min-w-0">
             <SectionHeading
               id="dev-heading"
@@ -138,7 +138,7 @@ export default function IntegrationsPage() {
               ]}
             />
           </div>
-          <Reveal className="grid min-w-0 gap-4 self-center">
+          <Reveal className="grid min-w-0 grid-cols-1 gap-4 self-center">
             <div>
               <Eyebrow tone="dark">Call the API</Eyebrow>
               <pre className="mt-3 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.04] p-5 font-mono text-[0.8125rem] leading-relaxed text-marigold-100">

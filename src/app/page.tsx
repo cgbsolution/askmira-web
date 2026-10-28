@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { DemoSection } from "@/components/sections/DemoSection";
 import { AudienceCards } from "@/components/sections/home/AudienceCards";
+import { ConnectedTeaser } from "@/components/sections/home/ConnectedTeaser";
 import { FeatureMosaic } from "@/components/sections/home/FeatureMosaic";
 import { Hero } from "@/components/sections/home/Hero";
 import { IntegrationsCloud } from "@/components/sections/home/IntegrationsCloud";
@@ -37,6 +38,7 @@ export default function HomePage() {
       <PlatformTabs />
       <Showcase />
       <FeatureMosaic />
+      <ConnectedTeaser />
       <MiraSection />
       <PayrollBand />
       <AudienceCards />

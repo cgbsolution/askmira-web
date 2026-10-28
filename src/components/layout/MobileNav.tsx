@@ -20,7 +20,14 @@ export function MobileNav({ menus, onDark, pathname }: { menus: SiteMenus; onDar
   React.useEffect(() => setOpen(false), [pathname]);
 
   const sections: { value: string; label: string; groups: { title?: string; items: MenuItem[] }[] }[] = [
-    { value: "product", label: "Product", groups: [{ items: menus.product }] },
+    {
+      value: "product",
+      label: "Product",
+      groups: [
+        { title: "AskMira", items: menus.product },
+        { title: "Connected apps", items: menus.apps },
+      ],
+    },
     { value: "features", label: "Features", groups: menus.features },
     { value: "solutions", label: "Solutions", groups: menus.solutions },
     { value: "resources", label: "Resources", groups: [{ items: menus.resources }] },

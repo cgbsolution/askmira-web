@@ -20,6 +20,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MiraChatMock } from "@/components/product/mock-platform";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { DarkHero } from "@/components/sections/DarkHero";
+import { MiraAcross } from "@/components/sections/ecosystem/MiraAcross";
 import { FaqList } from "@/components/sections/FaqList";
 import { IconChip, MockStage, SectionHeading } from "@/components/sections/primitives";
 import { faqGroups } from "@/lib/content/faq";
@@ -147,6 +148,18 @@ export default function AiPage() {
               <MiraChatMock className="mx-auto w-full max-w-md" />
             </MockStage>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section-y bg-background" aria-labelledby="across-heading">
+        <div className="container-site">
+          <SectionHeading
+            id="across-heading"
+            eyebrow="Across your apps"
+            title="Questions managers ask, and what Mira answers today"
+            lead="Mira reads AnytimeHire, Expense Genie and CGB Helpdesk where they are connected. Budget, procurement and sales questions are on the roadmap — and approvals always stay with people."
+          />
+          <MiraAcross className="mt-12" />
         </div>
       </section>
 

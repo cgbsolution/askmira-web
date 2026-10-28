@@ -247,7 +247,7 @@ export const productUpdates: ProductUpdate[] = [
   },
   {
     date: "2026-10-21",
-    title: "Connect AnytimeHire and ExpenseGenie in one click",
+    title: "Connect AnytimeHire and Expense Genie in one click",
     body: "Admins connect each product from Settings → Connectors, with a separate secret for every workspace.",
     tags: ["Integrations"],
   },

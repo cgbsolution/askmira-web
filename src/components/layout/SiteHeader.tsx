@@ -1,4 +1,4 @@
-import { featureGroups, productLinks, resourceLinks, solutionGroups, type NavLink } from "@/lib/content/nav";
+import { appLinks, featureGroups, productLinks, resourceLinks, solutionGroups, type NavLink } from "@/lib/content/nav";
 
 import { HeaderBar } from "./HeaderBar";
 import type { MenuItem, SiteMenus } from "./nav-types";
@@ -20,6 +20,7 @@ function toItem(link: NavLink): MenuItem {
 export function SiteHeader() {
   const menus: SiteMenus = {
     product: productLinks.map(toItem),
+    apps: appLinks.map(toItem),
     features: featureGroups.map((g) => ({ title: g.title, items: g.links.map(toItem) })),
     solutions: solutionGroups.map((g) => ({ title: g.title, items: g.links.map(toItem) })),
     resources: resourceLinks.map(toItem),

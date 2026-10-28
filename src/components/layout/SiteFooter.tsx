@@ -32,8 +32,8 @@ export function SiteFooter() {
           <div className="max-w-xs">
             <AskMiraLogo className="h-9" />
             <p className="mt-5 text-[0.9375rem] leading-relaxed text-white/70">
-              HR, payroll and culture for Indian companies — one employee record, statutory payroll built in, and a place
-              for every employee to ask, apply and be recognised.
+              HR, payroll and culture for Indian companies — one employee record, statutory payroll built in, and connected
+              apps for hiring, expenses, support, sales and procurement.
             </p>
             {hasContact && (
               <ul className="mt-6 space-y-2 text-[0.9375rem] text-white/70">

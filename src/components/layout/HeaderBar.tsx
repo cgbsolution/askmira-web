@@ -82,7 +82,7 @@ export function HeaderBar({ menus }: { menus: SiteMenus }) {
           >
             <NavigationMenuList>
               <MenuTrigger value="product" label="Product" onDark={onDark}>
-                <ProductPanel items={menus.product} pathname={pathname} />
+                <ProductPanel items={menus.product} apps={menus.apps} pathname={pathname} />
               </MenuTrigger>
               <MenuTrigger value="features" label="Features" onDark={onDark}>
                 <FeaturesPanel groups={menus.features} pathname={pathname} />
@@ -200,16 +200,29 @@ function PromoCard({ title, body }: { title: string; body: string }) {
   );
 }
 
-function ProductPanel({ items, pathname }: { items: MenuItem[]; pathname: string }) {
+function ProductPanel({ items, apps, pathname }: { items: MenuItem[]; apps: MenuItem[]; pathname: string }) {
   return (
-    <div className="grid w-[min(48rem,calc(100vw-3rem))] grid-cols-[1fr_15rem] gap-3 p-3">
-      <ul className="grid grid-cols-2 gap-1">
-        {items.map((item) => (
-          <li key={item.href}>
-            <MenuLink item={item} pathname={pathname} />
-          </li>
-        ))}
-      </ul>
+    <div className="grid w-[min(64rem,calc(100vw-3rem))] grid-cols-[1fr_1fr_15rem] gap-3 p-3">
+      <div className="pt-2">
+        <GroupTitle>AskMira HRMS</GroupTitle>
+        <ul className="grid gap-0.5">
+          {items.map((item) => (
+            <li key={item.href}>
+              <MenuLink item={item} pathname={pathname} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="pt-2">
+        <GroupTitle>Connected apps</GroupTitle>
+        <ul className="grid gap-0.5">
+          {apps.map((item) => (
+            <li key={item.href}>
+              <MenuLink item={item} pathname={pathname} />
+            </li>
+          ))}
+        </ul>
+      </div>
       <PromoCard title="See it with your own data" body="A 30-minute walkthrough of AskMira, shaped around how your company runs HR." />
     </div>
   );

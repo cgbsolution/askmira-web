@@ -75,7 +75,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "What can Ask Mira look up?",
-        a: "Company policies, your own record, people, who is on leave, attendance, departments and locations, reports, and data from connected products such as AnytimeHire and ExpenseGenie. It always works as the signed-in person, with exactly their permissions.",
+        a: "Company policies, your own record, people, who is on leave, attendance, departments and locations, reports, and data from connected products such as AnytimeHire and Expense Genie. It always works as the signed-in person, with exactly their permissions.",
       },
     ],
   },

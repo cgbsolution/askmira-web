@@ -35,12 +35,15 @@ export function MockFrame({
   className,
   bodyClassName,
   tone = "light",
+  tag,
 }: {
   label: string;
   children: React.ReactNode;
   className?: string;
   bodyClassName?: string;
   tone?: "light" | "dark";
+  /** Replaces the "Sample data" tag, e.g. for a concept that is not built yet. */
+  tag?: React.ReactNode;
 }) {
   return (
     <div
@@ -58,7 +61,7 @@ export function MockFrame({
         <span className="size-2.5 rounded-full bg-cream-300" />
         <span className="size-2.5 rounded-full bg-cream-300" />
         <span className="ml-3 truncate text-[10px] font-medium text-ink-400">AskMira · Demo workspace</span>
-        <SampleTag className="ml-auto" />
+        {tag ?? <SampleTag className="ml-auto" />}
       </div>
       <div aria-hidden className={cn("relative", bodyClassName)}>
         {children}

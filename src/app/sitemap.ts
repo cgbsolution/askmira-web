@@ -8,6 +8,7 @@ import { siteConfig } from "@/lib/site";
 const STATIC = [
   "/",
   "/platform",
+  "/connected-platform",
   "/ai",
   "/integrations",
   "/security",

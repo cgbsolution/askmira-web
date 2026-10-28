@@ -59,8 +59,10 @@ export const integrations: Integration[] = [
   { name: "ChatGPT", monogram: "AI", category: "AI assistants", status: "available", description: "The same MCP connector, for ChatGPT." },
 
   { name: "AnytimeHire", monogram: "AH", category: "Connected products", status: "available", description: "Openings, candidates and interviews from AnytimeHire, inside AskMira, connected in one click." },
-  { name: "ExpenseGenie", monogram: "EG", category: "Connected products", status: "available", description: "Claims, approvals and totals from ExpenseGenie, inside AskMira." },
+  { name: "Expense Genie", monogram: "EG", category: "Connected products", status: "available", description: "Claims, approvals and totals from Expense Genie, inside AskMira." },
   { name: "CGB Helpdesk", monogram: "HD", category: "Connected products", status: "available", description: "IT tickets and the asset register from CGB Helpdesk, inside AskMira." },
+  { name: "Saleinx CRM", monogram: "SX", category: "Connected products", status: "planned", description: "Our sales CRM. On the roadmap: its forecast beside department budgets and hiring plans." },
+  { name: "ProcureFlow", monogram: "PR", category: "Connected products", status: "planned", description: "Our procure-to-pay app. On the roadmap: purchases checked against department budgets, and delivered equipment added to the asset register." },
   { name: "Digio eSign", monogram: "DG", category: "Connected products", status: "pilot", description: "Aadhaar eSign for letters. Built; being verified with live credentials." },
 
   { name: "REST API", monogram: "{ }", category: "Developers", status: "available", description: "Scoped, revocable API keys for employees, leave, attendance, org and hiring data." },

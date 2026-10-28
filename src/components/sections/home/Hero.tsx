@@ -22,13 +22,13 @@ export function Hero() {
       <div className="container-site relative pt-32 text-center sm:pt-36 lg:pt-44">
         <Reveal y={12}>
           <Link
-            href="/ai"
+            href="/connected-platform"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 py-1 pr-3 pl-1 text-sm font-medium text-white/90 backdrop-blur-sm transition-colors outline-none hover:border-white/30 hover:bg-white/15 focus-visible:ring-[3px] focus-visible:ring-white/40"
           >
             <span className="inline-flex items-center gap-1 rounded-full bg-marigold-500 px-2 py-0.5 text-xs font-semibold text-ink-950">
               <Sparkles className="size-3" aria-hidden /> New
             </span>
-            Ask Mira answers from your own policies
+            One HRMS, connected to the business around it
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
           </Link>
         </Reveal>
@@ -41,7 +41,7 @@ export function Hero() {
         <Reveal delay={0.1}>
           <p className="mx-auto mt-6 max-w-2xl text-lead text-white/75">
             AskMira brings employee records, attendance and leave, Indian statutory payroll and people analytics into one
-            platform — and gives every employee one place to ask, apply and be recognised.
+            platform — and connects it to our apps for hiring, expenses and support, with sales and procurement next.
           </p>
         </Reveal>
         <Reveal delay={0.15}>
