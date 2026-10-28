@@ -1,6 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import {
+  SpotChart,
+  SpotChecklist,
+  SpotLaptop,
+  SpotReceipt,
+  SpotRecruit,
+  SpotTile,
+  SpotTrend,
+  type SpotIcon,
+} from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/button";
 import { appByKey, CONNECTION_LABEL, journey, platformApps, type AppKey, type ConnectionStatus } from "@/lib/content/ecosystem";
@@ -10,13 +20,13 @@ import { ConnectionBadge } from "../ecosystem/ConnectionBadge";
 import { SectionHeading } from "../primitives";
 
 /** Six stages that summarise the eleven-step journey on /connected-platform. */
-const STAGES: { title: string; steps: string[]; app: AppKey; label?: string }[] = [
-  { title: "Forecast", steps: ["sales"], app: "saleinx" },
-  { title: "Budget and approve", steps: ["budget", "workforce", "approval"], app: "hrms" },
-  { title: "Recruit", steps: ["recruitment"], app: "anytimehire" },
-  { title: "Onboard and equip", steps: ["onboarding", "procurement", "assets"], app: "hrms", label: "AskMira · ProcureFlow · CGB Helpdesk" },
-  { title: "Spend and support", steps: ["expenses", "helpdesk"], app: "expense-genie", label: "Expense Genie · CGB Helpdesk" },
-  { title: "Report", steps: ["reporting"], app: "mira" },
+const STAGES: { title: string; steps: string[]; app: AppKey; spot: SpotIcon; label?: string }[] = [
+  { title: "Forecast", steps: ["sales"], app: "saleinx", spot: SpotTrend },
+  { title: "Budget and approve", steps: ["budget", "workforce", "approval"], app: "hrms", spot: SpotChecklist },
+  { title: "Recruit", steps: ["recruitment"], app: "anytimehire", spot: SpotRecruit },
+  { title: "Onboard and equip", steps: ["onboarding", "procurement", "assets"], app: "hrms", spot: SpotLaptop, label: "AskMira · ProcureFlow · CGB Helpdesk" },
+  { title: "Spend and support", steps: ["expenses", "helpdesk"], app: "expense-genie", spot: SpotReceipt, label: "Expense Genie · CGB Helpdesk" },
+  { title: "Report", steps: ["reporting"], app: "mira", spot: SpotChart },
 ];
 
 const DOT = {
@@ -45,8 +55,9 @@ export function ConnectedTeaser() {
             return (
               <StaggerItem key={stage.title}>
                 <div className="relative flex h-full flex-col rounded-3xl border border-cream-200 bg-background p-5">
-                  <span className="font-display text-2xl font-semibold text-brand-200 tabular-nums">0{i + 1}</span>
-                  <h3 className="mt-2 text-base font-semibold text-ink-950">{stage.title}</h3>
+                  <SpotTile icon={stage.spot} size="md" tone={steps.every((st) => st.status === "planned") ? "muted" : "blush"} />
+                  <p className="mt-4 text-[0.6875rem] font-semibold tracking-[0.08em] text-ink-400 uppercase">Step {i + 1}</p>
+                  <h3 className="mt-0.5 text-base font-semibold text-ink-950">{stage.title}</h3>
                   <p className="mt-1 text-[0.8125rem] text-ink-500">{stage.label ?? app.name}</p>
                   <ul className="mt-auto flex flex-wrap gap-1.5 pt-4" aria-label="Connection status of each step">
                     {steps.map((s) => (
@@ -85,9 +96,7 @@ export function ConnectedTeaser() {
                 href={app.href}
                 className="group flex items-center gap-3 rounded-2xl border border-cream-200 p-4 transition-colors outline-none hover:border-cream-300 hover:bg-cream-50 focus-visible:ring-[3px] focus-visible:ring-ring/60"
               >
-                <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-blush-50 text-brand-700">
-                  <Icon className="size-5" aria-hidden />
-                </span>
+                <SpotTile icon={Icon} size="md" tone={app.connection.status === "planned" ? "muted" : "blush"} />
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold text-ink-900">{app.name}</span>
                   <span className="block truncate text-[0.8125rem] text-ink-500">{app.kind}</span>

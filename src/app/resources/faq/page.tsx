@@ -1,4 +1,4 @@
-import { MessageCircleQuestion } from "lucide-react";
+import { SpotQuestion } from "@/components/illustrations/spots";
 
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqList } from "@/components/sections/FaqList";
@@ -25,7 +25,7 @@ export default function FaqPage() {
     <>
       <PageHero
         eyebrow="FAQ"
-        eyebrowIcon={<MessageCircleQuestion className="size-4" aria-hidden />}
+        eyebrowIcon={SpotQuestion}
         title="Questions, answered plainly"
         lead="If yours is not here, ask us — in a demo or through the contact form."
         primary={{ label: "Ask a question", href: "/contact" }}

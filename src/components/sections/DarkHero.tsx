@@ -1,10 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import type { SpotIcon } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/button";
 
-import { Eyebrow } from "./primitives";
+import { Eyebrow, EyebrowSpot } from "./primitives";
 
 /** The deep-red hero used by the platform-level pages, with a visual below. */
 export function DarkHero({
@@ -16,7 +17,7 @@ export function DarkHero({
   visual,
 }: {
   eyebrow: string;
-  eyebrowIcon?: React.ReactNode;
+  eyebrowIcon?: SpotIcon;
   title: React.ReactNode;
   lead: React.ReactNode;
   secondary?: { label: string; href: string };
@@ -27,7 +28,7 @@ export function DarkHero({
       <div aria-hidden className="bg-glow pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[65%]" />
       <div className="container-site relative pt-32 pb-16 text-center sm:pt-36 sm:pb-24 lg:pt-44">
         <Reveal y={12}>
-          <Eyebrow tone="dark" icon={eyebrowIcon}>
+          <Eyebrow tone="dark" icon={eyebrowIcon && <EyebrowSpot icon={eyebrowIcon} />}>
             {eyebrow}
           </Eyebrow>
         </Reveal>

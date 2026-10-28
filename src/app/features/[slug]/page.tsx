@@ -33,14 +33,13 @@ export default async function FeaturePage({ params }: Props) {
   const { slug } = await params;
   const feature = featureBySlug(slug);
   if (!feature) notFound();
-  const Icon = feature.icon;
   const heroIsPanel = PANEL_MOCKUPS.has(feature.heroMockup);
 
   return (
     <>
       <PageHero
         eyebrow={feature.name}
-        eyebrowIcon={<Icon className="size-4" aria-hidden />}
+        eyebrowIcon={feature.icon}
         title={feature.headline}
         lead={feature.intro}
         secondary={{ label: "How it works", href: "#how-it-works" }}
@@ -97,9 +96,7 @@ export default async function FeaturePage({ params }: Props) {
             {feature.highlights.map(({ icon: HIcon, title, body }) => (
               <StaggerItem key={title}>
                 <div className="h-full rounded-3xl border border-cream-200 bg-background p-6 sm:p-7">
-                  <IconChip accent={feature.accent}>
-                    <HIcon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={HIcon} accent={feature.accent} />
                   <h3 className="mt-5 text-lg font-semibold text-ink-950">{title}</h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>
                 </div>

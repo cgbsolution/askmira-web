@@ -1,5 +1,4 @@
-import { BookOpen, Fingerprint, IndianRupee, type LucideIcon } from "lucide-react";
-
+import { SpotDevice, SpotPayslip, SpotSheet, type SpotIcon } from "@/components/illustrations/spots";
 export type GuideSection = {
   heading: string;
   paragraphs?: string[];
@@ -13,7 +12,7 @@ export type Guide = {
   title: string;
   summary: string;
   category: "Payroll" | "Getting started" | "Attendance";
-  icon: LucideIcon;
+  icon: SpotIcon;
   readMinutes: number;
   updated: string;
   sections: GuideSection[];
@@ -30,7 +29,7 @@ export const guides: Guide[] = [
     summary:
       "What to settle before you run payroll, what to check while it runs, and the statutory deposits and returns that follow.",
     category: "Payroll",
-    icon: IndianRupee,
+    icon: SpotPayslip,
     readMinutes: 7,
     updated: "2026-10-27",
     sections: [
@@ -100,7 +99,7 @@ export const guides: Guide[] = [
     summary:
       "How to get your employee sheet ready for AskMira, what the import checks, and how to fix the rows it sends back.",
     category: "Getting started",
-    icon: BookOpen,
+    icon: SpotSheet,
     readMinutes: 5,
     updated: "2026-10-27",
     sections: [
@@ -152,7 +151,7 @@ export const guides: Guide[] = [
     summary:
       "How AskMira receives punches from biometric terminals, what to set on the device, and how to check it is working.",
     category: "Attendance",
-    icon: Fingerprint,
+    icon: SpotDevice,
     readMinutes: 4,
     updated: "2026-10-27",
     sections: [

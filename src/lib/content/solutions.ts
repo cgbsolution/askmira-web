@@ -1,13 +1,4 @@
-import {
-  Briefcase,
-  Building2,
-  IndianRupee,
-  Rocket,
-  UserRound,
-  UsersRound,
-  type LucideIcon,
-} from "lucide-react";
-
+import { SpotBuildings, SpotCalculator, SpotCalendarClock, SpotConnected, SpotDocuments, SpotFileSend, SpotGrowth, SpotInbox, SpotLedger, SpotLock, SpotMedal, SpotOrg, SpotPayslip, SpotPerson, SpotQuestion, SpotSheet, SpotShield, SpotTarget, SpotTeam, type SpotIcon } from "@/components/illustrations/spots";
 import type { Accent, MockupKey } from "./types";
 
 export type Solution = {
@@ -16,13 +7,13 @@ export type Solution = {
   /** Menu label, e.g. "HR teams". */
   label: string;
   short: string;
-  icon: LucideIcon;
+  icon: SpotIcon;
   accent: Accent;
   menuGroup: "By role" | "By size";
   headline: string;
   intro: string;
   heroMockup: MockupKey;
-  pains: { title: string; body: string }[];
+  pains: { icon: SpotIcon; title: string; body: string }[];
   outcomes: { eyebrow: string; title: string; body: string; points: string[]; feature: string; mockup: MockupKey }[];
   month: { title: string; body: string }[];
   features: string[];
@@ -35,7 +26,7 @@ export const solutions: Solution[] = [
     name: "AskMira for HR teams",
     label: "HR teams",
     short: "Spend the month on people, not on chasing data.",
-    icon: UsersRound,
+    icon: SpotTeam,
     accent: "red",
     menuGroup: "By role",
     headline: "Spend the month on people, not on chasing data",
@@ -43,9 +34,9 @@ export const solutions: Solution[] = [
       "One record for every employee, attendance that is settled before payroll, and employees who can answer their own questions. HR gets its weeks back.",
     heroMockup: "dashboard",
     pains: [
-      { title: "Data in five places", body: "Joiner details in one sheet, attendance in another, salaries in a third — and every report starts with reconciling them." },
-      { title: "The month-end crunch", body: "Late regularisations, missed punches and last-minute leave land on HR the week payroll is due." },
-      { title: "The same questions, every day", body: "Leave balances, payslips, policy clauses: answered by hand, one message at a time." },
+      { icon: SpotSheet, title: "Data in five places", body: "Joiner details in one sheet, attendance in another, salaries in a third — and every report starts with reconciling them." },
+      { icon: SpotCalendarClock, title: "The month-end crunch", body: "Late regularisations, missed punches and last-minute leave land on HR the week payroll is due." },
+      { icon: SpotQuestion, title: "The same questions, every day", body: "Leave balances, payslips, policy clauses: answered by hand, one message at a time." },
     ],
     outcomes: [
       {
@@ -88,7 +79,7 @@ export const solutions: Solution[] = [
     name: "AskMira for employees",
     label: "Employees",
     short: "Your leave, pay and documents, without asking anyone.",
-    icon: UserRound,
+    icon: SpotPerson,
     accent: "marigold",
     menuGroup: "By role",
     headline: "Everything about your work life, in one place that makes sense",
@@ -96,9 +87,9 @@ export const solutions: Solution[] = [
       "Punch in, check your leave, download a payslip, declare investments and say thank you to a colleague — from your phone, in a minute.",
     heroMockup: "mobile",
     pains: [
-      { title: "Not knowing where you stand", body: "How much leave is left? Was that half day marked? Who do you even ask?" },
-      { title: "Waiting for paperwork", body: "Payslips, salary certificates and letters that take a request and a reminder." },
-      { title: "Good work going unseen", body: "Thank-yous lost in chat threads, and feedback only once a year." },
+      { icon: SpotPayslip, title: "Not knowing where you stand", body: "How much leave is left? Was that half day marked? Who do you even ask?" },
+      { icon: SpotDocuments, title: "Waiting for paperwork", body: "Payslips, salary certificates and letters that take a request and a reminder." },
+      { icon: SpotMedal, title: "Good work going unseen", body: "Thank-yous lost in chat threads, and feedback only once a year." },
     ],
     outcomes: [
       {
@@ -141,7 +132,7 @@ export const solutions: Solution[] = [
     name: "AskMira for managers",
     label: "Managers",
     short: "Lead your team without the admin.",
-    icon: Briefcase,
+    icon: SpotOrg,
     accent: "blush",
     menuGroup: "By role",
     headline: "Lead your team, not a pile of approvals",
@@ -149,9 +140,9 @@ export const solutions: Solution[] = [
       "Every approval in one inbox — or straight from the email — a live view of who is in, and reviews that build on goals and one-on-ones all year.",
     heroMockup: "workflow",
     pains: [
-      { title: "Approvals everywhere", body: "Leave in one tool, expenses in another, attendance fixes in a chat message." },
-      { title: "No view of the team today", body: "Who is in, who is on leave, who forgot to punch — found out too late." },
-      { title: "Reviews from memory", body: "A year of work summarised the night before the deadline." },
+      { icon: SpotInbox, title: "Approvals everywhere", body: "Leave in one tool, expenses in another, attendance fixes in a chat message." },
+      { icon: SpotTeam, title: "No view of the team today", body: "Who is in, who is on leave, who forgot to punch — found out too late." },
+      { icon: SpotTarget, title: "Reviews from memory", body: "A year of work summarised the night before the deadline." },
     ],
     outcomes: [
       {
@@ -194,7 +185,7 @@ export const solutions: Solution[] = [
     name: "AskMira for finance and payroll",
     label: "Finance & payroll",
     short: "Close payroll with numbers you can defend.",
-    icon: IndianRupee,
+    icon: SpotCalculator,
     accent: "red",
     menuGroup: "By role",
     headline: "Close payroll with numbers you can defend",
@@ -202,9 +193,9 @@ export const solutions: Solution[] = [
       "Payroll runs on locked attendance, statutory files come out of the run, and the bank file and journal entry are generated rather than typed.",
     heroMockup: "payroll",
     pains: [
-      { title: "Inputs that keep moving", body: "An attendance change after payroll is computed means recomputing — or paying the wrong amount." },
-      { title: "Filings by hand", body: "ECR files, challans and TDS returns rebuilt in spreadsheets every month or quarter." },
-      { title: "Payroll and the books disagree", body: "Journal entries typed from the payroll register, and reconciled for weeks." },
+      { icon: SpotCalculator, title: "Inputs that keep moving", body: "An attendance change after payroll is computed means recomputing — or paying the wrong amount." },
+      { icon: SpotFileSend, title: "Filings by hand", body: "ECR files, challans and TDS returns rebuilt in spreadsheets every month or quarter." },
+      { icon: SpotLedger, title: "Payroll and the books disagree", body: "Journal entries typed from the payroll register, and reconciled for weeks." },
     ],
     outcomes: [
       {
@@ -247,7 +238,7 @@ export const solutions: Solution[] = [
     name: "AskMira for growing businesses",
     label: "Growing businesses",
     short: "Grow past spreadsheets without an HR systems project.",
-    icon: Rocket,
+    icon: SpotGrowth,
     accent: "marigold",
     menuGroup: "By size",
     headline: "Outgrow your spreadsheets, not your HR team",
@@ -255,9 +246,9 @@ export const solutions: Solution[] = [
       "Bring your employee sheet in an afternoon, run compliant payroll from the first month, and switch on more modules only when you need them.",
     heroMockup: "import",
     pains: [
-      { title: "Spreadsheets that broke at fifty people", body: "Version clashes, formulas nobody owns, and one person who knows how it all works." },
-      { title: "Compliance worries", body: "PF, ESI, PT and TDS done by hand, with deadlines that do not move." },
-      { title: "A first HR hire doing everything", body: "Payroll, joiners, letters and questions — with no time for the people part." },
+      { icon: SpotSheet, title: "Spreadsheets that broke at fifty people", body: "Version clashes, formulas nobody owns, and one person who knows how it all works." },
+      { icon: SpotShield, title: "Compliance worries", body: "PF, ESI, PT and TDS done by hand, with deadlines that do not move." },
+      { icon: SpotPerson, title: "A first HR hire doing everything", body: "Payroll, joiners, letters and questions — with no time for the people part." },
     ],
     outcomes: [
       {
@@ -300,7 +291,7 @@ export const solutions: Solution[] = [
     name: "AskMira for enterprises",
     label: "Enterprise",
     short: "Multi-entity HR with the controls your auditors expect.",
-    icon: Building2,
+    icon: SpotBuildings,
     accent: "ink",
     menuGroup: "By size",
     headline: "Multi-entity HR with the controls your auditors expect",
@@ -308,9 +299,9 @@ export const solutions: Solution[] = [
       "Several legal entities and locations in one workspace, single sign-on and provisioning, an audit log nobody can edit, and an API for the systems around you.",
     heroMockup: "access",
     pains: [
-      { title: "Entities with their own rules", body: "Different PF codes, PT states and holiday calendars, run as separate islands." },
-      { title: "IT and security reviews", body: "SSO, provisioning, access reviews and logs — required before any rollout." },
-      { title: "Systems that must talk", body: "Finance, IT and identity tools that need people data the moment it changes." },
+      { icon: SpotBuildings, title: "Entities with their own rules", body: "Different PF codes, PT states and holiday calendars, run as separate islands." },
+      { icon: SpotLock, title: "IT and security reviews", body: "SSO, provisioning, access reviews and logs — required before any rollout." },
+      { icon: SpotConnected, title: "Systems that must talk", body: "Finance, IT and identity tools that need people data the moment it changes." },
     ],
     outcomes: [
       {

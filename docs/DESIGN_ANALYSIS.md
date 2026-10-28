@@ -70,3 +70,20 @@ Dark hero → trust strip → platform tabs → product showcase (interactive) �
 audiences → Ask Mira (AI) → India payroll band → integrations → security → resources + FAQ →
 closing CTA with the demo form → footer. Light and dark sections alternate so the eye gets a
 reset roughly every screen, the same cadence as the reference.
+
+## Illustrations (2026-10-28)
+
+The reference's pictures are drawn for each topic, in flat brand colours, on a soft tile. Ours
+are too: `src/components/illustrations/spots.tsx` holds about 60 spot illustrations on a 48×48
+grid, in wine, AskMira Red, soft pink and a touch of marigold, with a thin "cut" line wherever
+shapes overlap. The tones live in `globals.css` (`.spot`); `.spot-muted` greys a picture back
+for "planned" items.
+
+- Use `SpotTile` (or `IconChip`, which wraps it) for any picture on a card, menu item, list or
+  hero eyebrow (`EyebrowSpot`). Pick the drawing that shows the idea, not the nearest generic one.
+- lucide line icons are only for UI glyphs: arrows, checks, chevrons, close, and inside the
+  product mockups, which copy the real portal.
+- Avoid the patterns that make a page look generated: line icons in circles on every card, big
+  faded "01 / 02 / 03" numbers, decorative blobs, gradient headline text, grid-paper backgrounds.
+- A new drawing should reuse the same grid, tones and cut lines. Check it on the blush, marigold,
+  cream and muted tiles before using it.

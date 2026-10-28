@@ -1,3 +1,4 @@
+import { SpotTile } from "@/components/illustrations/spots";
 import { STATUS_LABEL, type Integration } from "@/lib/content/integrations";
 import { cn } from "@/lib/utils";
 
@@ -7,24 +8,9 @@ const DOT = {
   planned: "bg-ink-300",
 } as const;
 
-/** A monogram tile — partners' own logos are not used without their approval. */
-export function Monogram({ integration, className }: { integration: Integration; className?: string }) {
-  return (
-    <span
-      aria-hidden
-      className={cn(
-        "grid size-12 shrink-0 place-items-center rounded-2xl bg-gradient-to-br font-display text-base font-semibold",
-        integration.status === "planned"
-          ? "from-cream-100 to-cream-200 text-ink-400"
-          : integration.category === "Connected products"
-            ? "from-brand-500 to-brand-700 text-white"
-            : "from-ink-800 to-ink-950 text-marigold-300",
-        className,
-      )}
-    >
-      {integration.monogram}
-    </span>
-  );
+/** A picture of what the integration does — partners' own logos are not used without their approval. */
+export function IntegrationMark({ integration, size = "md" }: { integration: Integration; size?: "sm" | "md" }) {
+  return <SpotTile icon={integration.spot} size={size} tone={integration.status === "planned" ? "muted" : "blush"} />;
 }
 
 export function StatusDot({ status, withLabel = true }: { status: Integration["status"]; withLabel?: boolean }) {
@@ -40,7 +26,7 @@ export function StatusDot({ status, withLabel = true }: { status: Integration["s
 export function IntegrationPill({ integration }: { integration: Integration }) {
   return (
     <div className="flex items-center gap-3 rounded-2xl border border-cream-200 bg-white py-2.5 pr-5 pl-2.5 shadow-soft">
-      <Monogram integration={integration} className="size-10 rounded-xl text-sm" />
+      <IntegrationMark integration={integration} size="sm" />
       <div className="min-w-0">
         <p className="text-sm font-semibold whitespace-nowrap text-ink-900">{integration.name}</p>
         <StatusDot status={integration.status} />

@@ -1,4 +1,6 @@
 import { ArrowRight, CircleCheck, Hammer } from "lucide-react";
+
+import { SpotTile } from "@/components/illustrations/spots";
 import Link from "next/link";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -51,7 +53,6 @@ export function Journey() {
       <div className="min-w-0 flex-1">
         {journey.map((step, i) => {
           const app = appByKey(step.app);
-          const Icon = app.icon;
           const nextStep = journey[i + 1];
           return (
             <TabsContent
@@ -61,9 +62,7 @@ export function Journey() {
             >
               <div className="rounded-[2rem] border border-cream-200 bg-white p-6 sm:p-9">
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="grid size-11 place-items-center rounded-2xl bg-blush-100 text-brand-700">
-                    <Icon className="size-5" aria-hidden />
-                  </span>
+                  <SpotTile icon={app.icon} size="lg" />
                   <div>
                     <p className="text-xs font-semibold tracking-[0.08em] text-ink-400 uppercase">
                       Step {i + 1} of {journey.length} · {app.name}

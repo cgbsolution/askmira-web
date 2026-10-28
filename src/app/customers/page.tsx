@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { SpotQuote } from "@/components/illustrations/spots";
 
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -40,7 +40,7 @@ export default function CustomersPage() {
     <>
       <PageHero
         eyebrow="Customer stories"
-        eyebrowIcon={<Quote className="size-4" aria-hidden />}
+        eyebrowIcon={SpotQuote}
         title="Stories from HR teams on AskMira"
         lead="We are onboarding our first customers now. Their stories will appear here in their own words, with their numbers, and only with their permission."
       />

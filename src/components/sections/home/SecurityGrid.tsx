@@ -1,38 +1,37 @@
-import { Building2, FileLock2, KeyRound, ScrollText, ShieldCheck, Sparkles, type LucideIcon } from "lucide-react";
-
+import { SpotAiTrail, SpotAuditLog, SpotIdLock, SpotKey, SpotPrivacy, SpotVault, type SpotIcon } from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { AuditMock } from "@/components/product/mock-people";
 
 import { ArrowLink, Eyebrow, IconChip } from "../primitives";
 
-export const SECURITY_POINTS: { icon: LucideIcon; title: string; body: string }[] = [
+export const SECURITY_POINTS: { icon: SpotIcon; title: string; body: string }[] = [
   {
-    icon: Building2,
+    icon: SpotVault,
     title: "Workspace isolation",
     body: "Every query is scoped to your workspace on the server, from your sign-in token — never from what a browser sends.",
   },
   {
-    icon: ScrollText,
+    icon: SpotAuditLog,
     title: "An audit log nobody can edit",
     body: "Insert-only, and saved in the same transaction as the change it records.",
   },
   {
-    icon: KeyRound,
+    icon: SpotKey,
     title: "Sign-in controls",
     body: "OIDC single sign-on, Google and Microsoft, two-step verification, IP allowlists and SCIM.",
   },
   {
-    icon: FileLock2,
+    icon: SpotIdLock,
     title: "Sensitive fields protected",
     body: "PAN and similar fields are encrypted at rest; files are served only through AskMira, never by public link.",
   },
   {
-    icon: ShieldCheck,
+    icon: SpotPrivacy,
     title: "DPDP tools",
     body: "Consent by purpose, requests from employees about their data, and retention rules for records.",
   },
   {
-    icon: Sparkles,
+    icon: SpotAiTrail,
     title: "AI with a paper trail",
     body: "Off by default. Every AI request is logged with the model, the outcome and who asked.",
   },
@@ -62,9 +61,7 @@ export function SecurityGrid() {
           {SECURITY_POINTS.map(({ icon: Icon, title, body }) => (
             <StaggerItem key={title}>
               <div className="h-full rounded-3xl border border-cream-200 bg-white p-6 shadow-soft">
-                <IconChip accent="ink">
-                  <Icon aria-hidden />
-                </IconChip>
+                <IconChip icon={Icon} accent="red" />
                 <h3 className="mt-5 text-lg font-semibold text-ink-950">{title}</h3>
                 <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>
               </div>

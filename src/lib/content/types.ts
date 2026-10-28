@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+import type { SpotIcon } from "@/components/illustrations/spots";
 
 /** Product previews, rendered by components/product/registry.tsx. */
 export type MockupKey =
@@ -39,7 +39,7 @@ export type FeatureBlock = {
   mockup: MockupKey;
 };
 
-export type Highlight = { icon: LucideIcon; title: string; body: string };
+export type Highlight = { icon: SpotIcon; title: string; body: string };
 
 export type Faq = { q: string; a: string };
 
@@ -48,7 +48,7 @@ export type Feature = {
   name: string;
   /** One line, for menus and cards. */
   short: string;
-  icon: LucideIcon;
+  icon: SpotIcon;
   accent: Accent;
   /** Which menu group it sits in. */
   group: "Core HR" | "Time & pay" | "Talent" | "Platform";

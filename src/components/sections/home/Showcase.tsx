@@ -1,13 +1,4 @@
-import {
-  CalendarDays,
-  ChartColumn,
-  IndianRupee,
-  LayoutDashboard,
-  UserPlus,
-  UsersRound,
-  type LucideIcon,
-} from "lucide-react";
-
+import { SpotCalendarClock, SpotChart, SpotDashboard, SpotPayslip, SpotRecruit, SpotTeam, SpotTile, type SpotIcon } from "@/components/illustrations/spots";
 import { AnalyticsMock } from "@/components/product/lazy";
 import { DashboardMock } from "@/components/product/mock-dashboard";
 import { PayrollMock, PayslipMock } from "@/components/product/mock-pay";
@@ -51,21 +42,21 @@ function ProfileCard() {
 
 const TOUR: {
   value: string;
-  icon: LucideIcon;
+  icon: SpotIcon;
   title: string;
   body: string;
   render: () => React.ReactNode;
 }[] = [
   {
     value: "dashboard",
-    icon: LayoutDashboard,
+    icon: SpotDashboard,
     title: "HR admin home",
     body: "Headcount, approvals, today's punch and payroll status the moment you sign in.",
     render: () => <DashboardMock />,
   },
   {
     value: "people",
-    icon: UsersRound,
+    icon: SpotTeam,
     title: "Directory and profiles",
     body: "Search everyone, filter by team or place, and open a complete profile.",
     render: () => (
@@ -79,7 +70,7 @@ const TOUR: {
   },
   {
     value: "attendance",
-    icon: CalendarDays,
+    icon: SpotCalendarClock,
     title: "Attendance and leave",
     body: "A month at a glance, today's geofenced punch, and leave approvals with the team's week.",
     render: () => (
@@ -93,7 +84,7 @@ const TOUR: {
   },
   {
     value: "payroll",
-    icon: IndianRupee,
+    icon: SpotPayslip,
     title: "Payroll run",
     body: "Step by step from locked attendance to approval, with statutory totals and exceptions.",
     render: () => (
@@ -107,14 +98,14 @@ const TOUR: {
   },
   {
     value: "hiring",
-    icon: UserPlus,
+    icon: SpotRecruit,
     title: "Recruitment pipeline",
     body: "Every candidate by stage, with sources, interview slots and offers.",
     render: () => <PipelineMock />,
   },
   {
     value: "analytics",
-    icon: ChartColumn,
+    icon: SpotChart,
     title: "Analytics",
     body: "Headcount, movement, attrition and cost — from the records payroll uses.",
     render: () => <AnalyticsMock />,
@@ -146,9 +137,7 @@ export function Showcase() {
                 value={value}
                 className="group h-auto min-w-max flex-none items-start justify-start gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-left whitespace-normal text-white/80 hover:bg-white/[0.08] hover:text-white data-[state=active]:border-white/20 data-[state=active]:bg-white data-[state=active]:text-ink-950 data-[state=active]:shadow-float lg:min-w-0 lg:py-4"
               >
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-white/10 text-marigold-300 group-data-[state=active]:bg-brand-500 group-data-[state=active]:text-white">
-                  <Icon className="size-4" aria-hidden />
-                </span>
+                <SpotTile icon={Icon} size="sm" tone="cream" />
                 <span className="min-w-0">
                   <span className="block text-[0.9375rem] font-semibold">{title}</span>
                   <span className="mt-1 hidden text-[0.8125rem] leading-snug font-normal text-white/60 group-data-[state=active]:text-ink-500 lg:block">

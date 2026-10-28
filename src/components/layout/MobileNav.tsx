@@ -74,9 +74,7 @@ export function MobileNav({ menus, onDark, pathname }: { menus: SiteMenus; onDar
                                 className="flex min-h-11 items-center gap-3 rounded-xl px-2 py-2 text-[0.9375rem] font-medium text-ink-800 outline-none hover:bg-cream-100 focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-[current=page]:bg-blush-50 aria-[current=page]:text-brand-800"
                               >
                                 {item.icon && (
-                                  <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-white text-brand-700 ring-1 ring-cream-200">
-                                    {item.icon}
-                                  </span>
+                                  <span className="shrink-0 [&>span]:size-9 [&>span]:rounded-lg [&>span]:p-1">{item.icon}</span>
                                 )}
                                 {item.title}
                               </Link>

@@ -289,23 +289,32 @@
     radial-gradient(60% 55% at 20% 100%, rgb(235 6 29 / 0.55) 0%, transparent 70%),
     radial-gradient(55% 55% at 85% 100%, rgb(248 160 26 / 0.5) 0%, transparent 70%);
 }
-@utility text-gradient-brand {
-  background-image: linear-gradient(90deg, var(--color-marigold-300), var(--color-marigold-500) 45%, var(--color-brand-400));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-@utility bg-grid {
-  background-image:
-    linear-gradient(to right, rgb(16 4 4 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(16 4 4 / 0.05) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
 @utility mask-fade-x {
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 @utility mask-fade-b {
   mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+/* Spot illustrations (components/illustrations/spots.tsx). Four brand tones
+   plus cream; --spot-bg is whatever the picture sits on, so overlapping
+   shapes get a clean cut line in that colour. */
+.spot {
+  --spot-d: var(--color-brand-900);
+  --spot-r: var(--color-brand-500);
+  --spot-p: var(--color-brand-200);
+  --spot-m: var(--color-marigold-400);
+  --spot-w: var(--color-cream-25);
+  --spot-bg: var(--spot-tile, var(--color-blush-100));
+  display: block;
+  overflow: visible;
+}
+/* Planned items: the same drawing, greyed back. */
+.spot-muted .spot {
+  --spot-d: var(--color-ink-400);
+  --spot-r: var(--color-cream-500);
+  --spot-p: var(--color-cream-300);
+  --spot-m: var(--color-cream-400);
 }
 
 /* Marquees stop for people who asked for less motion. */

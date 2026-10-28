@@ -1,11 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import type { SpotIcon } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-import { Eyebrow } from "./primitives";
+import { Eyebrow, EyebrowSpot } from "./primitives";
 
 /**
  * The opening of every inner page: cream, centred or split, with the
@@ -24,7 +25,7 @@ export function PageHero({
   children,
 }: {
   eyebrow?: string;
-  eyebrowIcon?: React.ReactNode;
+  eyebrowIcon?: SpotIcon;
   title: React.ReactNode;
   lead?: React.ReactNode;
   primary?: { label: string; href: string } | null;
@@ -44,7 +45,7 @@ export function PageHero({
     <>
       {eyebrow && (
         <Reveal y={12}>
-          <Eyebrow icon={eyebrowIcon}>{eyebrow}</Eyebrow>
+          <Eyebrow icon={eyebrowIcon && <EyebrowSpot icon={eyebrowIcon} />}>{eyebrow}</Eyebrow>
         </Reveal>
       )}
       <Reveal delay={0.05}>
@@ -84,7 +85,6 @@ export function PageHero({
 
   return (
     <section className={cn("relative overflow-hidden pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-44", bg)}>
-      <div aria-hidden className="bg-grid pointer-events-none absolute inset-0 opacity-50 [mask-image:radial-gradient(60%_50%_at_50%_0%,black,transparent)]" />
       <div className="container-site relative">
         {layout === "center" ? (
           <>

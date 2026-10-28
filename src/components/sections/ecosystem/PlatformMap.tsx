@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { SpotTile } from "@/components/illustrations/spots";
+
 import { appByKey, type AppKey, type ConnectionStatus } from "@/lib/content/ecosystem";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +17,6 @@ function line(status: ConnectionStatus) {
 
 function AppNode({ appKey, side }: { appKey: AppKey; side: "left" | "right" }) {
   const app = appByKey(appKey);
-  const Icon = app.icon;
   return (
     <Link
       href={app.href}
@@ -30,9 +31,7 @@ function AppNode({ appKey, side }: { appKey: AppKey; side: "left" | "right" }) {
           line(app.connection.status),
         )}
       />
-      <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-white/10 text-marigold-300">
-        <Icon className="size-5" aria-hidden />
-      </span>
+      <SpotTile icon={app.icon} size="md" tone={app.connection.status === "planned" ? "muted" : "cream"} />
       <span className="min-w-0">
         <span className="block font-semibold">{app.name}</span>
         <span className="block text-[0.8125rem] text-white/60">{app.kind}</span>

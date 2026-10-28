@@ -1,6 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
+import { SpotTile, type SpotIcon, type SpotTone } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
 import type { Accent } from "@/lib/content/types";
 import { cn } from "@/lib/utils";
@@ -140,27 +141,31 @@ export function ArrowLink({
   );
 }
 
-const ACCENT_CHIP: Record<Accent, string> = {
-  red: "bg-blush-100 text-brand-700",
-  marigold: "bg-marigold-100 text-marigold-800",
-  blush: "bg-blush-50 text-blush-700 ring-1 ring-blush-200",
-  ink: "bg-ink-900 text-marigold-300",
+const ACCENT_TONE: Record<Accent, SpotTone> = {
+  red: "blush",
+  marigold: "marigold",
+  blush: "cream",
+  ink: "cream",
 };
 
+/** A small round spot that sits at the start of an eyebrow pill. */
+export function EyebrowSpot({ icon }: { icon: SpotIcon }) {
+  return <SpotTile icon={icon} size="xs" tone="white" className="-my-1 -ml-2 size-7 rounded-full p-1" />;
+}
+
+/** A spot illustration on its tile, toned by the item's accent. */
 export function IconChip({
+  icon,
   accent = "red",
-  children,
+  size = "lg",
   className,
 }: {
+  icon: SpotIcon;
   accent?: Accent;
-  children: React.ReactNode;
+  size?: "sm" | "md" | "lg" | "xl";
   className?: string;
 }) {
-  return (
-    <span className={cn("grid size-11 shrink-0 place-items-center rounded-2xl [&_svg]:size-5", ACCENT_CHIP[accent], className)}>
-      {children}
-    </span>
-  );
+  return <SpotTile icon={icon} size={size} tone={ACCENT_TONE[accent]} className={className} />;
 }
 
 const PANEL_TONE = {
@@ -184,7 +189,6 @@ export function MockStage({
 }) {
   return (
     <div className={cn("relative overflow-hidden rounded-[2rem] border p-4 sm:p-8 lg:p-10", PANEL_TONE[tone], className)}>
-      <div aria-hidden className="bg-grid pointer-events-none absolute inset-0 opacity-60 [mask-image:radial-gradient(70%_60%_at_50%_40%,black,transparent)]" />
       <div className="relative">{children}</div>
     </div>
   );

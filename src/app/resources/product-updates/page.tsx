@@ -1,4 +1,4 @@
-import { Megaphone } from "lucide-react";
+import { SpotMegaphone } from "@/components/illustrations/spots";
 
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -19,7 +19,7 @@ export default function ProductUpdatesPage() {
     <>
       <PageHero
         eyebrow="Product updates"
-        eyebrowIcon={<Megaphone className="size-4" aria-hidden />}
+        eyebrowIcon={SpotMegaphone}
         title="What's new in AskMira"
         lead="The changes we have shipped lately, newest first."
         primary={null}

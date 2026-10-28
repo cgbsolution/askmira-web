@@ -1,6 +1,7 @@
 import { ArrowUpRight, Clock } from "lucide-react";
 import Link from "next/link";
 
+import { SpotTile } from "@/components/illustrations/spots";
 import { Badge } from "@/components/ui/badge";
 import type { Guide } from "@/lib/content/resources";
 import { cn } from "@/lib/utils";
@@ -12,13 +13,12 @@ export function formatLongDate(iso: string) {
 }
 
 const CATEGORY_TONE = {
-  Payroll: "bg-blush-50 text-brand-700",
-  "Getting started": "bg-marigold-50 text-marigold-800",
-  Attendance: "bg-info-50 text-info-600",
+  Payroll: "blush",
+  "Getting started": "marigold",
+  Attendance: "cream",
 } as const;
 
 export function GuideCard({ guide, className }: { guide: Guide; className?: string }) {
-  const Icon = guide.icon;
   return (
     <Link
       href={`/resources/guides/${guide.slug}`}
@@ -28,9 +28,7 @@ export function GuideCard({ guide, className }: { guide: Guide; className?: stri
       )}
     >
       <div className="flex items-center justify-between">
-        <span className={cn("grid size-11 place-items-center rounded-2xl", CATEGORY_TONE[guide.category])}>
-          <Icon className="size-5" aria-hidden />
-        </span>
+        <SpotTile icon={guide.icon} size="lg" tone={CATEGORY_TONE[guide.category]} />
         <ArrowUpRight className="size-5 text-ink-300 transition-colors group-hover:text-brand-700" aria-hidden />
       </div>
       <Badge variant="outline" className="mt-6">

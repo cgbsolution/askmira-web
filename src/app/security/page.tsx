@@ -1,4 +1,4 @@
-import { ShieldCheck } from "lucide-react";
+import { SpotShield } from "@/components/illustrations/spots";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { AccessMock, AuditMock } from "@/components/product/mock-people";
@@ -66,7 +66,7 @@ export default function SecurityPage() {
     <>
       <PageHero
         eyebrow="Security & privacy"
-        eyebrowIcon={<ShieldCheck className="size-4" aria-hidden />}
+        eyebrowIcon={SpotShield}
         title="Built like payroll depends on it"
         lead="Salaries, bank accounts and identity numbers are some of the most sensitive data a company holds. Here is how AskMira looks after them — described as it is built, not as a promise."
         secondary={{ label: "Send us your questionnaire", href: "/contact" }}
@@ -78,9 +78,7 @@ export default function SecurityPage() {
             {SECURITY_POINTS.map(({ icon: Icon, title, body }) => (
               <StaggerItem key={title}>
                 <div className="h-full rounded-3xl border border-cream-200 bg-white p-7">
-                  <IconChip accent="ink">
-                    <Icon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={Icon} accent="red" />
                   <h2 className="mt-5 text-lg font-semibold text-ink-950">{title}</h2>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>
                 </div>

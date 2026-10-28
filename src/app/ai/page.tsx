@@ -1,20 +1,4 @@
-import {
-  BookOpenText,
-  Building2,
-  CalendarDays,
-  ChartColumn,
-  Cable,
-  Eye,
-  FileClock,
-  Fingerprint,
-  Globe,
-  MapPin,
-  Power,
-  Sparkles,
-  UserRound,
-  UsersRound,
-  type LucideIcon,
-} from "lucide-react";
+import { SpotAuditLog, SpotBook, SpotBuildings, SpotCalendar, SpotChart, SpotConnected, SpotDevice, SpotLock, SpotMira, SpotPerson, SpotPin, SpotPlane, SpotPlug, SpotPrivacy, SpotTeam, SpotTile, SpotToggle, type SpotIcon } from "@/components/illustrations/spots";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { MiraChatMock } from "@/components/product/mock-platform";
@@ -33,46 +17,46 @@ export const metadata = pageMetadata({
   path: "/ai",
 });
 
-const CAPABILITIES: { icon: LucideIcon; title: string; body: string; points: string[] }[] = [
+const CAPABILITIES: { icon: SpotIcon; title: string; body: string; points: string[] }[] = [
   {
-    icon: BookOpenText,
+    icon: SpotBook,
     title: "Policy answers, with the source quoted",
     body: "Employees ask in their own words. Mira answers from your handbook and policies, and names the document and section it used.",
     points: ["No more hunting through PDFs", "An answer anyone can check", "The helpdesk is there when a person is needed"],
   },
   {
-    icon: ChartColumn,
+    icon: SpotChart,
     title: "Reports, asked in plain words",
     body: "Ask \"how many joiners in Pune this quarter?\" and Mira turns it into a report definition. The model sees field names, never a single row.",
     points: ["The same safeguards as the report builder", "Shows how it read your question", "Rows scoped to what you may see"],
   },
   {
-    icon: Cable,
+    icon: SpotPlug,
     title: "Your AI assistant, connected",
     body: "Connect AskMira to Claude or ChatGPT over MCP. The assistant signs in as the person and gets exactly their permissions.",
     points: ["Sign-in with OAuth", "Every call recorded", "The same permissions as in AskMira"],
   },
 ];
 
-const LOOKUPS: { icon: LucideIcon; label: string }[] = [
-  { icon: BookOpenText, label: "Company policies" },
-  { icon: UserRound, label: "Your own record" },
-  { icon: UsersRound, label: "People" },
-  { icon: CalendarDays, label: "Who is on leave" },
-  { icon: Fingerprint, label: "Attendance" },
-  { icon: Building2, label: "Departments" },
-  { icon: MapPin, label: "Locations" },
-  { icon: ChartColumn, label: "Reports" },
-  { icon: Cable, label: "Connected products" },
+const LOOKUPS: { icon: SpotIcon; label: string }[] = [
+  { icon: SpotBook, label: "Company policies" },
+  { icon: SpotPerson, label: "Your own record" },
+  { icon: SpotTeam, label: "People" },
+  { icon: SpotCalendar, label: "Who is on leave" },
+  { icon: SpotDevice, label: "Attendance" },
+  { icon: SpotBuildings, label: "Departments" },
+  { icon: SpotPin, label: "Locations" },
+  { icon: SpotChart, label: "Reports" },
+  { icon: SpotConnected, label: "Connected products" },
 ];
 
-const RULES: { icon: LucideIcon; title: string; body: string }[] = [
-  { icon: Power, title: "Off by default", body: "No AI call is made until your admin turns AI on for the workspace, with their name on the audit entry." },
-  { icon: Fingerprint, title: "Consent comes first", body: "Where the data is an employee's own, their consent for that purpose must allow it. A blank is not a yes." },
-  { icon: Globe, title: "Transfers are recorded", body: "Any data sent to a provider outside India is recorded with the provider, the purpose and the categories of data." },
-  { icon: FileClock, title: "Every request logged", body: "The model used, the outcome and who asked — published to admins in the AI Trust Center." },
-  { icon: Eye, title: "Never more than the asker", body: "Mira works with the signed-in person's permissions. It cannot see what they cannot." },
-  { icon: Sparkles, title: "Plain about limits", body: "With no AI key configured, the screen says so instead of showing a spinner that never ends." },
+const RULES: { icon: SpotIcon; title: string; body: string }[] = [
+  { icon: SpotToggle, title: "Off by default", body: "No AI call is made until your admin turns AI on for the workspace, with their name on the audit entry." },
+  { icon: SpotPrivacy, title: "Consent comes first", body: "Where the data is an employee's own, their consent for that purpose must allow it. A blank is not a yes." },
+  { icon: SpotPlane, title: "Transfers are recorded", body: "Any data sent to a provider outside India is recorded with the provider, the purpose and the categories of data." },
+  { icon: SpotAuditLog, title: "Every request logged", body: "The model used, the outcome and who asked — published to admins in the AI Trust Center." },
+  { icon: SpotLock, title: "Never more than the asker", body: "Mira works with the signed-in person's permissions. It cannot see what they cannot." },
+  { icon: SpotMira, title: "Plain about limits", body: "With no AI key configured, the screen says so instead of showing a spinner that never ends." },
 ];
 
 export default function AiPage() {
@@ -81,7 +65,7 @@ export default function AiPage() {
     <>
       <DarkHero
         eyebrow="Ask Mira AI"
-        eyebrowIcon={<Sparkles className="size-4" aria-hidden />}
+        eyebrowIcon={SpotMira}
         title="An HR companion that shows its working"
         lead="Ask Mira answers questions from your own policies and records, quotes where the answer came from, and never sees more than the person asking."
         secondary={{ label: "The rules Mira follows", href: "#guardrails" }}
@@ -104,9 +88,7 @@ export default function AiPage() {
             {CAPABILITIES.map(({ icon: Icon, title, body, points }) => (
               <StaggerItem key={title}>
                 <div className="flex h-full flex-col rounded-3xl border border-cream-200 bg-white p-7">
-                  <IconChip accent="marigold">
-                    <Icon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={Icon} accent="marigold" />
                   <h3 className="mt-6 font-display text-display-4 font-semibold text-ink-950">{title}</h3>
                   <p className="mt-3 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>
                   <ul className="mt-6 grid gap-2 border-t border-cream-200 pt-5">
@@ -137,7 +119,7 @@ export default function AiPage() {
             <ul className="mt-8 flex flex-wrap gap-2">
               {LOOKUPS.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-2 rounded-full border border-cream-300 bg-white px-4 py-2 text-sm font-semibold text-ink-800">
-                  <Icon className="size-4 text-brand-700" aria-hidden />
+                  <SpotTile icon={Icon} size="xs" className="-my-1 -ml-2.5 size-7 rounded-full p-1" />
                   {label}
                 </li>
               ))}
@@ -176,9 +158,7 @@ export default function AiPage() {
             {RULES.map(({ icon: Icon, title, body }) => (
               <StaggerItem key={title}>
                 <div className="h-full rounded-3xl border border-white/10 bg-white/[0.05] p-7">
-                  <span className="grid size-11 place-items-center rounded-2xl bg-white/10 text-marigold-300">
-                    <Icon className="size-5" aria-hidden />
-                  </span>
+                  <SpotTile icon={Icon} size="md" tone="cream" />
                   <h3 className="mt-5 text-lg font-semibold">{title}</h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-white/70">{body}</p>
                 </div>

@@ -1,4 +1,6 @@
-import { ArrowUpRight, BookOpen, MessageCircleQuestion, Newspaper, Quote } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+
+import { SpotBook, SpotNews, SpotQuestion, SpotQuote, SpotTile } from "@/components/illustrations/spots";
 import Link from "next/link";
 
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -17,9 +19,9 @@ export const metadata = pageMetadata({
 });
 
 const HUBS = [
-  { icon: Newspaper, title: "Product updates", body: "What we have shipped recently, newest first.", href: "/resources/product-updates" },
-  { icon: MessageCircleQuestion, title: "FAQ", body: "Setup, payroll, security, AI and pricing questions.", href: "/resources/faq" },
-  { icon: Quote, title: "Customer stories", body: "How teams run HR on AskMira.", href: "/customers" },
+  { icon: SpotNews, title: "Product updates", body: "What we have shipped recently, newest first.", href: "/resources/product-updates" },
+  { icon: SpotQuestion, title: "FAQ", body: "Setup, payroll, security, AI and pricing questions.", href: "/resources/faq" },
+  { icon: SpotQuote, title: "Customer stories", body: "How teams run HR on AskMira.", href: "/customers" },
 ];
 
 export default function ResourcesPage() {
@@ -27,7 +29,7 @@ export default function ResourcesPage() {
     <>
       <PageHero
         eyebrow="Resources"
-        eyebrowIcon={<BookOpen className="size-4" aria-hidden />}
+        eyebrowIcon={SpotBook}
         title="Practical help for Indian HR teams"
         lead="Guides that are useful whether or not you choose AskMira, a log of what we ship, and straight answers to common questions."
         primary={null}
@@ -85,7 +87,7 @@ export default function ResourcesPage() {
                   className="group flex h-full flex-col rounded-3xl bg-marigold-50 p-7 transition-colors outline-none hover:bg-marigold-100 focus-visible:ring-[3px] focus-visible:ring-ring/60"
                 >
                   <div className="flex items-center justify-between">
-                    <Icon className="size-6 text-marigold-800" aria-hidden />
+                    <SpotTile icon={Icon} size="lg" tone="white" />
                     <ArrowUpRight className="size-5 text-marigold-800/60 group-hover:text-marigold-900" aria-hidden />
                   </div>
                   <h2 className="mt-6 font-display text-xl font-semibold text-ink-950">{title}</h2>

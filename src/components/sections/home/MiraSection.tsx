@@ -1,5 +1,4 @@
-import { BookOpenText, Fingerprint, ShieldCheck } from "lucide-react";
-
+import { SpotBook, SpotConnected, SpotToggle } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
 import { MiraChatMock } from "@/components/product/mock-platform";
 
@@ -7,17 +6,17 @@ import { ArrowLink, Eyebrow, IconChip, MockStage } from "../primitives";
 
 const POINTS = [
   {
-    icon: BookOpenText,
+    icon: SpotBook,
     title: "Answers from your own policies",
     body: "Mira quotes the policy and section it used, so an answer can be checked in seconds.",
   },
   {
-    icon: Fingerprint,
+    icon: SpotConnected,
     title: "Works as you, across your apps",
     body: "It looks up people, leave and reports — and jobs, expense claims and tickets in connected apps — with exactly the asker's permissions.",
   },
   {
-    icon: ShieldCheck,
+    icon: SpotToggle,
     title: "Off until you switch it on",
     body: "Your admin decides. Consent is checked, and every request is recorded in the AI Trust Center.",
   },
@@ -42,9 +41,7 @@ export function MiraSection() {
             {POINTS.map(({ icon: Icon, title, body }, i) => (
               <li key={title}>
                 <Reveal delay={i * 0.06} className="flex gap-4">
-                  <IconChip accent={i === 2 ? "ink" : "marigold"}>
-                    <Icon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={Icon} accent={i === 1 ? "red" : "marigold"} />
                   <div>
                     <h3 className="text-lg font-semibold text-ink-950">{title}</h3>
                     <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>

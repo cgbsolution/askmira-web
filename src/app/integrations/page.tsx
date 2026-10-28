@@ -1,8 +1,8 @@
-import { Plug } from "lucide-react";
+import { SpotPlug } from "@/components/illustrations/spots";
 
 import { Reveal } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { Monogram, StatusDot } from "@/components/sections/IntegrationTile";
+import { IntegrationMark, StatusDot } from "@/components/sections/IntegrationTile";
 import { PageHero } from "@/components/sections/PageHero";
 import { CheckList, Eyebrow, SectionHeading } from "@/components/sections/primitives";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +21,7 @@ function IntegrationCard({ integration }: { integration: Integration }) {
   return (
     <div className="flex h-full flex-col rounded-3xl border border-cream-200 bg-white p-6">
       <div className="flex items-start justify-between gap-3">
-        <Monogram integration={integration} />
+        <IntegrationMark integration={integration} />
         <StatusDot status={integration.status} />
       </div>
       <h3 className="mt-5 text-lg font-semibold text-ink-950">{integration.name}</h3>
@@ -64,7 +64,7 @@ export default function IntegrationsPage() {
     <>
       <PageHero
         eyebrow="Integrations"
-        eyebrowIcon={<Plug className="size-4" aria-hidden />}
+        eyebrowIcon={SpotPlug}
         title="Works with what you already run"
         lead="Attendance devices, banks, accounting, identity, messaging and AI assistants. Every listing says honestly whether it is available today, in pilot, or planned."
         secondary={{ label: "For developers", href: "#developers" }}

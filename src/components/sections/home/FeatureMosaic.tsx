@@ -1,6 +1,7 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+import { SpotCalendarClock, SpotChart, SpotIdCard, SpotPayslip, SpotTile } from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { PayslipMock } from "@/components/product/mock-pay";
 import { featureBySlug } from "@/lib/content/features";
@@ -104,9 +105,7 @@ function FeatureTile({ feature, tile }: { feature: Feature; tile: Tile }) {
       )}
     >
       <div className="flex items-start justify-between gap-4">
-        <IconChip accent={dark ? "ink" : feature.accent} className={cn(dark && "bg-white/10 text-marigold-300")}>
-          <Icon aria-hidden />
-        </IconChip>
+        <IconChip icon={Icon} accent={dark ? "ink" : feature.accent} size={large ? "xl" : "lg"} />
         <ArrowUpRight
           className={cn(
             "size-5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
@@ -149,9 +148,17 @@ export function FeatureMosaic() {
               href="/platform"
               className="group flex h-full flex-col justify-between gap-6 rounded-3xl border border-dashed border-cream-300 p-6 transition-colors outline-none hover:border-brand-300 hover:bg-cream-50 focus-visible:ring-[3px] focus-visible:ring-ring/60 sm:p-7"
             >
-              <p className="font-display text-display-4 font-semibold text-ink-950">
-                See how the modules fit together on one record
-              </p>
+              <div>
+                <div aria-hidden className="flex items-end">
+                  <SpotTile icon={SpotIdCard} size="lg" className="-rotate-6" />
+                  <SpotTile icon={SpotCalendarClock} size="lg" tone="marigold" className="-ml-3 mb-3 rotate-3" />
+                  <SpotTile icon={SpotPayslip} size="lg" tone="cream" className="-ml-3 -rotate-3" />
+                  <SpotTile icon={SpotChart} size="lg" className="-ml-3 mb-2 rotate-6" />
+                </div>
+                <p className="mt-6 font-display text-display-4 font-semibold text-ink-950">
+                  See how the modules fit together on one record
+                </p>
+              </div>
               <span className="inline-flex items-center gap-2 font-semibold text-brand-800">
                 Platform overview
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden />

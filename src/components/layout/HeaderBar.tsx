@@ -1,10 +1,11 @@
 "use client";
 
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import * as React from "react";
 
+import { SpotCalendarClock, SpotMira, SpotPayslip, SpotTile } from "@/components/illustrations/spots";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -160,7 +161,7 @@ function MenuLink({ item, pathname, compact = false }: { item: MenuItem; pathnam
         className="group/link flex gap-3 rounded-2xl p-3 text-sm hover:bg-cream-100 focus-visible:bg-cream-100 data-[active]:bg-blush-50"
       >
         {item.icon && (
-          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-blush-50 text-brand-700 transition-colors group-hover/link:bg-brand-500 group-hover/link:text-white group-focus-visible/link:bg-brand-500 group-focus-visible/link:text-white">
+          <span className="shrink-0 transition-transform duration-200 group-hover/link:-rotate-6 group-focus-visible/link:-rotate-6 motion-reduce:transition-none">
             {item.icon}
           </span>
         )}
@@ -184,8 +185,12 @@ function PromoCard({ title, body }: { title: string; body: string }) {
     <div className="bg-deep relative flex flex-col justify-between overflow-hidden rounded-2xl p-5 text-white">
       <div aria-hidden className="bg-glow pointer-events-none absolute inset-0 opacity-80" />
       <div className="relative">
-        <CalendarCheck className="size-6 text-marigold-400" aria-hidden />
-        <p className="mt-3 font-display text-xl leading-tight font-semibold">{title}</p>
+        <div aria-hidden className="flex items-end">
+          <SpotTile icon={SpotCalendarClock} size="md" tone="cream" className="-rotate-6" />
+          <SpotTile icon={SpotMira} size="md" tone="marigold" className="-ml-2 mb-2 rotate-3" />
+          <SpotTile icon={SpotPayslip} size="md" className="-ml-2 rotate-[8deg]" />
+        </div>
+        <p className="mt-4 font-display text-xl leading-tight font-semibold">{title}</p>
         <p className="mt-2 text-sm text-white/75">{body}</p>
       </div>
       <NavigationMenuLink asChild>

@@ -1,4 +1,4 @@
-import { Building2, Eye, Landmark, Lock, Sparkles, type LucideIcon } from "lucide-react";
+import { SpotAiTrail, SpotAuditLog, SpotChart, SpotPayslip, SpotVault, type SpotIcon } from "@/components/illustrations/spots";
 
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { CtaBand } from "@/components/sections/CtaBand";
@@ -13,29 +13,29 @@ export const metadata = pageMetadata({
   path: "/about",
 });
 
-const PRINCIPLES: { icon: LucideIcon; title: string; body: string }[] = [
+const PRINCIPLES: { icon: SpotIcon; title: string; body: string }[] = [
   {
-    icon: Eye,
+    icon: SpotChart,
     title: "Every number on screen is real",
     body: "If a module is not built yet, AskMira says so. It never fills a screen with sample figures that a customer might mistake for their own.",
   },
   {
-    icon: Landmark,
+    icon: SpotAuditLog,
     title: "History does not change",
     body: "A new statutory rate is a new dated version. Last year's payroll recomputes exactly as it was, and the audit log can only be added to.",
   },
   {
-    icon: Lock,
+    icon: SpotVault,
     title: "Your data stays yours",
     body: "Each company's data is separated on every query, from the workspace in your sign-in — never from anything a browser sends.",
   },
   {
-    icon: Sparkles,
+    icon: SpotAiTrail,
     title: "AI shows its working",
     body: "No AI answer without its sources or its reasoning, no AI call without your admin's say-so, and a record of each one.",
   },
   {
-    icon: Building2,
+    icon: SpotPayslip,
     title: "Built for how India works",
     body: "PF, ESI, professional tax, LWF and TDS; biometric devices on the shop floor; payroll bureaus working alongside HR.",
   },
@@ -63,9 +63,7 @@ export default function AboutPage() {
             {PRINCIPLES.map(({ icon: Icon, title, body }, i) => (
               <StaggerItem key={title} className={i === 0 ? "lg:col-span-2" : undefined}>
                 <div className="h-full rounded-3xl border border-cream-200 bg-white p-7">
-                  <IconChip accent={i === 0 ? "red" : i % 2 ? "marigold" : "ink"}>
-                    <Icon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={Icon} accent={i === 0 ? "red" : i % 2 ? "marigold" : "ink"} />
                   <h3 className="mt-5 font-display text-xl font-semibold text-ink-950">{title}</h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>
                 </div>

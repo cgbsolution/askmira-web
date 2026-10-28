@@ -1,4 +1,6 @@
-import { Database, LayoutDashboard } from "lucide-react";
+import { Database } from "lucide-react";
+
+import { SpotDashboard } from "@/components/illustrations/spots";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/Reveal";
@@ -34,7 +36,7 @@ export default function PlatformPage() {
     <>
       <DarkHero
         eyebrow="Platform overview"
-        eyebrowIcon={<LayoutDashboard className="size-4" aria-hidden />}
+        eyebrowIcon={SpotDashboard}
         title="One employee record. Every HR process."
         lead="AskMira is twelve modules built on a single record of each person — so attendance feeds payroll, reviews feed increments, and nothing is typed twice."
         secondary={{ label: "See all features", href: "#all-features" }}

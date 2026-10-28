@@ -33,9 +33,7 @@ export function AppDetails() {
             <Reveal key={app.key}>
               <article id={app.key} className="scroll-mt-28 rounded-[2rem] border border-cream-200 bg-white p-6 sm:p-9">
                 <div className="flex flex-wrap items-start gap-4">
-                  <IconChip accent={app.accent}>
-                    <Icon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={Icon} accent={app.accent} />
                   <div className="min-w-0 flex-1">
                     <p className="text-xs font-semibold tracking-[0.08em] text-ink-400 uppercase">{app.kind}</p>
                     <h3 className="font-display text-display-4 font-semibold text-ink-950">{app.name}</h3>

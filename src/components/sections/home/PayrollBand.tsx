@@ -1,4 +1,4 @@
-import { BadgeCheck, Calculator, FileCheck2, Landmark, Lock } from "lucide-react";
+import { SpotBank, SpotCalculator, SpotCalendarLock, SpotChecklist, SpotFileSend, SpotTile } from "@/components/illustrations/spots";
 import Link from "next/link";
 
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "../primitives";
 
 const STEPS = [
-  { icon: Lock, title: "Lock attendance", body: "Regularisations decided, leave approved, the month frozen for payroll." },
-  { icon: Calculator, title: "Compute", body: "Salaries, arrears, loans and holds, with statutory deductions applied." },
-  { icon: BadgeCheck, title: "Review and approve", body: "New joiners, leavers and unusual changes checked before approval." },
-  { icon: Landmark, title: "Pay", body: "A bank file in your bank's format; payslips published to employees." },
-  { icon: FileCheck2, title: "File and post", body: "ECR, ESI, PT and TDS challans, 24Q and Form 16; the journal to your books." },
+  { icon: SpotCalendarLock, title: "Lock attendance", body: "Regularisations decided, leave approved, the month frozen for payroll." },
+  { icon: SpotCalculator, title: "Compute", body: "Salaries, arrears, loans and holds, with statutory deductions applied." },
+  { icon: SpotChecklist, title: "Review and approve", body: "New joiners, leavers and unusual changes checked before approval." },
+  { icon: SpotBank, title: "Pay", body: "A bank file in your bank's format; payslips published to employees." },
+  { icon: SpotFileSend, title: "File and post", body: "ECR, ESI, PT and TDS challans, 24Q and Form 16; the journal to your books." },
 ];
 
 export function PayrollBand() {
@@ -27,17 +27,13 @@ export function PayrollBand() {
           lead="Each step has to finish before the next can start — so mistakes surface while they are still cheap to fix."
         />
         <Stagger className="relative mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          <div aria-hidden className="absolute top-7 right-[10%] left-[10%] hidden h-px bg-gradient-to-r from-white/0 via-white/30 to-white/0 lg:block" />
+          <div aria-hidden className="absolute top-14 right-[10%] left-[10%] hidden h-px bg-gradient-to-r from-white/0 via-white/30 to-white/0 lg:block" />
           {STEPS.map(({ icon: Icon, title, body }, i) => (
             <StaggerItem key={title}>
               <div className="relative h-full rounded-3xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-sm">
-                <div className="flex items-center gap-3">
-                  <span className="grid size-14 place-items-center rounded-2xl bg-white text-brand-800 shadow-float">
-                    <Icon className="size-6" aria-hidden />
-                  </span>
-                  <span className="font-display text-3xl font-semibold text-white/25 tabular-nums">0{i + 1}</span>
-                </div>
-                <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                <SpotTile icon={Icon} size="lg" tone="cream" className="shadow-float" />
+                <p className="mt-5 text-xs font-semibold tracking-[0.08em] text-marigold-300 uppercase">Step {i + 1}</p>
+                <h3 className="mt-1 text-lg font-semibold">{title}</h3>
                 <p className="mt-2 text-[0.9375rem] leading-relaxed text-white/70">{body}</p>
               </div>
             </StaggerItem>

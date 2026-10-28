@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, Lock, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Lock } from "lucide-react";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/Reveal";
@@ -26,7 +26,7 @@ export function Hero() {
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 py-1 pr-3 pl-1 text-sm font-medium text-white/90 backdrop-blur-sm transition-colors outline-none hover:border-white/30 hover:bg-white/15 focus-visible:ring-[3px] focus-visible:ring-white/40"
           >
             <span className="inline-flex items-center gap-1 rounded-full bg-marigold-500 px-2 py-0.5 text-xs font-semibold text-ink-950">
-              <Sparkles className="size-3" aria-hidden /> New
+              New
             </span>
             One HRMS, connected to the business around it
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
@@ -35,7 +35,28 @@ export function Hero() {
 
         <Reveal delay={0.05}>
           <h1 className="mx-auto mt-7 max-w-5xl font-display text-display-1 font-semibold">
-            From punch-in to payslip, <span className="text-gradient-brand">HR that runs on one&nbsp;record</span>
+            From punch-in to payslip,{" "}
+            <span className="text-marigold-400">
+              HR that runs on{" "}
+              <span className="relative inline-block">
+                one&nbsp;record
+                <svg
+                  aria-hidden
+                  viewBox="0 0 200 14"
+                  preserveAspectRatio="none"
+                  className="absolute -bottom-1 left-0 h-2.5 w-full text-brand-400 sm:-bottom-2 sm:h-3.5"
+                >
+                  <path
+                    d="M4 10.5C48 4.5 104 3 196 6.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="5"
+                    strokeLinecap="round"
+                    vectorEffect="non-scaling-stroke"
+                  />
+                </svg>
+              </span>
+            </span>
           </h1>
         </Reveal>
         <Reveal delay={0.1}>

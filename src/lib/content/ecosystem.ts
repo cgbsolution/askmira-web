@@ -1,14 +1,4 @@
-import {
-  ChartNoAxesCombined,
-  Headset,
-  PackageCheck,
-  Receipt,
-  Sparkles,
-  UserSearch,
-  UsersRound,
-  type LucideIcon,
-} from "lucide-react";
-
+import { SpotBox, SpotDashboard, SpotHeadset, SpotMira, SpotReceipt, SpotRecruit, SpotTrend, type SpotIcon } from "@/components/illustrations/spots";
 import type { Accent } from "./types";
 
 /*
@@ -49,7 +39,7 @@ export type PlatformApp = {
   name: string;
   /** What it is, in a few words. */
   kind: string;
-  icon: LucideIcon;
+  icon: SpotIcon;
   accent: Accent;
   summary: string;
   /** Capabilities seen in the product's own code (or, for login-only apps, its public description). */
@@ -67,7 +57,7 @@ export const platformApps: PlatformApp[] = [
     key: "hrms",
     name: "AskMira HRMS",
     kind: "People, time and payroll",
-    icon: UsersRound,
+    icon: SpotDashboard,
     accent: "red",
     summary:
       "The core: one employee record for attendance, leave, Indian statutory payroll, performance, culture — and the department budgets that hiring is checked against.",
@@ -85,7 +75,7 @@ export const platformApps: PlatformApp[] = [
     key: "anytimehire",
     name: "AnytimeHire",
     kind: "AI recruitment and interviews",
-    icon: UserSearch,
+    icon: SpotRecruit,
     accent: "marigold",
     summary:
       "Finds and interviews candidates at scale: resume-to-job matching, AI avatar interviews with proctoring, and rubric scoring a recruiter can check.",
@@ -107,7 +97,7 @@ export const platformApps: PlatformApp[] = [
     key: "expense-genie",
     name: "Expense Genie",
     kind: "Expenses and reimbursements",
-    icon: Receipt,
+    icon: SpotReceipt,
     accent: "blush",
     summary:
       "Employees claim expenses in a chat, on the web or on their phone; rules and caps route each claim, and finance tracks reimbursement.",
@@ -129,7 +119,7 @@ export const platformApps: PlatformApp[] = [
     key: "helpdesk",
     name: "CGB Helpdesk",
     kind: "Tickets and IT assets",
-    icon: Headset,
+    icon: SpotHeadset,
     accent: "ink",
     summary:
       "Internal support: tickets with priorities and SLA timers, assignment and reassignment, and an asset register linked to the tickets raised about each asset.",
@@ -151,7 +141,7 @@ export const platformApps: PlatformApp[] = [
     key: "saleinx",
     name: "Saleinx",
     kind: "Sales CRM",
-    icon: ChartNoAxesCombined,
+    icon: SpotTrend,
     accent: "marigold",
     summary:
       "An operational CRM with built-in analytics, automation and team collaboration — where pipeline and forecast live.",
@@ -167,7 +157,7 @@ export const platformApps: PlatformApp[] = [
     key: "procureflow",
     name: "ProcureFlow",
     kind: "Procure-to-pay and vendors",
-    icon: PackageCheck,
+    icon: SpotBox,
     accent: "blush",
     summary:
       "Multi-tenant procure-to-pay for Indian manufacturing, with a buyer portal for your team and a separate portal for suppliers.",
@@ -183,7 +173,7 @@ export const platformApps: PlatformApp[] = [
     key: "mira",
     name: "Ask Mira",
     kind: "AI companion",
-    icon: Sparkles,
+    icon: SpotMira,
     accent: "marigold",
     summary:
       "Answers questions across AskMira and the connected apps — always as the person asking, with their permissions, and never approving anything on its own.",

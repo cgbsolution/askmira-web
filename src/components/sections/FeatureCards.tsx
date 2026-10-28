@@ -19,9 +19,7 @@ export function FeatureCard({ feature, className }: { feature: Feature; classNam
       )}
     >
       <div className="flex items-start justify-between">
-        <IconChip accent={feature.accent}>
-          <Icon aria-hidden />
-        </IconChip>
+        <IconChip icon={Icon} accent={feature.accent} />
         <ArrowUpRight className="size-5 text-ink-300 transition-colors group-hover:text-brand-700" aria-hidden />
       </div>
       <h3 className="mt-5 font-display text-xl font-semibold text-ink-950">{feature.name}</h3>

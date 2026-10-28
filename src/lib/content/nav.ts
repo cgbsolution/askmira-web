@@ -1,31 +1,18 @@
-import {
-  Blocks,
-  BookOpen,
-  LayoutDashboard,
-  Megaphone,
-  MessageCircleQuestion,
-  Network,
-  Newspaper,
-  Plug,
-  ShieldCheck,
-  Sparkles,
-  type LucideIcon,
-} from "lucide-react";
-
+import { SpotBook, SpotConnected, SpotDashboard, SpotMegaphone, SpotMira, SpotNews, SpotPlug, SpotQuestion, SpotQuote, SpotShield, type SpotIcon } from "@/components/illustrations/spots";
 import { platformApps } from "./ecosystem";
 import { features, FEATURE_GROUPS } from "./features";
 import { solutions } from "./solutions";
 
-export type NavLink = { title: string; href: string; description?: string; icon?: LucideIcon };
+export type NavLink = { title: string; href: string; description?: string; icon?: SpotIcon };
 
 /** Product: the platform-level pages. */
 export const productLinks: NavLink[] = [
-  { title: "Platform overview", href: "/platform", description: "How the HRMS modules fit together on one record.", icon: LayoutDashboard },
-  { title: "Connected platform", href: "/connected-platform", description: "HRMS plus hiring, expenses, support, sales and procurement.", icon: Network },
-  { title: "Ask Mira AI", href: "/ai", description: "Answers across HR and your connected apps, with guardrails.", icon: Sparkles },
-  { title: "Integrations", href: "/integrations", description: "Devices, banks, identity, AI assistants and an API.", icon: Plug },
-  { title: "Security & privacy", href: "/security", description: "Isolation, audit, sign-in controls and DPDP.", icon: ShieldCheck },
-  { title: "What's new", href: "/resources/product-updates", description: "Recent product updates.", icon: Megaphone },
+  { title: "Platform overview", href: "/platform", description: "How the HRMS modules fit together on one record.", icon: SpotDashboard },
+  { title: "Connected platform", href: "/connected-platform", description: "HRMS plus hiring, expenses, support, sales and procurement.", icon: SpotConnected },
+  { title: "Ask Mira AI", href: "/ai", description: "Answers across HR and your connected apps, with guardrails.", icon: SpotMira },
+  { title: "Integrations", href: "/integrations", description: "Devices, banks, identity, AI assistants and an API.", icon: SpotPlug },
+  { title: "Security & privacy", href: "/security", description: "Isolation, audit, sign-in controls and DPDP.", icon: SpotShield },
+  { title: "What's new", href: "/resources/product-updates", description: "Recent product updates.", icon: SpotMegaphone },
 ];
 
 /** The business apps around the HRMS, each with how it connects. */
@@ -51,10 +38,10 @@ export const solutionGroups = (["By role", "By size"] as const).map((group) => (
 }));
 
 export const resourceLinks: NavLink[] = [
-  { title: "Guides", href: "/resources", description: "Practical how-tos for payroll, attendance and setup.", icon: BookOpen },
-  { title: "Product updates", href: "/resources/product-updates", description: "What we have shipped recently.", icon: Newspaper },
-  { title: "FAQ", href: "/resources/faq", description: "Setup, payroll, security and AI questions.", icon: MessageCircleQuestion },
-  { title: "Customer stories", href: "/customers", description: "How teams run HR on AskMira.", icon: Blocks },
+  { title: "Guides", href: "/resources", description: "Practical how-tos for payroll, attendance and setup.", icon: SpotBook },
+  { title: "Product updates", href: "/resources/product-updates", description: "What we have shipped recently.", icon: SpotNews },
+  { title: "FAQ", href: "/resources/faq", description: "Setup, payroll, security and AI questions.", icon: SpotQuestion },
+  { title: "Customer stories", href: "/customers", description: "How teams run HR on AskMira.", icon: SpotQuote },
 ];
 
 export const footerColumns: { title: string; links: NavLink[] }[] = [

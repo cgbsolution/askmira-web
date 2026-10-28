@@ -1,15 +1,4 @@
-import {
-  Award,
-  CalendarDays,
-  ChartColumn,
-  Gift,
-  HeartHandshake,
-  IndianRupee,
-  ReceiptText,
-  UserPlus,
-  UsersRound,
-  type LucideIcon,
-} from "lucide-react";
+import { SpotCalendarClock, SpotChart, SpotHeart, SpotIdCard, SpotMedal, SpotPayslip, SpotReceipt, SpotRecruit, SpotRupee, type SpotIcon } from "@/components/illustrations/spots";
 
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { DemoSection } from "@/components/sections/DemoSection";
@@ -27,15 +16,15 @@ export const metadata = pageMetadata({
 });
 
 /** The modules a workspace can switch on — the same list as in Settings → Modules. */
-const MODULES: { icon: LucideIcon; name: string; body: string }[] = [
-  { icon: UsersRound, name: "Core HR", body: "Employee records, documents, org chart, onboarding and self-service." },
-  { icon: CalendarDays, name: "Leave & attendance", body: "Punch, shifts, overtime, timesheets, leave and holidays." },
-  { icon: IndianRupee, name: "Payroll", body: "Statutory payroll, payslips, bank files, filings and full and final." },
-  { icon: UserPlus, name: "Hiring", body: "Requisitions, careers site, pipeline, interviews and offers." },
-  { icon: HeartHandshake, name: "Culture", body: "Feed, shoutouts, awards, surveys, polls, clubs and Your Voice." },
-  { icon: ChartColumn, name: "Analytics", body: "Dashboards and the report library across modules." },
-  { icon: Gift, name: "Benefits", body: "Benefits and stock options for employees." },
-  { icon: Award, name: "Rewards", body: "Reward points that recognition adds up to." },
+const MODULES: { icon: SpotIcon; name: string; body: string }[] = [
+  { icon: SpotIdCard, name: "Core HR", body: "Employee records, documents, org chart, onboarding and self-service." },
+  { icon: SpotCalendarClock, name: "Leave & attendance", body: "Punch, shifts, overtime, timesheets, leave and holidays." },
+  { icon: SpotPayslip, name: "Payroll", body: "Statutory payroll, payslips, bank files, filings and full and final." },
+  { icon: SpotRecruit, name: "Hiring", body: "Requisitions, careers site, pipeline, interviews and offers." },
+  { icon: SpotHeart, name: "Culture", body: "Feed, shoutouts, awards, surveys, polls, clubs and Your Voice." },
+  { icon: SpotChart, name: "Analytics", body: "Dashboards and the report library across modules." },
+  { icon: SpotRupee, name: "Benefits", body: "Benefits and stock options for employees." },
+  { icon: SpotMedal, name: "Rewards", body: "Reward points that recognition adds up to." },
 ];
 
 const INCLUDED = [
@@ -62,7 +51,7 @@ export default function PricingPage() {
     <>
       <PageHero
         eyebrow="Pricing"
-        eyebrowIcon={<ReceiptText className="size-4" aria-hidden />}
+        eyebrowIcon={SpotReceipt}
         title="Pay for the HR you actually run"
         lead="AskMira is quoted per workspace, on the modules you switch on and your number of employees. Start with what hurts most and add modules later — the record underneath stays the same."
         primary={{ label: "Get a quote", href: "#demo" }}
@@ -81,9 +70,7 @@ export default function PricingPage() {
             {MODULES.map(({ icon: Icon, name, body }, i) => (
               <StaggerItem key={name}>
                 <div className="h-full rounded-3xl border border-cream-200 bg-white p-6">
-                  <IconChip accent={i % 3 === 0 ? "red" : i % 3 === 1 ? "marigold" : "blush"}>
-                    <Icon aria-hidden />
-                  </IconChip>
+                  <IconChip icon={Icon} accent={i % 3 === 0 ? "red" : i % 3 === 1 ? "marigold" : "blush"} />
                   <h3 className="mt-5 text-lg font-semibold text-ink-950">{name}</h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{body}</p>
                 </div>

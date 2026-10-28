@@ -1,3 +1,4 @@
+import { SpotTile } from "@/components/illustrations/spots";
 import { appLinks, featureGroups, productLinks, resourceLinks, solutionGroups, type NavLink } from "@/lib/content/nav";
 
 import { HeaderBar } from "./HeaderBar";
@@ -9,7 +10,7 @@ function toItem(link: NavLink): MenuItem {
     title: link.title,
     href: link.href,
     description: link.description,
-    icon: Icon ? <Icon className="size-[1.125rem]" aria-hidden /> : undefined,
+    icon: Icon ? <SpotTile icon={Icon} size="sm" /> : undefined,
   };
 }
 

@@ -1,12 +1,13 @@
-import { CalendarCheck, CheckCircle2, MessagesSquare, Settings2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
+import { SpotCalendarClock, SpotChat, SpotDashboard, SpotTile } from "@/components/illustrations/spots";
 import { DemoForm } from "@/components/forms/DemoForm";
 import { Reveal } from "@/components/motion/Reveal";
 
 const AGENDA = [
-  { icon: MessagesSquare, text: "We start with how you run HR and payroll today." },
-  { icon: Settings2, text: "Then walk through the parts of AskMira that fit — not a fixed script." },
-  { icon: CalendarCheck, text: "You leave with answers on setup, data import and pricing." },
+  { icon: SpotChat, text: "We start with how you run HR and payroll today." },
+  { icon: SpotDashboard, text: "Then walk through the parts of AskMira that fit — not a fixed script." },
+  { icon: SpotCalendarClock, text: "You leave with answers on setup, data import and pricing." },
 ];
 
 /** The closing conversion section: the pitch on the left, the working form on the right. */
@@ -33,9 +34,7 @@ export function DemoSection({
               <ul className="mt-9 grid gap-5">
                 {AGENDA.map(({ icon: Icon, text }) => (
                   <li key={text} className="flex items-start gap-4">
-                    <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-white/10 text-marigold-300">
-                      <Icon className="size-5" aria-hidden />
-                    </span>
+                    <SpotTile icon={Icon} size="md" tone="cream" />
                     <span className="pt-2 text-[0.9875rem] text-white/85">{text}</span>
                   </li>
                 ))}

@@ -1,4 +1,6 @@
-import { CircleCheck, Hammer, Network } from "lucide-react";
+import { CircleCheck, Hammer } from "lucide-react";
+
+import { SpotConnected } from "@/components/illustrations/spots";
 
 import { Reveal } from "@/components/motion/Reveal";
 import { BudgetIntelligenceMock, MiraBudgetMock } from "@/components/product/mock-budget";
@@ -39,7 +41,7 @@ export default function ConnectedPlatformPage() {
     <>
       <DarkHero
         eyebrow="The AskMira platform"
-        eyebrowIcon={<Network className="size-4" aria-hidden />}
+        eyebrowIcon={SpotConnected}
         title="Your HRMS, connected to the rest of the business"
         lead="AskMira runs people, time and payroll. Around it sit our apps for hiring, expenses and support that already connect to it, and the sales and procurement apps we are connecting next — one sign-in, one employee record, and Ask Mira across all of it."
         secondary={{ label: "Follow one hire end to end", href: "#journey" }}

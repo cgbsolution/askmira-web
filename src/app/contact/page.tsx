@@ -1,4 +1,6 @@
-import { LifeBuoy, Mail, MapPin, MessageSquareText, Phone, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+import { SpotChat, SpotHeadset, SpotShield, SpotTile } from "@/components/illustrations/spots";
 import Link from "next/link";
 
 import { DemoForm } from "@/components/forms/DemoForm";
@@ -19,7 +21,7 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        eyebrowIcon={<MessageSquareText className="size-4" aria-hidden />}
+        eyebrowIcon={SpotChat}
         title="Talk to the AskMira team"
         lead="Questions about the product, pricing, a partnership or a security review — send us a note and we will reply by email."
         primary={null}
@@ -31,7 +33,7 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={0.1} className="grid content-start gap-4">
             <div className="rounded-3xl border border-cream-200 bg-white p-7">
-              <LifeBuoy className="size-6 text-brand-700" aria-hidden />
+              <SpotTile icon={SpotHeadset} size="lg" />
               <h2 className="mt-4 font-display text-xl font-semibold text-ink-950">Already using AskMira?</h2>
               <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">
                 Sign in — every page has a short help guide, and your HR team can answer workspace questions.
@@ -44,7 +46,7 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="rounded-3xl border border-cream-200 bg-white p-7">
-              <ShieldCheck className="size-6 text-brand-700" aria-hidden />
+              <SpotTile icon={SpotShield} size="lg" />
               <h2 className="mt-4 font-display text-xl font-semibold text-ink-950">Security review?</h2>
               <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">
                 Choose &ldquo;Something else&rdquo; above and tell us about your questionnaire. Our{" "}

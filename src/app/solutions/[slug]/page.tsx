@@ -8,7 +8,7 @@ import { DemoSection } from "@/components/sections/DemoSection";
 import { FeatureCards } from "@/components/sections/FeatureCards";
 import { FeatureSplit } from "@/components/sections/FeatureSplit";
 import { PageHero } from "@/components/sections/PageHero";
-import { MockStage, SectionHeading, type PanelTone } from "@/components/sections/primitives";
+import { IconChip, MockStage, type PanelTone, SectionHeading } from "@/components/sections/primitives";
 import { featureBySlug } from "@/lib/content/features";
 import { solutionBySlug, solutions } from "@/lib/content/solutions";
 import { pageMetadata } from "@/lib/seo";
@@ -35,7 +35,6 @@ export default async function SolutionPage({ params }: Props) {
   const { slug } = await params;
   const solution = solutionBySlug(slug);
   if (!solution) notFound();
-  const Icon = solution.icon;
   const heroIsPanel = PANEL_MOCKUPS.has(solution.heroMockup);
 
   return (
@@ -43,8 +42,8 @@ export default async function SolutionPage({ params }: Props) {
       <PageHero
         layout="split"
         tone="marigold"
-        eyebrow={`For ${solution.label.toLowerCase()}`}
-        eyebrowIcon={<Icon className="size-4" aria-hidden />}
+        eyebrow={`For ${solution.label.replace(/^[A-Z](?=[a-z])/, (c) => c.toLowerCase())}`}
+        eyebrowIcon={solution.icon}
         title={solution.headline}
         lead={solution.intro}
         secondary={{ label: "What changes", href: "#outcomes" }}
@@ -62,8 +61,8 @@ export default async function SolutionPage({ params }: Props) {
             {solution.pains.map((pain, i) => (
               <StaggerItem key={pain.title}>
                 <div className="h-full rounded-3xl border border-cream-200 bg-white p-7">
-                  <span className="font-display text-4xl font-semibold text-brand-200 tabular-nums">0{i + 1}</span>
-                  <h3 className="mt-4 text-lg font-semibold text-ink-950">{pain.title}</h3>
+                  <IconChip icon={pain.icon} accent={i === 1 ? "marigold" : "red"} />
+                  <h3 className="mt-5 text-lg font-semibold text-ink-950">{pain.title}</h3>
                   <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{pain.body}</p>
                 </div>
               </StaggerItem>
