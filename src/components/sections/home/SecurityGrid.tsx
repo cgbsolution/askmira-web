@@ -1,6 +1,6 @@
 import { SpotAiTrail, SpotAuditLog, SpotIdLock, SpotKey, SpotPrivacy, SpotVault, type SpotIcon } from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { AuditMock } from "@/components/product/mock-people";
+import { ProductMockup } from "@/components/product/registry";
 
 import { ArrowLink, Eyebrow, IconChip } from "../primitives";
 
@@ -51,7 +51,7 @@ export function SecurityGrid() {
             AskMira is built — not settings someone has to remember to turn on.
           </p>
           <div className="mt-8 hidden max-w-md lg:block">
-            <AuditMock />
+            <ProductMockup name="audit" />
           </div>
           <ArrowLink href="/security" className="mt-8">
             Security and privacy in detail

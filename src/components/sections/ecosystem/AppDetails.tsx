@@ -1,7 +1,9 @@
 import { Check, Link2 } from "lucide-react";
 
 import { Reveal } from "@/components/motion/Reveal";
+import { AppWindow } from "@/components/product/AppWindow";
 import { platformApps } from "@/lib/content/ecosystem";
+import { appScreens } from "@/lib/content/screens";
 
 import { IconChip } from "../primitives";
 import { ConnectionBadge } from "./ConnectionBadge";
@@ -11,7 +13,7 @@ const DETAILED = platformApps.filter((a) => a.key !== "hrms" && a.key !== "mira"
 /** Each connected app: what it does, and how it joins the HRMS today. Anchored for the menus. */
 export function AppDetails() {
   return (
-    <div className="grid gap-10 lg:grid-cols-[14rem_1fr] lg:gap-14">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[14rem_1fr] lg:gap-14">
       <nav aria-label="Apps on this page" className="hidden lg:block">
         <ul className="sticky top-28 grid gap-1 border-l border-cream-300">
           {DETAILED.map((app) => (
@@ -26,7 +28,7 @@ export function AppDetails() {
           ))}
         </ul>
       </nav>
-      <div className="grid gap-6">
+      <div className="grid min-w-0 grid-cols-1 gap-6">
         {DETAILED.map((app) => {
           const Icon = app.icon;
           return (
@@ -40,7 +42,14 @@ export function AppDetails() {
                   </div>
                   <ConnectionBadge status={app.connection.status} />
                 </div>
-                <p className="mt-5 text-lead text-ink-700">{app.summary}</p>
+                <p className="mt-4 text-[0.9375rem] text-ink-700 sm:text-base">{app.summary}</p>
+                {app.key in appScreens && (
+                  <AppWindow
+                    screen={appScreens[app.key as keyof typeof appScreens]}
+                    className="mt-6"
+                    sizes="(min-width: 1280px) 820px, 100vw"
+                  />
+                )}
                 <div className="mt-6 grid gap-6 md:grid-cols-[1.2fr_1fr]">
                   <ul className="grid content-start gap-2.5">
                     {app.capabilities.map((c) => (

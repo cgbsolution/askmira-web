@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { SpotCalendarClock, SpotChart, SpotIdCard, SpotPayslip, SpotTile } from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { PayslipMock } from "@/components/product/mock-pay";
+import { ProductMockup } from "@/components/product/registry";
 import { featureBySlug } from "@/lib/content/features";
 import type { Feature } from "@/lib/content/types";
 import { cn } from "@/lib/utils";
@@ -57,7 +57,7 @@ const TILES: Tile[] = [
     variant: "deep",
     extra: (
       <div className="mt-8 -mb-10 max-w-sm translate-y-2 transition-transform duration-500 group-hover:translate-y-0">
-        <PayslipMock />
+        <ProductMockup name="payslip" className="shadow-frame" />
       </div>
     ),
   },

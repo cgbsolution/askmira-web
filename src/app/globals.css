@@ -181,6 +181,14 @@
   --color-info-50: #ebf3f7;
   --color-info-600: #2d6a8a;
 
+  /* macOS window chrome around real product screenshots. */
+  --color-mac-close: #ff5f57;
+  --color-mac-minimise: #febc2e;
+  --color-mac-zoom: #28c840;
+  --color-mac-bar: #f3f0ee;
+  --color-mac-bar-dark: #26232a;
+  --color-mac-body: #1c1a1f;
+
   --breakpoint-xs: 480px;
 }
 

@@ -1,10 +1,12 @@
 import { ArrowRight, CircleCheck, Hammer } from "lucide-react";
+import Link from "next/link";
 
 import { SpotTile } from "@/components/illustrations/spots";
-import Link from "next/link";
+import { AppWindow } from "@/components/product/AppWindow";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { appByKey, journey } from "@/lib/content/ecosystem";
+import { journeyScreens } from "@/lib/content/screens";
 import { cn } from "@/lib/utils";
 
 import { ConnectionBadge } from "./ConnectionBadge";
@@ -22,7 +24,7 @@ const DOT = {
  */
 export function Journey() {
   return (
-    <Tabs defaultValue={journey[0]!.id} orientation="vertical" className="gap-6 lg:flex-row lg:gap-10">
+    <Tabs defaultValue={(journey.find((j) => journeyScreens[j.id]) ?? journey[0]!).id} orientation="vertical" className="gap-6 lg:flex-row lg:gap-10">
       <TabsList
         aria-label="Steps of the journey"
         className="mask-fade-x -mx-4 flex h-auto w-[calc(100%+2rem)] shrink-0 justify-start gap-2 overflow-x-auto bg-transparent p-1 px-4 [scrollbar-width:none] sm:mx-0 sm:w-full sm:px-1 lg:w-80 lg:flex-col lg:items-stretch lg:gap-1 lg:overflow-visible lg:[mask-image:none]"
@@ -60,7 +62,7 @@ export function Journey() {
               value={step.id}
               className="duration-500 data-[state=active]:animate-in data-[state=active]:fade-in-0 data-[state=active]:slide-in-from-bottom-1"
             >
-              <div className="rounded-[2rem] border border-cream-200 bg-white p-6 sm:p-9">
+              <div className="rounded-[2rem] border border-cream-200 bg-white p-5 sm:p-8">
                 <div className="flex flex-wrap items-center gap-3">
                   <SpotTile icon={app.icon} size="lg" />
                   <div>
@@ -71,14 +73,15 @@ export function Journey() {
                   </div>
                   <ConnectionBadge status={step.status} className="ml-auto" />
                 </div>
-                <p className="mt-5 text-lead text-ink-700">{step.summary}</p>
+                <p className="mt-4 text-[0.9375rem] text-ink-700 sm:text-base">{step.summary}</p>
 
-                <figure className="mt-6 rounded-2xl bg-marigold-50 p-5">
-                  <figcaption className="text-[0.6875rem] font-semibold tracking-[0.08em] text-marigold-800 uppercase">
-                    In the example · sample company
-                  </figcaption>
-                  <p className="mt-2 font-display text-xl leading-snug font-medium text-ink-900">{step.example}</p>
-                </figure>
+                {journeyScreens[step.id] ? (
+                  <AppWindow screen={journeyScreens[step.id]!} className="mt-6" sizes="(min-width: 1280px) 760px, 100vw" />
+                ) : (
+                  <div className="mt-6 grid place-items-center rounded-xl py-10 border border-dashed border-cream-300 bg-cream-50 p-6 text-center text-sm text-ink-500">
+                    No screen yet — {app.name}&apos;s link to AskMira is planned.
+                  </div>
+                )}
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   <div>

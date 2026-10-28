@@ -1,13 +1,25 @@
-import { ArrowRight, CheckCircle2, Lock } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/Reveal";
-import { DashboardMock } from "@/components/product/mock-dashboard";
-import { MiraChatMock } from "@/components/product/mock-platform";
-import { MockPanel } from "@/components/product/primitives";
+import { AppWindow, MacBook } from "@/components/product/AppWindow";
 import { Button } from "@/components/ui/button";
+import { screens, type Screen } from "@/lib/content/screens";
+import { cn } from "@/lib/utils";
 
 const PROOF = ["Indian statutory payroll built in", "Works on any phone", "AI off until you switch it on"];
+
+/** A small window of a connected app, floating beside the laptop. */
+function FloatingApp({ screen, label, className }: { screen: Screen; label: string; className?: string }) {
+  return (
+    <div className={cn("animate-float absolute hidden w-[17rem] lg:block xl:w-[19rem]", className)}>
+      <AppWindow screen={screen} chrome="slim" sizes="320px" className="shadow-frame" />
+      <span className="absolute -top-3 left-3 rounded-full bg-white px-2.5 py-1 font-sans text-[11px] font-semibold text-ink-900 shadow-card">
+        {label}
+      </span>
+    </div>
+  );
+}
 
 export function Hero() {
   return (
@@ -87,28 +99,22 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.25} y={48} amount={0.05} className="relative mx-auto mt-14 max-w-6xl pb-16 text-left sm:mt-16 sm:pb-24">
-          <div className="relative rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-2 shadow-frame backdrop-blur-sm sm:p-3">
-            <DashboardMock className="rounded-[1.25rem] border-0 shadow-none" />
-          </div>
+          <MacBook screen={screens.amHome} priority sizes="(min-width: 1280px) 1000px, 100vw" />
 
-          <MockPanel
-            label="Attendance for October is locked and ready for payroll"
-            className="animate-float absolute top-[58%] -left-6 hidden w-60 [animation-delay:-2s] lg:block xl:-left-14"
-          >
-            <div className="flex items-center gap-3 p-3">
-              <span className="grid size-9 place-items-center rounded-xl bg-success-50 text-success-600">
-                <Lock className="size-4" />
-              </span>
-              <div>
-                <p className="text-xs font-semibold">October attendance locked</p>
-                <p className="text-[10px] text-ink-400">248 people · ready for payroll</p>
-              </div>
-            </div>
-          </MockPanel>
-
-          <div className="animate-float absolute top-[34%] -right-4 hidden w-[19rem] lg:block xl:-right-16">
-            <MiraChatMock />
-          </div>
+          <FloatingApp
+            screen={screens.athPipeline}
+            label="AnytimeHire"
+            className="top-[40%] -left-8 [animation-delay:-2s] xl:-left-20"
+          />
+          <FloatingApp screen={screens.egDash} label="Expense Genie" className="top-[16%] -right-6 xl:-right-20" />
+          <FloatingApp
+            screen={screens.hdTickets}
+            label="CGB Helpdesk"
+            className="top-[62%] -right-2 [animation-delay:-4s] xl:-right-12"
+          />
+          <p className="mt-6 text-center text-xs text-white/50">
+            Real screens from AskMira and the apps connected to it, in a demo workspace with sample data.
+          </p>
         </Reveal>
       </div>
     </section>

@@ -1,7 +1,9 @@
 import { SpotAuditLog, SpotBook, SpotBuildings, SpotCalendar, SpotChart, SpotConnected, SpotDevice, SpotLock, SpotMira, SpotPerson, SpotPin, SpotPlane, SpotPlug, SpotPrivacy, SpotTeam, SpotTile, SpotToggle, type SpotIcon } from "@/components/illustrations/spots";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { MiraChatMock } from "@/components/product/mock-platform";
+import { AppWindow } from "@/components/product/AppWindow";
+import { ProductMockup } from "@/components/product/registry";
+import { screens } from "@/lib/content/screens";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { DarkHero } from "@/components/sections/DarkHero";
 import { MiraAcross } from "@/components/sections/ecosystem/MiraAcross";
@@ -70,9 +72,7 @@ export default function AiPage() {
         lead="Ask Mira answers questions from your own policies and records, quotes where the answer came from, and never sees more than the person asking."
         secondary={{ label: "The rules Mira follows", href: "#guardrails" }}
         visual={
-          <div className="mx-auto max-w-md">
-            <MiraChatMock />
-          </div>
+          <AppWindow screen={screens.amMira} priority className="mx-auto max-w-5xl shadow-frame" />
         }
       />
 
@@ -127,7 +127,7 @@ export default function AiPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <MockStage tone="marigold">
-              <MiraChatMock className="mx-auto w-full max-w-md" />
+              <ProductMockup name="mira" />
             </MockStage>
           </Reveal>
         </div>

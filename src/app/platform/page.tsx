@@ -4,7 +4,8 @@ import { SpotDashboard } from "@/components/illustrations/spots";
 import Link from "next/link";
 
 import { Reveal } from "@/components/motion/Reveal";
-import { DashboardMock } from "@/components/product/mock-dashboard";
+import { MacBook } from "@/components/product/AppWindow";
+import { screens } from "@/lib/content/screens";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { DarkHero } from "@/components/sections/DarkHero";
 import { FeatureCards } from "@/components/sections/FeatureCards";
@@ -41,9 +42,7 @@ export default function PlatformPage() {
         lead="AskMira is twelve modules built on a single record of each person — so attendance feeds payroll, reviews feed increments, and nothing is typed twice."
         secondary={{ label: "See all features", href: "#all-features" }}
         visual={
-          <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.06] p-2 shadow-frame sm:p-3">
-            <DashboardMock className="rounded-[1.25rem] border-0 shadow-none" />
-          </div>
+          <MacBook screen={screens.amHome} priority />
         }
       />
 

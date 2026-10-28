@@ -1,7 +1,7 @@
 import { SpotShield } from "@/components/illustrations/spots";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { AccessMock, AuditMock } from "@/components/product/mock-people";
+import { ProductMockup } from "@/components/product/registry";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { FaqList } from "@/components/sections/FaqList";
 import { SECURITY_POINTS } from "@/components/sections/home/SecurityGrid";
@@ -27,7 +27,7 @@ const AREAS = [
       "Payroll bureaus get time-limited access the client grants, and their actions are recorded as theirs",
       "Workspace settings are reserved for admins",
     ],
-    visual: <AccessMock />,
+    visual: <ProductMockup name="access" />,
   },
   {
     eyebrow: "Accountability",
@@ -38,7 +38,7 @@ const AREAS = [
       "Payroll rule sets are versioned by date; history is never overwritten",
       "Money is stored as exact decimals, never floating point",
     ],
-    visual: <AuditMock className="mx-auto w-full max-w-md" />,
+    visual: <ProductMockup name="audit" />,
   },
 ];
 

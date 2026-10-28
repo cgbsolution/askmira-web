@@ -1,42 +1,24 @@
 import { SpotCalendarClock, SpotChart, SpotDashboard, SpotPayslip, SpotRecruit, SpotTeam, SpotTile, type SpotIcon } from "@/components/illustrations/spots";
-import { AnalyticsMock } from "@/components/product/lazy";
-import { DashboardMock } from "@/components/product/mock-dashboard";
-import { PayrollMock, PayslipMock } from "@/components/product/mock-pay";
-import { DirectoryMock } from "@/components/product/mock-people";
-import { PipelineMock } from "@/components/product/mock-talent";
-import { AttendanceMock, LeaveMock } from "@/components/product/mock-time";
-import { MockPanel, Person, Status } from "@/components/product/primitives";
+import { AppWindow } from "@/components/product/AppWindow";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { screens, type Screen } from "@/lib/content/screens";
 
 import { SectionHeading } from "../primitives";
 
-function ProfileCard() {
+/** A real screen, with an optional second window overlapping its corner. */
+function Shot({ main, inset }: { main: Screen; inset?: Screen }) {
   return (
-    <MockPanel label="Preview of an employee's profile card, with sample data" className="w-64">
-      <div className="p-4">
-        <div className="flex items-center gap-3">
-          <Person name="Meera Nair" size="lg" />
-          <div>
-            <p className="text-sm font-semibold">Meera Nair</p>
-            <p className="text-[11px] text-ink-500">Product Designer · Design</p>
-          </div>
-        </div>
-        <div className="mt-3 flex flex-wrap gap-1">
-          <Status tone="success">Active</Status>
-          <Status tone="muted">Bengaluru HQ</Status>
-        </div>
-        <div className="mt-3 grid grid-cols-2 gap-2 text-[10px]">
-          <div>
-            <p className="text-ink-400">Reports to</p>
-            <p className="font-medium">Rahul Iyer</p>
-          </div>
-          <div>
-            <p className="text-ink-400">Joined</p>
-            <p className="font-medium">12 Jun 2023</p>
-          </div>
-        </div>
-      </div>
-    </MockPanel>
+    <div className="relative xl:pb-10">
+      <AppWindow screen={main} className="shadow-frame" sizes="(min-width: 1280px) 820px, 100vw" />
+      {inset && (
+        <AppWindow
+          screen={inset}
+          chrome="slim"
+          className="absolute -right-6 -bottom-2 hidden w-[42%] shadow-frame xl:block"
+          sizes="360px"
+        />
+      )}
+    </div>
   );
 }
 
@@ -52,63 +34,42 @@ const TOUR: {
     icon: SpotDashboard,
     title: "HR admin home",
     body: "Headcount, approvals, today's punch and payroll status the moment you sign in.",
-    render: () => <DashboardMock />,
+    render: () => <Shot main={screens.amHome} inset={screens.amApprovals} />,
   },
   {
     value: "people",
     icon: SpotTeam,
     title: "Directory and profiles",
     body: "Search everyone, filter by team or place, and open a complete profile.",
-    render: () => (
-      <div className="relative">
-        <DirectoryMock />
-        <div className="absolute -right-6 -bottom-8 hidden xl:block">
-          <ProfileCard />
-        </div>
-      </div>
-    ),
+    render: () => <Shot main={screens.amDirectory} inset={screens.amProfile} />,
   },
   {
     value: "attendance",
     icon: SpotCalendarClock,
     title: "Attendance and leave",
     body: "A month at a glance, today's geofenced punch, and leave approvals with the team's week.",
-    render: () => (
-      <div className="relative">
-        <AttendanceMock />
-        <div className="absolute -right-6 -bottom-10 hidden w-80 xl:block">
-          <LeaveMock />
-        </div>
-      </div>
-    ),
+    render: () => <Shot main={screens.amAttendance} inset={screens.amLeave} />,
   },
   {
     value: "payroll",
     icon: SpotPayslip,
     title: "Payroll run",
     body: "Step by step from locked attendance to approval, with statutory totals and exceptions.",
-    render: () => (
-      <div className="relative">
-        <PayrollMock />
-        <div className="absolute -right-6 -bottom-10 hidden w-72 xl:block">
-          <PayslipMock />
-        </div>
-      </div>
-    ),
+    render: () => <Shot main={screens.amPayrun} inset={screens.amPayslip} />,
   },
   {
     value: "hiring",
     icon: SpotRecruit,
     title: "Recruitment pipeline",
     body: "Every candidate by stage, with sources, interview slots and offers.",
-    render: () => <PipelineMock />,
+    render: () => <Shot main={screens.amCandidates} />,
   },
   {
     value: "analytics",
     icon: SpotChart,
     title: "Analytics",
     body: "Headcount, movement, attrition and cost — from the records payroll uses.",
-    render: () => <AnalyticsMock />,
+    render: () => <Shot main={screens.amReports} inset={screens.amHiringAnalytics} />,
   },
 ];
 
@@ -123,7 +84,7 @@ export function Showcase() {
           tone="dark"
           eyebrow="Product tour"
           title="See the screens your team will use every day"
-          lead="Real AskMira screens, rebuilt here with sample data. Pick one to look closer."
+          lead="The real AskMira screens, from a demo workspace with sample data."
         />
 
         <Tabs defaultValue="dashboard" orientation="vertical" className="mt-12 gap-8 sm:mt-16 lg:flex-row lg:gap-12">

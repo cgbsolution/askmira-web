@@ -1,6 +1,6 @@
 import { SpotBook, SpotConnected, SpotToggle } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
-import { MiraChatMock } from "@/components/product/mock-platform";
+import { ProductMockup } from "@/components/product/registry";
 
 import { ArrowLink, Eyebrow, IconChip, MockStage } from "../primitives";
 
@@ -56,7 +56,7 @@ export function MiraSection() {
         </div>
         <Reveal delay={0.1}>
           <MockStage tone="marigold">
-            <MiraChatMock className="mx-auto w-full max-w-md" />
+            <ProductMockup name="mira" />
           </MockStage>
         </Reveal>
       </div>
