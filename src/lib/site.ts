@@ -19,6 +19,8 @@ type SiteConfig = {
   contact: { email: string; phone: string; address: string };
   social: { linkedin: string; x: string; youtube: string; instagram: string };
   legalName: string;
+  /** The person who answers privacy questions and grievances (DPDP s.8(9)). */
+  grievanceOfficer: { name: string; email: string };
 };
 
 export const siteConfig: SiteConfig = {
@@ -49,6 +51,15 @@ export const siteConfig: SiteConfig = {
 
   /** The legal entity named in the copyright line and the legal pages. */
   legalName: "",
+
+  /**
+   * Named on /privacy. Set by environment so the real person is decided at
+   * launch, not invented here; until then the page says none is named yet.
+   */
+  grievanceOfficer: {
+    name: process.env.NEXT_PUBLIC_GRIEVANCE_OFFICER_NAME ?? "",
+    email: process.env.NEXT_PUBLIC_GRIEVANCE_OFFICER_EMAIL ?? "",
+  },
 };
 
 export const signInUrl = `${siteConfig.appUrl}/signin`;
