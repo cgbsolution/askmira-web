@@ -47,8 +47,8 @@ Differences on purpose:
 - **No invented proof.** We have no approved customer logos, testimonials, ratings, analyst badges
   or ROI figures, so those slots carry what is verifiable instead: product facts (modules,
   statutory coverage, security controls) and clearly labelled placeholders that are easy to fill.
-- **Integration honesty.** Each integration carries a status: *Available*, *In pilot* (built, not
-  yet verified against a live partner account) or *Planned*, read from the backend's own notes.
+- **Integration honesty.** The site lists only integrations and connections the product ships,
+  checked against its code; nothing is shown as planned or in progress.
 - **India first.** Payroll content speaks to PF, ESI, PT, TDS, Form 16 and bank files, which is
   what the product actually ships.
 - **No self sign-up.** Every CTA leads to a demo request; "Sign in" goes to the portal.
@@ -76,8 +76,7 @@ reset roughly every screen, the same cadence as the reference.
 The reference's pictures are drawn for each topic, in flat brand colours, on a soft tile. Ours
 are too: `src/components/illustrations/spots.tsx` holds about 60 spot illustrations on a 48×48
 grid, in wine, AskMira Red, soft pink and a touch of marigold, with a thin "cut" line wherever
-shapes overlap. The tones live in `globals.css` (`.spot`); `.spot-muted` greys a picture back
-for "planned" items.
+shapes overlap. The tones live in `globals.css` (`.spot`); `.spot-muted` greys a picture back.
 
 - Use `SpotTile` (or `IconChip`, which wraps it) for any picture on a card, menu item, list or
   hero eyebrow (`EyebrowSpot`). Pick the drawing that shows the idea, not the nearest generic one.

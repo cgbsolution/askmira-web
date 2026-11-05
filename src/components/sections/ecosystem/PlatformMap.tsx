@@ -10,9 +10,9 @@ import { ConnectionBadge } from "./ConnectionBadge";
 const LEFT: AppKey[] = ["anytimehire", "expense-genie", "helpdesk"];
 const RIGHT: AppKey[] = ["saleinx", "procureflow", "mira"];
 
-/** The line from an app to the HRMS: solid when connected, dashed when planned. */
-function line(status: ConnectionStatus) {
-  return status === "planned" ? "border-dashed border-white/25" : "border-solid border-marigold-400/70";
+/** The line from an app to the HRMS. */
+function line(_status: ConnectionStatus) {
+  return "border-solid border-marigold-400/70";
 }
 
 function AppNode({ appKey, side }: { appKey: AppKey; side: "left" | "right" }) {
@@ -31,7 +31,7 @@ function AppNode({ appKey, side }: { appKey: AppKey; side: "left" | "right" }) {
           line(app.connection.status),
         )}
       />
-      <SpotTile icon={app.icon} size="md" tone={app.connection.status === "planned" ? "muted" : "cream"} />
+      <SpotTile icon={app.icon} size="md" tone="cream" />
       <span className="min-w-0">
         <span className="block font-semibold">{app.name}</span>
         <span className="block text-[0.8125rem] text-white/60">{app.kind}</span>
@@ -43,7 +43,7 @@ function AppNode({ appKey, side }: { appKey: AppKey; side: "left" | "right" }) {
 
 /**
  * The HRMS at the centre, the business apps around it. Lines show what is
- * connected (solid) and what is planned (dashed).
+ * connected, each by a solid line.
  */
 export function PlatformMap() {
   const hrms = appByKey("hrms");

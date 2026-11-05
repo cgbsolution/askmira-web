@@ -203,6 +203,42 @@ export type ProductUpdate = {
 /** Product updates, newest first, from the build log. */
 export const productUpdates: ProductUpdate[] = [
   {
+    date: "2026-11-05",
+    title: "Approvals in Slack and Microsoft Teams",
+    body: "Connect your own Slack app or Teams bot under Settings → Notifications. People get the requests waiting on them as direct messages, with the same Approve and Reject buttons as the approval email, and can switch any event off.",
+    tags: ["Workflows", "Integrations"],
+  },
+  {
+    date: "2026-11-05",
+    title: "Department budgets, with the year's spend beside them",
+    body: "Employees → Positions → Budget now shows each department's approved positions and cost beside payroll paid, Expense Genie claims, ProcureFlow purchasing and the Saleinx pipeline. Ask Mira answers “can we afford two more hires?” from the same figures.",
+    tags: ["Core HR", "AI"],
+  },
+  {
+    date: "2026-11-05",
+    title: "Hiring, expenses and purchasing joined up across the apps",
+    body: "An approved requisition opens its job in AnytimeHire, and hired candidates come back to Add employees with their details filled in. Approved Expense Genie claims are paid with salary. Equipment received in ProcureFlow is added to the asset register.",
+    tags: ["Integrations", "Payroll"],
+  },
+  {
+    date: "2026-11-05",
+    title: "The BI connector delivers",
+    body: "Nightly CSV files in your own S3-compatible bucket, or a private feed link for Power BI, Excel and Looker Studio. Every delivery is recorded with its field list.",
+    tags: ["Analytics"],
+  },
+  {
+    date: "2026-11-03",
+    title: "Saleinx and ProcureFlow connect to AskMira",
+    body: "Both connect in one click. Deals, the pipeline and Wons to approve, and procurement approvals, orders, invoices and budgets show inside AskMira. Ask Mira adds leads, moves deals, approves in ProcureFlow and books won orders, once you confirm.",
+    tags: ["Integrations", "AI"],
+  },
+  {
+    date: "2026-10-31",
+    title: "Ask Mira: charts, conversations and your choice of AI",
+    body: "Ask for any figure or trend over your data and get a chart with the table beside it. Mira holds a conversation, applies for leave and raises requests once you confirm, and runs on Anthropic, OpenAI, Gemini or your own Ollama server.",
+    tags: ["AI"],
+  },
+  {
     date: "2026-10-26",
     title: "A new look, from the AskMira brand kit",
     body: "The portal, emails, payslips and the employee app now use the AskMira logo and colours. Status colours stay separate from the brand red, so an error never looks like a button.",

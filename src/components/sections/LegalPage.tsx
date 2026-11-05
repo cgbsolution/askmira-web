@@ -26,11 +26,8 @@ export function LegalPage({
         {draft && (
           <Alert variant="warning" className="mt-8 rounded-2xl">
             <TriangleAlert aria-hidden />
-            <AlertTitle>Draft awaiting legal review</AlertTitle>
-            <AlertDescription>
-              This page describes how the website handles information today. It will be replaced by the final, legally
-              reviewed text before launch.
-            </AlertDescription>
+            <AlertTitle>Draft under legal review</AlertTitle>
+            <AlertDescription>This page describes how the website handles information.</AlertDescription>
           </Alert>
         )}
         <p className="mt-8 text-[1.0625rem] leading-[1.75] text-ink-700">{intro}</p>

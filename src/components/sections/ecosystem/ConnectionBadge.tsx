@@ -1,24 +1,14 @@
-import { CircleCheck, CircleDashed, CircleDot, Clock3 } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { CONNECTION_HELP, CONNECTION_LABEL, type ConnectionStatus } from "@/lib/content/ecosystem";
 import { cn } from "@/lib/utils";
 
-const VARIANT = {
-  live: "success",
-  partial: "info",
-  available: "warning",
-  planned: "muted",
-} as const;
+const VARIANT = { live: "success" } as const;
 
-const ICON = {
-  live: CircleCheck,
-  partial: CircleDot,
-  available: CircleDashed,
-  planned: Clock3,
-} as const;
+const ICON = { live: CircleCheck } as const;
 
-/** How far a connection is built. Never a brand colour: these are statuses. */
+/** A connection's state. Never a brand colour: this is a status. */
 export function ConnectionBadge({
   status,
   className,

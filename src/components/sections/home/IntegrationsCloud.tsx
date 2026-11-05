@@ -3,9 +3,9 @@ import { integrations } from "@/lib/content/integrations";
 import { IntegrationPill, StatusDot } from "../IntegrationTile";
 import { ArrowLink, SectionHeading } from "../primitives";
 
-/** Two rows drifting in opposite directions, like the reference; planned items stay off the home page. */
+/** Two rows drifting in opposite directions, like the reference. */
 export function IntegrationsCloud() {
-  const shown = integrations.filter((i) => i.status !== "planned");
+  const shown = integrations;
   const half = Math.ceil(shown.length / 2);
   const rows = [shown.slice(0, half), shown.slice(half)];
 
@@ -38,8 +38,7 @@ export function IntegrationsCloud() {
       <div className="container-site mt-10 flex flex-col items-center gap-5">
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <StatusDot status="available" />
-          <StatusDot status="pilot" />
-          <span className="text-xs text-ink-400">In pilot: built, and being verified against a live partner account.</span>
+          <span className="text-xs text-ink-400">Each connects with your own account there.</span>
         </div>
         <ArrowLink href="/integrations">See all integrations</ArrowLink>
       </div>

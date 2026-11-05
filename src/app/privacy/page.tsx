@@ -13,7 +13,7 @@ function grievanceLine(): string {
   const { name, email } = siteConfig.grievanceOfficer;
   if (name && email) return `Our grievance officer is ${name}, at ${email}.`;
   if (email) return `Write to our grievance officer at ${email}.`;
-  return "Our grievance officer will be named here before launch. Until then, send your request through the contact form and the AskMira team will answer it.";
+  return "Send your request through the contact form and the AskMira team's grievance officer will answer it.";
 }
 
 export default function PrivacyPage() {

@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
  * Where one shape sits on another it gets a "cut" — a thin outline in the
  * colour behind the picture (--spot-bg) — so layers read like printed paper,
  * not like a gradient. The tones are set in globals.css (`.spot`), so the same
- * drawing works on a blush tile, a dark card, or greyed out for "planned".
+ * drawing works on a blush tile, a dark card, or greyed out.
  */
 
 export type SpotIcon = (props: { className?: string }) => React.JSX.Element;

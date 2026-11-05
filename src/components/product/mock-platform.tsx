@@ -132,7 +132,7 @@ export function DocumentMock({ className }: { className?: string }) {
               <p className="flex items-center gap-1.5 text-[10px] font-semibold">
                 <FileSignature className="size-3 text-ink-500" /> Aadhaar eSign
               </p>
-              <p className="mt-1 text-[9px] text-ink-400">In pilot · switched on per workspace</p>
+              <p className="mt-1 text-[9px] text-ink-400">Through your Digio account</p>
             </MockCard>
           </div>
         </div>

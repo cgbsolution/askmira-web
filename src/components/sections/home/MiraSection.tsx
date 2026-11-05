@@ -13,7 +13,7 @@ const POINTS = [
   {
     icon: SpotConnected,
     title: "Works as you, across your apps",
-    body: "It looks up people, leave and reports — and jobs, expense claims and tickets in connected apps — with exactly the asker's permissions.",
+    body: "It looks up people, leave, payroll and budgets — and jobs, claims, tickets, deals and purchases in connected apps — and acts once you confirm, with exactly the asker's permissions.",
   },
   {
     icon: SpotToggle,

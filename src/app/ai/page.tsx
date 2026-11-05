@@ -15,7 +15,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Ask Mira — the HR companion with guardrails",
   description:
-    "Ask Mira answers HR questions from your own policies with the source quoted, looks things up with the asker's permissions, and is off until your admin switches it on.",
+    "Ask Mira answers HR questions from your own policies with the source quoted, looks things up and acts with the asker's permissions once they confirm, and is off until your admin switches it on.",
   path: "/ai",
 });
 
@@ -33,6 +33,18 @@ const CAPABILITIES: { icon: SpotIcon; title: string; body: string; points: strin
     points: ["The same safeguards as the report builder", "Shows how it read your question", "Rows scoped to what you may see"],
   },
   {
+    icon: SpotToggle,
+    title: "Does it for you, when you confirm",
+    body: "Apply for leave, raise an attendance correction or a ticket, approve what waits on you, move a deal in Saleinx or approve in ProcureFlow. Mira shows what it will do; nothing happens until you confirm.",
+    points: ["The module's own rules are checked first", "Leave only against the balance you have", "Recorded as done through Ask Mira"],
+  },
+  {
+    icon: SpotChart,
+    title: "Charts over your own data",
+    body: "Payroll cost by month, leave by type, exits by department, expenses and tickets — as line, bar or pie charts with the table beside them.",
+    points: ["Each person sees only what their role may see", "The AI reads figures only for groups of five or more", "Follow-up questions change the chart"],
+  },
+  {
     icon: SpotPlug,
     title: "Your AI assistant, connected",
     body: "Connect AskMira to Claude or ChatGPT over MCP. The assistant signs in as the person and gets exactly their permissions.",
@@ -48,8 +60,10 @@ const LOOKUPS: { icon: SpotIcon; label: string }[] = [
   { icon: SpotDevice, label: "Attendance" },
   { icon: SpotBuildings, label: "Departments" },
   { icon: SpotPin, label: "Locations" },
-  { icon: SpotChart, label: "Reports" },
-  { icon: SpotConnected, label: "Connected products" },
+  { icon: SpotChart, label: "Reports and charts" },
+  { icon: SpotChart, label: "Payroll totals" },
+  { icon: SpotBuildings, label: "Department budgets" },
+  { icon: SpotConnected, label: "AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow" },
 ];
 
 const RULES: { icon: SpotIcon; title: string; body: string }[] = [
@@ -58,7 +72,8 @@ const RULES: { icon: SpotIcon; title: string; body: string }[] = [
   { icon: SpotPlane, title: "Transfers are recorded", body: "Any data sent to a provider outside India is recorded with the provider, the purpose and the categories of data." },
   { icon: SpotAuditLog, title: "Every request logged", body: "The model used, the outcome and who asked — published to admins in the AI Trust Center." },
   { icon: SpotLock, title: "Never more than the asker", body: "Mira works with the signed-in person's permissions. It cannot see what they cannot." },
-  { icon: SpotMira, title: "Plain about limits", body: "With no AI key configured, the screen says so instead of showing a spinner that never ends." },
+  { icon: SpotMira, title: "Quick lookups without AI", body: "With AI off, Mira still answers common questions by rule, and nothing leaves AskMira." },
+  { icon: SpotPlug, title: "Your choice of AI", body: "Each workspace picks Anthropic, OpenAI, Google Gemini or its own Ollama server, with its own key." },
 ];
 
 export default function AiPage() {
@@ -113,8 +128,8 @@ export default function AiPage() {
               What Mira can look up for you
             </h2>
             <p className="mt-4 text-lead text-ink-600">
-              Mira answers questions; it does not change records on its own. These are the things it can read — each
-              one only as far as the person asking is allowed to see.
+              Mira changes something only when the person asking confirms it, through the module&apos;s own rules. These
+              are the things it can read — each one only as far as the person asking is allowed to see.
             </p>
             <ul className="mt-8 flex flex-wrap gap-2">
               {LOOKUPS.map(({ icon: Icon, label }) => (
@@ -139,7 +154,7 @@ export default function AiPage() {
             id="across-heading"
             eyebrow="Across your apps"
             title="Questions managers ask, and what Mira answers today"
-            lead="Mira reads AnytimeHire, Expense Genie and CGB Helpdesk where they are connected. Budget, procurement and sales questions are on the roadmap — and approvals always stay with people."
+            lead="Mira reads AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow where they are connected, and AskMira's own budgets. It acts only when the person asking confirms."
           />
           <MiraAcross className="mt-12" />
         </div>

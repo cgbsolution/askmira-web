@@ -451,18 +451,19 @@ export const tour: { app: ScreenApp; lead: string; screens: Screen[] }[] = [
   },
   {
     app: "procureflow",
-    lead: "Procure-to-pay with buyer and supplier portals. Connection to AskMira is planned.",
+    lead: "Procure-to-pay with buyer and supplier portals. Opens from AskMira without a second sign-in; approvals and budgets show inside AskMira.",
     screens: [screens.pfLogin],
   },
   {
     app: "saleinx",
-    lead: "Sales CRM with pipeline analytics. Connection to AskMira is planned.",
+    lead: "Sales CRM with pipeline analytics. Opens from AskMira without a second sign-in; deals and the pipeline show inside AskMira.",
     screens: [screens.sxLogin],
   },
 ];
 
-/** The screen where each step of the hiring journey happens. Planned steps have none. */
+/** The screen where each step of the hiring journey happens. */
 export const journeyScreens: Partial<Record<string, Screen>> = {
+  order: screens.amMira,
   budget: screens.amBudget,
   workforce: screens.amScenarios,
   approval: screens.amHiring,

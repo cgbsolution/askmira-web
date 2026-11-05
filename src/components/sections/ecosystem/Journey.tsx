@@ -1,4 +1,4 @@
-import { ArrowRight, CircleCheck, Hammer } from "lucide-react";
+import { ArrowRight, CircleCheck } from "lucide-react";
 import Link from "next/link";
 
 import { SpotTile } from "@/components/illustrations/spots";
@@ -11,16 +11,11 @@ import { cn } from "@/lib/utils";
 
 import { ConnectionBadge } from "./ConnectionBadge";
 
-const DOT = {
-  live: "bg-success",
-  partial: "bg-info",
-  available: "bg-marigold-500",
-  planned: "bg-ink-300",
-} as const;
+const DOT = { live: "bg-success" } as const;
 
 /**
  * The sales-to-budget-to-hiring journey, one sample company end to end. Each
- * step names the app that does it and says honestly how much is connected.
+ * step names the app that does it and how it works across the apps.
  */
 export function Journey() {
   return (
@@ -75,29 +70,21 @@ export function Journey() {
                 </div>
                 <p className="mt-4 text-[0.9375rem] text-ink-700 sm:text-base">{step.summary}</p>
 
-                {journeyScreens[step.id] ? (
+                {journeyScreens[step.id] && (
                   <AppWindow screen={journeyScreens[step.id]!} className="mt-6" sizes="(min-width: 1280px) 760px, 100vw" />
-                ) : (
-                  <div className="mt-6 grid place-items-center rounded-xl py-10 border border-dashed border-cream-300 bg-cream-50 p-6 text-center text-sm text-ink-500">
-                    No screen yet — {app.name}&apos;s link to AskMira is planned.
-                  </div>
                 )}
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   <div>
                     <p className="flex items-center gap-1.5 text-sm font-semibold text-ink-900">
-                      <CircleCheck className="size-4 text-success" aria-hidden /> Works today
+                      <CircleCheck className="size-4 text-success" aria-hidden /> How it works
                     </p>
                     <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink-600">{step.today}</p>
                   </div>
-                  {step.next && (
-                    <div>
-                      <p className="flex items-center gap-1.5 text-sm font-semibold text-ink-900">
-                        <Hammer className="size-4 text-ink-400" aria-hidden /> Still to build
-                      </p>
-                      <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink-600">{step.next}</p>
-                    </div>
-                  )}
+                  <div>
+                    <p className="text-sm font-semibold text-ink-900">In the example</p>
+                    <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink-600">{step.example}</p>
+                  </div>
                 </div>
 
                 <div className="mt-7 flex flex-wrap items-center justify-between gap-3 border-t border-cream-200 pt-5 text-sm">

@@ -42,7 +42,7 @@ export function MockFrame({
   className?: string;
   bodyClassName?: string;
   tone?: "light" | "dark";
-  /** Replaces the "Sample data" tag, e.g. for a concept that is not built yet. */
+  /** Replaces the "Sample data" tag. */
   tag?: React.ReactNode;
 }) {
   return (

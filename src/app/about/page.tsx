@@ -17,7 +17,7 @@ const PRINCIPLES: { icon: SpotIcon; title: string; body: string }[] = [
   {
     icon: SpotChart,
     title: "Every number on screen is real",
-    body: "If a module is not built yet, AskMira says so. It never fills a screen with sample figures that a customer might mistake for their own.",
+    body: "Every figure on a screen is your own. AskMira never fills a screen with sample figures that a customer might mistake for theirs.",
   },
   {
     icon: SpotAuditLog,

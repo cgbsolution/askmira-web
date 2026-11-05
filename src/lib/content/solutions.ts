@@ -331,7 +331,7 @@ export const solutions: Solution[] = [
     ],
     month: [
       { title: "Security review", body: "SSO, SCIM, IP allowlists and audit log walked through with IT." },
-      { title: "Pilot", body: "One entity or location live first, on the same workspace as the rest." },
+      { title: "Start with one", body: "One entity or location live first, on the same workspace as the rest." },
       { title: "Roll-out", body: "Remaining entities added with their own registrations and calendars." },
       { title: "Run", body: "API and webhooks feeding finance and IT systems as people change." },
     ],

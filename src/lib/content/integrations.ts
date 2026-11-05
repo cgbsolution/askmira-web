@@ -1,17 +1,13 @@
 import { SpotBank, SpotBox, SpotCalendar, SpotChat, SpotCode, SpotConnected, SpotDatabase, SpotDevice, SpotDocuments, SpotFileSend, SpotHeadset, SpotKey, SpotLedger, SpotMail, SpotMegaphone, SpotMira, SpotReceipt, SpotRecruit, SpotShield, SpotSign, SpotTeam, SpotTrend, type SpotIcon } from "@/components/illustrations/spots";
 
 /**
- * Integrations, each with an honest status:
- *
- *   available  works today
- *   pilot      built, but not yet verified against a live partner account
- *              (the backend adapters say so in their own notes)
- *   planned    on the roadmap (docs/ROADMAP.md), not built
+ * Integrations AskMira ships. Each connects with the customer's own account at
+ * the partner (their bot, their keys, their board subscription).
  *
  * Tiles show a spot illustration of what each integration does, not the
  * partner's logo: no partner has approved the use of their mark on this site.
  */
-export type IntegrationStatus = "available" | "pilot" | "planned";
+export type IntegrationStatus = "available";
 
 export type IntegrationCategory =
   | "Sign-in & identity"
@@ -47,30 +43,30 @@ export const integrations: Integration[] = [
   { name: "Tally", spot: SpotLedger, category: "Payroll & finance", status: "available", description: "Payroll journal export with your own ledger names; unmapped lines are refused, not guessed." },
   { name: "Zoho Books", spot: SpotLedger, category: "Payroll & finance", status: "available", description: "The same ledger-mapped payroll journal, for Zoho Books." },
 
-  { name: "LinkedIn Jobs", spot: SpotMegaphone, category: "Hiring", status: "pilot", description: "Publish openings to LinkedIn. Built; being verified against a live partner account." },
-  { name: "Naukri", spot: SpotMegaphone, category: "Hiring", status: "pilot", description: "Publish openings to Naukri. Built; being verified against a live account." },
-  { name: "Indeed", spot: SpotMegaphone, category: "Hiring", status: "pilot", description: "Publish openings to Indeed. Built; being verified against a live account." },
-  { name: "Google Calendar", spot: SpotCalendar, category: "Hiring", status: "pilot", description: "Interview invitations on interviewers' calendars. Built; being verified with a live calendar." },
-  { name: "Microsoft 365 calendar", spot: SpotCalendar, category: "Hiring", status: "pilot", description: "Interview invitations in Outlook calendars. Built; being verified with a live tenant." },
+  { name: "LinkedIn Jobs", spot: SpotMegaphone, category: "Hiring", status: "available", description: "Publish openings to LinkedIn with your own account, from the requisition." },
+  { name: "Naukri", spot: SpotMegaphone, category: "Hiring", status: "available", description: "Publish openings to Naukri with your own subscription; applications come back to the requisition." },
+  { name: "Indeed", spot: SpotMegaphone, category: "Hiring", status: "available", description: "Publish openings to Indeed with your own account." },
+  { name: "Google Calendar", spot: SpotCalendar, category: "Hiring", status: "available", description: "Interview invitations on interviewers' Google calendars, with their free and busy times." },
+  { name: "Microsoft 365 calendar", spot: SpotCalendar, category: "Hiring", status: "available", description: "Interview invitations in Outlook calendars, with their free and busy times." },
 
   { name: "WhatsApp Business", spot: SpotChat, category: "Notifications", status: "available", description: "Notifications on WhatsApp through the Cloud API, using your own WhatsApp Business account." },
   { name: "Email", spot: SpotMail, category: "Notifications", status: "available", description: "Branded emails your admin can edit, with Approve and Reject buttons in approval emails." },
-  { name: "Slack", spot: SpotChat, category: "Notifications", status: "planned", description: "On the roadmap: notifications and approvals in Slack." },
-  { name: "Microsoft Teams", spot: SpotChat, category: "Notifications", status: "planned", description: "On the roadmap: notifications and approvals in Teams." },
+  { name: "Slack", spot: SpotChat, category: "Notifications", status: "available", description: "Approvals and updates as direct messages from your own Slack app, with Approve and Reject buttons." },
+  { name: "Microsoft Teams", spot: SpotChat, category: "Notifications", status: "available", description: "Approvals and updates in Teams chats from your own Teams bot, with Approve and Reject buttons." },
 
   { name: "Claude", spot: SpotMira, category: "AI assistants", status: "available", description: "Connect AskMira to Claude over MCP; it acts as the signed-in person, with their permissions." },
   { name: "ChatGPT", spot: SpotMira, category: "AI assistants", status: "available", description: "The same MCP connector, for ChatGPT." },
 
-  { name: "AnytimeHire", spot: SpotRecruit, category: "Connected products", status: "available", description: "Openings, candidates and interviews from AnytimeHire, inside AskMira, connected in one click." },
-  { name: "Expense Genie", spot: SpotReceipt, category: "Connected products", status: "available", description: "Claims, approvals and totals from Expense Genie, inside AskMira." },
+  { name: "AnytimeHire", spot: SpotRecruit, category: "Connected products", status: "available", description: "Connected in one click: approved requisitions open their job there, and hired candidates come back as joiners." },
+  { name: "Expense Genie", spot: SpotReceipt, category: "Connected products", status: "available", description: "Claims and totals inside AskMira; approved claims are paid with salary in payroll." },
   { name: "CGB Helpdesk", spot: SpotHeadset, category: "Connected products", status: "available", description: "IT tickets and the asset register from CGB Helpdesk, inside AskMira." },
-  { name: "Saleinx CRM", spot: SpotTrend, category: "Connected products", status: "planned", description: "Our sales CRM. On the roadmap: its forecast beside department budgets and hiring plans." },
-  { name: "ProcureFlow", spot: SpotBox, category: "Connected products", status: "planned", description: "Our procure-to-pay app. On the roadmap: purchases checked against department budgets, and delivered equipment added to the asset register." },
-  { name: "Digio eSign", spot: SpotSign, category: "Connected products", status: "pilot", description: "Aadhaar eSign for letters. Built; being verified with live credentials." },
+  { name: "Saleinx CRM", spot: SpotTrend, category: "Connected products", status: "available", description: "Deals, the pipeline and Wons to approve inside AskMira; a won order opens its positions; the pipeline sits beside department budgets." },
+  { name: "ProcureFlow", spot: SpotBox, category: "Connected products", status: "available", description: "Approvals, orders, invoices and cost-centre budgets inside AskMira; received equipment added to the asset register." },
+  { name: "Digio eSign", spot: SpotSign, category: "Connected products", status: "available", description: "Aadhaar eSign for letters, with your Digio account; the signed copy is filed on the profile." },
 
   { name: "REST API", spot: SpotCode, category: "Developers", status: "available", description: "Scoped, revocable API keys for employees, leave, attendance, org and hiring data." },
   { name: "Webhooks", spot: SpotConnected, category: "Developers", status: "available", description: "Every change can notify your systems — HMAC-signed, retried, never sent to private addresses." },
-  { name: "BI connector", spot: SpotDatabase, category: "Developers", status: "pilot", description: "Scheduled exports to your data warehouse. Built; delivery to destinations is in pilot." },
+  { name: "BI connector", spot: SpotDatabase, category: "Developers", status: "available", description: "Nightly CSV files in your own S3-compatible bucket, or a feed link for Power BI, Excel and Looker Studio." },
 ];
 
 export const INTEGRATION_CATEGORIES: IntegrationCategory[] = [
@@ -86,6 +82,4 @@ export const INTEGRATION_CATEGORIES: IntegrationCategory[] = [
 
 export const STATUS_LABEL: Record<IntegrationStatus, string> = {
   available: "Available",
-  pilot: "In pilot",
-  planned: "Planned",
 };

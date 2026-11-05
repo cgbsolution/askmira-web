@@ -1,55 +1,35 @@
-# Integration status — AskMira and the connected apps
+# Connections — AskMira and the connected apps
 
-Checked on 2026-10-28 against source code. The website's `/connected-platform` page, the home
-"Beyond HR" section and the Ask Mira page read their labels from
-[src/lib/content/ecosystem.ts](../src/lib/content/ecosystem.ts); change a status there and every page follows.
+Checked on 2026-11-05 against each product's code. The website's `/connected-platform` page, the
+home "Beyond HR" section and the Ask Mira page read from
+[src/lib/content/ecosystem.ts](../src/lib/content/ecosystem.ts); integrations from
+[src/lib/content/integrations.ts](../src/lib/content/integrations.ts).
 
-| Label on the site | Meaning |
-| --- | --- |
-| Live | Built and working, checked in both products' code. |
-| Partly connected | Some of it works; the rest is listed below. |
-| Not connected yet | Both products have what is needed; the link between them is not built. |
-| Planned | On the roadmap, not built. |
-
-## What was inspected
-
-| Product | Where | Inspected |
-| --- | --- | --- |
-| AskMira HRMS | `C:\cgbcode\askmira` | Source. `backend/app/services/products/*` (connectors), `positions/*` (headcount budgets, budget checks, scenarios), `models/hiring.py` (requisitions), `services/companion/tools.py` (Ask Mira lookups). |
-| AnytimeHire | `C:\Users\Deepak\Desktop\code-files\Inteview-Tool` | Source. `app/routers/askmira.py` (the AskMira link), jobs, candidates, interviews, talent agent (`TALENT_AGENT.md`). |
-| Expense Genie | `C:\cgbcode\expgenie` | Source. `expenses-backend/routes/askmira.js` (the AskMira link), categories (monthly budgets), integrations (SAP/HRMS config), dashboard pages, `expenses-ginie` mobile app. |
-| CGB Helpdesk | `E:\cgb-code\CGB-Helpdesk` | Source. Tickets with SLA, assets with assignments, multi-organisation access. **This local copy has no AskMira endpoints**, so the live AskMira ↔ Helpdesk link was verified from AskMira's side only; the deployed helpdesk must be a newer version than this folder. |
-| ProcureFlow | https://vendor.artboxsolutions.ai/ | **Public sign-in page only.** No password was available (none supplied, none in environment variables), and no local source was found. Public description: "Multi-tenant Procure-to-Pay for Indian manufacturing"; buyer portal plus a supplier portal. |
-| Saleinx (the CRM; the brief calls it "Salenix") | https://crm.artboxsolutions.ai/ | **Public sign-in page only**, same reason. Public description: "operational CRM with built-in analytics, automation, and team collaboration". |
-
-Because ProcureFlow and Saleinx could not be inspected, the site claims only their public
-descriptions, and every connection to them is "Planned". To verify more, share the source
-repositories or set credentials in a secure store (not in chat or code) and re-run the inspection.
+The site lists only what is built. Every connection below is built in both products; each one is
+called out in the code that implements it.
 
 ## Connections
 
-| From | To | Status | What exists | Still to build |
-| --- | --- | --- | --- | --- |
-| AskMira | AnytimeHire | Live | One-click connect (PKCE, per-workspace secret), single sign-on (one-time launch token), people sync (provision + roster sync), Ask Mira read-only lookups of jobs, candidates and interviews; AskMira's Hiring section shows AnytimeHire's records. | — |
-| AskMira requisition | AnytimeHire job | Not connected yet | AskMira requisitions (department, openings, CTC range); AnytimeHire jobs API (department, max CTC budget). | On requisition approval, create or update the AnytimeHire job (signed `use=provision` call, as for people sync). |
-| AnytimeHire hire | AskMira joiner | Not connected yet | AnytimeHire candidate status `hired`; AskMira onboarding creates joiners. | A signed call from AnytimeHire (or a poll from AskMira) that hands the hired candidate to Add employees → joiner plan. |
-| AskMira | Expense Genie | Live | Same link pattern as AnytimeHire; claims shown inside AskMira (`/linked/expense/*`); Ask Mira lookups of claims and totals. | — |
-| Expense Genie payout | AskMira payroll | Not connected yet | Expense Genie records payments (`POST /:id/payment`); AskMira pays salary reimbursements raised in AskMira. | Send approved, unpaid claims to the next payroll run; mark them paid in Expense Genie. |
-| Expense Genie budgets | AskMira department budgets | Planned | Expense Genie budgets are monthly **per category** (`categories.monthly_budget`); its admin dashboard notes "no budgets table yet". | Department (or cost-centre) budgets in Expense Genie, or spend reported to AskMira by department. |
-| AskMira | CGB Helpdesk | Live (AskMira side verified) | Raise and reply to tickets from AskMira (in the helpdesk, as the person); asset register; Ask Mira lookups of tickets and assets. | Bring the local `E:` copy up to date with the deployed version. |
-| Saleinx forecast | AskMira budgets | Planned | — | Forecast feed (API or export) and a place beside the department budget. |
-| ProcureFlow | AskMira budgets and approvals | Planned | — | People and departments from AskMira; purchase requests checked against department budgets. |
-| ProcureFlow purchase | Asset register | Planned | — | Register delivered equipment as an asset and assign it to the joiner it was bought for. |
-| Ask Mira | Budgets, Saleinx, ProcureFlow | Planned | Ask Mira has no budget lookup; AskMira enforces budgets only when positions are created. | Read-only lookups for each, under the asker's permissions (same `use=query` pattern). |
+| From | To | What it does | Where it is built |
+| --- | --- | --- | --- |
+| AskMira | AnytimeHire | One-click connect (PKCE, per-workspace secret), single sign-on, people sync, Ask Mira lookups. | AskMira `services/products`; AnytimeHire `app/routers/askmira.py` |
+| AskMira requisition | AnytimeHire job | The last approval opens the job there (`job.open`, keyed by the requisition, so never twice); HR can retry. | AskMira `services/hiring/linked_jobs.py` |
+| AnytimeHire hire | AskMira joiner | Hired candidates listed under Onboarding → Add employees → Hired in AnytimeHire, the form filled in. | AnytimeHire query `hires`; AskMira `services/onboarding/linked_hires.py` |
+| Saleinx order | AnytimeHire + P&L | Ask Mira books a won, approved order: positions open in AnytimeHire, prospective P&L in AskMira; a failed step undoes the rest. | AskMira `services/companion/order_win.py` |
+| AskMira | Expense Genie | One-click connect, single sign-on, people sync, claims inside AskMira, Ask Mira lookups. | Expense Genie `routes/askmira.js` |
+| Expense Genie claims | AskMira payroll | Approved, unpaid INR claims become untaxed reimbursement lines; the run's approval records each once and marks it paid in Expense Genie (retried hourly). | Expense Genie `payable`, `claims.paid`; AskMira `payroll/inputs.py` (ExpenseGenieClaimProvider), `payroll/linked_expenses.py` |
+| Expense Genie spend | AskMira budgets | Approved claims added up by each submitter's department. | AskMira `services/positions/spend.py` |
+| AskMira | CGB Helpdesk | Tickets inside AskMira, the asset register, Ask Mira lookups and ticket actions; managers' team tickets; joiners' equipment. | Helpdesk `src/lib/askmira` (scope `team`, `holdings`) |
+| AskMira | Saleinx | One-click connect, single sign-on, people sync with Saleinx's roles; deals, pipeline, Wons to approve; Ask Mira lead/stage/approval actions. | Saleinx `src/lib/askmira` |
+| AskMira | ProcureFlow | One-click connect, single sign-on, people sync with ProcureFlow's roles; approvals, requisitions, orders, invoices, budgets; Ask Mira approvals. | ProcureFlow `apps/api/src/integrations/askmira` |
+| ProcureFlow budgets | AskMira budgets | Cost-centre allocated/committed/available beside the department of the same name. | AskMira `services/positions/spend.py` |
+| ProcureFlow receipt | Asset register | Received units become assets — CGB Helpdesk's register (`asset.create`, IT team only) or AskMira's — once each. | ProcureFlow `receipts`; AskMira `services/assets/received.py` |
+| Ask Mira | Every app | Lookups and confirmed actions as the person, with their role in each app. | AskMira `services/companion` |
 
-Not claimed anywhere on the site: SAP posting from Expense Genie (config exists, posting is
-switched off in code by request), any live data exchange with Saleinx or ProcureFlow, Mira taking
-actions or approving anything.
+## Integrations that use the customer's own account
 
-## The budget preview
-
-`src/components/product/mock-budget.tsx` is labelled **"Concept preview · sample data"** because the
-combined view (budget + Expense Genie spend + ProcureFlow commitments + Saleinx forecast) does not
-exist. Its arithmetic is in the file header and adds up. What does exist in AskMira today — department
-headcount budgets, budget checks on new positions, what-if scenarios, requisitions with a CTC range —
-is listed beside it on the page.
+LinkedIn, Naukri, Indeed, Google Calendar, Microsoft 365, Digio, WhatsApp, Slack, Microsoft Teams
+and the BI bucket each connect with the customer's own account, key or bot. Their adapters follow
+each provider's published API and are tested against faithful fakes of it (the S3 signing against
+AWS's own published examples). Before a customer relies on one, run it once with that customer's
+real account.

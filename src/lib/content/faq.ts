@@ -8,7 +8,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Can I sign up and try AskMira on my own?",
-        a: "Not yet. Every AskMira workspace is set up by our team after a demo, together with your first admin. It keeps strangers off the platform and means your workspace starts with your company's details, entities and locations already in place.",
+        a: "No. Every AskMira workspace is set up by our team after a demo, together with your first admin. It keeps strangers off the platform and means your workspace starts with your company's details, entities and locations already in place.",
       },
       {
         q: "How do we move our employee data in?",
@@ -20,7 +20,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Does it work on phones?",
-        a: "Yes. Every page works in a phone browser and can be added to the home screen. Native Android and iOS apps are built and in testing.",
+        a: "Yes. Employees punch in, apply for leave, approve, open payslips and ask Mira from the AskMira app for Android, and every page also works in a phone browser — including on iPhone — and can be added to the home screen.",
       },
     ],
   },
@@ -75,7 +75,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "What can Ask Mira look up?",
-        a: "Company policies, your own record, people, who is on leave, attendance, departments and locations, reports, and data from connected products such as AnytimeHire and Expense Genie. It always works as the signed-in person, with exactly their permissions.",
+        a: "Company policies, your own record, people, who is on leave, attendance, payroll totals, department budgets, reports and charts, and the connected apps — AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow. It can also apply for leave, raise requests and tickets, or approve what waits on you, once you confirm. It always works as the signed-in person, with exactly their permissions.",
       },
     ],
   },

@@ -2,15 +2,11 @@ import { SpotTile } from "@/components/illustrations/spots";
 import { STATUS_LABEL, type Integration } from "@/lib/content/integrations";
 import { cn } from "@/lib/utils";
 
-const DOT = {
-  available: "bg-success",
-  pilot: "bg-marigold-500",
-  planned: "bg-ink-300",
-} as const;
+const DOT = { available: "bg-success" } as const;
 
 /** A picture of what the integration does — partners' own logos are not used without their approval. */
 export function IntegrationMark({ integration, size = "md" }: { integration: Integration; size?: "sm" | "md" }) {
-  return <SpotTile icon={integration.spot} size={size} tone={integration.status === "planned" ? "muted" : "blush"} />;
+  return <SpotTile icon={integration.spot} size={size} tone="blush" />;
 }
 
 export function StatusDot({ status, withLabel = true }: { status: Integration["status"]; withLabel?: boolean }) {

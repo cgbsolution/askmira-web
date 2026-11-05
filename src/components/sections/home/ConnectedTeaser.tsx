@@ -15,7 +15,7 @@ export function ConnectedTeaser() {
           id="connected-heading"
           eyebrow="See it for real"
           title="One HRMS, and the apps around it"
-          lead="These are the actual screens. Hiring, expenses and IT support already connect to AskMira; sales and procurement are next."
+          lead="These are the actual screens. Hiring, expenses, IT support, sales and procurement all connect to AskMira."
         />
         <ScreenTour className="mt-12 sm:mt-14" />
         <div className="mt-10 flex justify-center">

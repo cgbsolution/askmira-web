@@ -1,4 +1,4 @@
-import { CircleCheck, Hammer } from "lucide-react";
+import { CircleCheck } from "lucide-react";
 
 import { SpotConnected } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
@@ -6,7 +6,6 @@ import { AppWindow } from "@/components/product/AppWindow";
 import { DemoSection } from "@/components/sections/DemoSection";
 import { DarkHero } from "@/components/sections/DarkHero";
 import { AppDetails } from "@/components/sections/ecosystem/AppDetails";
-import { ConnectionLegend } from "@/components/sections/ecosystem/ConnectionBadge";
 import { ConnectionMatrix } from "@/components/sections/ecosystem/ConnectionMatrix";
 import { Journey } from "@/components/sections/ecosystem/Journey";
 import { MiraAcross } from "@/components/sections/ecosystem/MiraAcross";
@@ -19,7 +18,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "The connected platform",
   description:
-    "AskMira HRMS at the centre, connected to AnytimeHire for hiring, Expense Genie for expenses and CGB Helpdesk for IT support — with Saleinx CRM and ProcureFlow procurement next. Real screens, and what is connected today.",
+    "AskMira HRMS at the centre, connected to AnytimeHire for hiring, Expense Genie for expenses, CGB Helpdesk for IT support, Saleinx for sales and ProcureFlow for procurement. Real screens, and how each connection works.",
   path: "/connected-platform",
 });
 
@@ -27,12 +26,9 @@ const TODAY = [
   "Approved headcount and cost per department, for the financial year",
   "New positions refused when they would go over budget",
   "What-if scenarios that cost extra headcount before anyone asks",
-  "Requisitions with a CTC range, approved in order",
-];
-
-const NEXT = [
-  "Spend from Expense Genie and ProcureFlow in the same view",
-  "The Saleinx sales forecast beside the budget",
+  "Requisitions with a CTC range, approved in order — then opened in AnytimeHire",
+  "Payroll paid, Expense Genie spend and ProcureFlow purchasing beside each budget",
+  "The Saleinx pipeline in the same view",
   "Ask Mira answering “can we afford it?” from the budget",
 ];
 
@@ -43,7 +39,7 @@ export default function ConnectedPlatformPage() {
         eyebrow="The AskMira platform"
         eyebrowIcon={SpotConnected}
         title="Your HRMS, connected to the rest of the business"
-        lead="AskMira runs people, attendance and payroll. Hiring, expenses and IT support already connect to it. Sales and procurement are next."
+        lead="AskMira runs people, attendance and payroll. Hiring, expenses, IT support, sales and procurement connect to it."
         secondary={{ label: "Follow one hire end to end", href: "#journey" }}
         visual={<WindowStack />}
       />
@@ -68,7 +64,6 @@ export default function ConnectedPlatformPage() {
             title="From a sales forecast to a new joiner's laptop"
             lead="A sample sales team needs two more people. Here is every screen the decision passes through."
           />
-          <ConnectionLegend className="mt-8 justify-center" />
           <div className="mt-10 sm:mt-12">
             <Journey />
           </div>
@@ -83,30 +78,17 @@ export default function ConnectedPlatformPage() {
               Can we afford to grow?
             </h2>
             <p className="mt-5 text-lead text-white/75">
-              Headcount budgets live in AskMira, next to the people who fill them.
+              Headcount budgets live in AskMira, next to the people who fill them — and the spend, purchasing and pipeline that decide them.
             </p>
             <div className="mt-8 grid gap-6">
               <div>
                 <p className="flex items-center gap-2 text-sm font-semibold">
-                  <CircleCheck className="size-4 text-success-50" aria-hidden /> In AskMira today
+                  <CircleCheck className="size-4 text-success-50" aria-hidden /> In AskMira
                 </p>
                 <ul className="mt-3 grid gap-2 text-[0.9375rem] text-white/75">
                   {TODAY.map((t) => (
                     <li key={t} className="flex gap-2">
                       <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-marigold-400" />
-                      {t}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="flex items-center gap-2 text-sm font-semibold">
-                  <Hammer className="size-4 text-white/60" aria-hidden /> Next
-                </p>
-                <ul className="mt-3 grid gap-2 text-[0.9375rem] text-white/60">
-                  {NEXT.map((t) => (
-                    <li key={t} className="flex gap-2">
-                      <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-white/30" />
                       {t}
                     </li>
                   ))}
@@ -147,7 +129,7 @@ export default function ConnectedPlatformPage() {
             tone="dark"
             eyebrow="Ask Mira"
             title="Ask once, answered from the app that knows"
-            lead="Mira works as the person asking, with their permissions. It answers; people still approve hiring, purchases and spend."
+            lead="Mira works as the person asking, with their permissions. It answers, and acts only when that person confirms."
           />
           <div className="mx-auto mt-12 max-w-4xl sm:mt-14">
             <AppWindow screen={screens.amMira} className="shadow-frame" sizes="(min-width: 1024px) 900px, 100vw" />
@@ -160,8 +142,8 @@ export default function ConnectedPlatformPage() {
         <div className="container-site">
           <SectionHeading
             id="matrix-heading"
-            eyebrow="Connection status"
-            title="Every connection, and how far it is built"
+            eyebrow="Connections"
+            title="Every connection, and what it does"
             lead="Checked against each product's own code."
           />
           <div className="mt-12">
@@ -172,7 +154,7 @@ export default function ConnectedPlatformPage() {
 
       <DemoSection
         title="See the platform with your own numbers"
-        lead="Tell us which apps you run today. We will show you what connects now, and what is coming."
+        lead="Tell us which apps you run today. We will show you how they connect to AskMira."
       />
     </>
   );

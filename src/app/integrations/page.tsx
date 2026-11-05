@@ -56,32 +56,21 @@ const API_SNIPPET = `curl https://<your-askmira-api>/api/v1/ext/leave-balances \
   -H "Authorization: Bearer amk_…"`;
 
 export default function IntegrationsPage() {
-  const counts = {
-    available: integrations.filter((i) => i.status === "available").length,
-    pilot: integrations.filter((i) => i.status === "pilot").length,
-  };
+  const available = integrations.length;
   return (
     <>
       <PageHero
         eyebrow="Integrations"
         eyebrowIcon={SpotPlug}
         title="Works with what you already run"
-        lead="Attendance devices, banks, accounting, identity, messaging and AI assistants. Every listing says honestly whether it is available today, in pilot, or planned."
+        lead="Attendance devices, banks, accounting, identity, messaging, connected apps and AI assistants — each connected with your own account there."
         secondary={{ label: "For developers", href: "#developers" }}
       >
         <Reveal delay={0.2}>
           <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-ink-600">
             <span className="flex items-center gap-2">
               <StatusDot status="available" withLabel={false} />
-              {counts.available} available today
-            </span>
-            <span className="flex items-center gap-2">
-              <StatusDot status="pilot" withLabel={false} />
-              {counts.pilot} in pilot — built, being verified with a live partner account
-            </span>
-            <span className="flex items-center gap-2">
-              <StatusDot status="planned" withLabel={false} />
-              Planned — on the roadmap, not built
+              {available} integrations, all available
             </span>
           </div>
         </Reveal>

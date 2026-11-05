@@ -2,9 +2,8 @@ import { SpotAuditLog, SpotBank, SpotBell, SpotBook, SpotCalculator, SpotCalenda
 import type { Feature } from "./types";
 
 /**
- * The twelve feature pages. Every claim here is something the product ships
- * today; anything built but not yet verified against a live partner account is
- * called out as "in pilot" in the text, not presented as available.
+ * The twelve feature pages. Every claim here is something the product ships,
+ * checked against its code.
  */
 export const features: Feature[] = [
   {
@@ -125,13 +124,13 @@ export const features: Feature[] = [
     ],
     highlights: [
       { icon: SpotTrend, title: "Hiring analytics", body: "Funnel, sources and time to hire for every requisition." },
-      { icon: SpotMegaphone, title: "Job boards", body: "LinkedIn, Naukri and Indeed posting is in pilot — built, and being verified with live accounts." },
-      { icon: SpotConnected, title: "Already use AnytimeHire?", body: "Connect it and see openings, candidates and interviews inside AskMira." },
+      { icon: SpotMegaphone, title: "Job boards", body: "Post openings to LinkedIn, Naukri and Indeed from AskMira, with your own accounts there." },
+      { icon: SpotConnected, title: "Already use AnytimeHire?", body: "Connect it: approved requisitions open their job there, and hired candidates come back as joiners." },
     ],
     faqs: [
       { q: "Do candidates need an account?", a: "No. Candidates apply from your careers page and use secure links to book interviews and respond to offers." },
       { q: "What happens to a candidate's details after they accept?", a: "They carry over into onboarding, so HR does not type them again." },
-      { q: "Can we post to LinkedIn and Naukri?", a: "Job board posting is built and in pilot. We switch it on for a workspace once it has been verified against that board's live account." },
+      { q: "Can we post to LinkedIn and Naukri?", a: "Yes. Connect your LinkedIn, Naukri or Indeed account under Hiring → Job boards, and publish each opening from its requisition. A posting the board refuses stays visible with the board's own reason." },
     ],
     related: ["employee-management", "documents", "workflows"],
     seoTitle: "Recruitment and onboarding",
@@ -390,7 +389,7 @@ export const features: Feature[] = [
         points: [
           "Punch in, apply for leave and approve from a phone",
           "Add AskMira to the home screen like an app",
-          "Native Android and iOS apps are in testing",
+          "The AskMira app for Android: punch, leave, approvals and payslips",
           "Email approvals for managers on the move",
         ],
         mockup: "mobile",
@@ -399,10 +398,10 @@ export const features: Feature[] = [
     highlights: [
       { icon: SpotBook, title: "Help on every page", body: "Each screen has a short guide, so people learn by doing." },
       { icon: SpotInbox, title: "One inbox", body: "Everything waiting for you — approvals, tasks, surveys — in one list." },
-      { icon: SpotBell, title: "Notifications", body: "In the app, by email and, if you connect it, on WhatsApp." },
+      { icon: SpotBell, title: "Notifications", body: "In the app, by email, and on WhatsApp, Slack or Microsoft Teams when you connect them." },
     ],
     faqs: [
-      { q: "Is there a mobile app?", a: "Every page of AskMira works in a phone browser and can be added to the home screen. Native Android and iOS apps are built and in testing." },
+      { q: "Is there a mobile app?", a: "Yes, the AskMira app for Android, for punching in, leave, approvals, payslips and Ask Mira. Every page also works in a phone browser, including on iPhone, and can be added to the home screen." },
       { q: "Can employees see each other's pay?", a: "No. Employees see their own pay and documents. What managers and HR can see is controlled by role." },
     ],
     related: ["attendance-leave", "payroll", "workflows"],
@@ -493,7 +492,7 @@ export const features: Feature[] = [
         points: [
           "Templates with fields filled in from the employee record",
           "Letters issued one at a time or in bulk",
-          "Aadhaar eSign through Digio is in pilot",
+          "Aadhaar eSign through your Digio account",
           "Every issued letter filed on the person's profile",
         ],
         mockup: "document",
@@ -518,7 +517,7 @@ export const features: Feature[] = [
     ],
     faqs: [
       { q: "Can we use our existing letter formats?", a: "Yes. Paste your letter into a template and mark the fields to fill in." },
-      { q: "Do you support e-signatures?", a: "Aadhaar eSign through Digio is built and in pilot. It is switched on per workspace once verified with live credentials." },
+      { q: "Do you support e-signatures?", a: "Yes. Letters can be sent for Aadhaar eSign through Digio; the signed copy is filed on the employee's profile when Digio confirms it." },
     ],
     related: ["employee-management", "recruitment-onboarding", "access-control"],
     seoTitle: "HR document management and letters",
@@ -551,7 +550,7 @@ export const features: Feature[] = [
         points: [
           "Approval chains by role, reporting line or department",
           "One approvals inbox for everything waiting on you",
-          "Approve or reject straight from the email",
+          "Approve or reject straight from the email, Slack or Teams",
           "Admins and HR act directly, without raising requests for themselves",
         ],
         mockup: "workflow",
@@ -570,7 +569,7 @@ export const features: Feature[] = [
       },
     ],
     highlights: [
-      { icon: SpotMail, title: "Email approvals", body: "Approve and Reject buttons that work from any mail app." },
+      { icon: SpotMail, title: "Approve anywhere", body: "Approve and Reject buttons in the email, and in Slack or Teams when you connect them." },
       { icon: SpotConnected, title: "Webhooks", body: "Every change can notify your systems, signed and retried." },
       { icon: SpotChecklist, title: "Approval chains", body: "As many levels as your policy needs, per request type." },
     ],
@@ -622,7 +621,7 @@ export const features: Feature[] = [
           "Ready-made reports across every module",
           "Filters, column choice and Excel export",
           "Hiring analytics for every requisition",
-          "A BI connector for your data warehouse is in pilot",
+          "A BI connector: nightly files in your own bucket, or a feed link for Power BI",
         ],
         mockup: "directory",
       },
@@ -634,7 +633,7 @@ export const features: Feature[] = [
     ],
     faqs: [
       { q: "Can managers see analytics for their own team?", a: "Yes. Managers see their reporting tree; HR and admins see the whole company." },
-      { q: "Can we get the data into our own BI tool?", a: "Excel export works today. A direct BI connector is built and in pilot." },
+      { q: "Can we get the data into our own BI tool?", a: "Yes. The BI connector writes a CSV to your own S3-compatible bucket every night, or gives your BI tool — Power BI, Excel, Looker Studio — a private feed link to refresh from. Every export is recorded with its field list." },
     ],
     related: ["payroll", "performance", "engagement"],
     seoTitle: "HR analytics and reporting",

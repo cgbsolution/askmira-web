@@ -5,7 +5,7 @@ import { connections } from "@/lib/content/ecosystem";
 
 import { ConnectionBadge } from "./ConnectionBadge";
 
-/** Every connection between the apps, and how far it is built. A table on wide screens, cards on phones. */
+/** Every connection between the apps, and what it does. A table on wide screens, cards on phones. */
 export function ConnectionMatrix() {
   return (
     <>
@@ -16,8 +16,7 @@ export function ConnectionMatrix() {
             <TableRow className="bg-cream-50 hover:bg-cream-50">
               <TableHead className="h-12 px-5 font-semibold text-ink-700">Connection</TableHead>
               <TableHead className="h-12 px-5 font-semibold text-ink-700">Status</TableHead>
-              <TableHead className="h-12 px-5 font-semibold text-ink-700">What exists</TableHead>
-              <TableHead className="h-12 px-5 font-semibold text-ink-700">Still to build</TableHead>
+              <TableHead className="h-12 px-5 font-semibold text-ink-700">What it does</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -32,9 +31,6 @@ export function ConnectionMatrix() {
                   <ConnectionBadge status={c.status} />
                 </TableCell>
                 <TableCell className="px-5 py-4 align-top text-[0.875rem] whitespace-normal text-ink-600">{c.what}</TableCell>
-                <TableCell className="px-5 py-4 align-top text-[0.875rem] whitespace-normal text-ink-600">
-                  {c.remaining ?? "—"}
-                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -49,12 +45,6 @@ export function ConnectionMatrix() {
             </p>
             <ConnectionBadge status={c.status} className="mt-2" />
             <p className="mt-3 text-[0.875rem] text-ink-600">{c.what}</p>
-            {c.remaining && (
-              <p className="mt-2 text-[0.875rem] text-ink-600">
-                <span className="font-semibold text-ink-800">Still to build: </span>
-                {c.remaining}
-              </p>
-            )}
           </li>
         ))}
       </ul>

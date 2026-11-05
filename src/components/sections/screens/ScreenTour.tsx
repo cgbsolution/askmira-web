@@ -38,7 +38,6 @@ export function ScreenTour({ tone = "light", className }: { tone?: "light" | "da
             <span className="text-[0.9375rem] font-semibold">{APPS[t.app].name}</span>
             <span className="text-xs font-medium opacity-70">
               {APPS[t.app].role}
-              {appStatus(t.app) === "planned" ? " · planned" : ""}
             </span>
           </TabsTrigger>
         ))}
