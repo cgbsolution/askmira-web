@@ -84,7 +84,23 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "How much does AskMira cost?",
-        a: "Pricing depends on the modules you switch on and the number of employees. We share a quote after a short demo, once we know what you need.",
+        a: "Free covers up to 20 employees at no cost. Core is ₹4,999, Premium ₹5,999 and Ultimate ₹6,999 a month for up to 50 employees, plus ₹99, ₹119 or ₹139 a month for each additional employee. Paid plans are billed quarterly; prices exclude GST.",
+      },
+      {
+        q: "Can I change plans later?",
+        a: "Yes. Move up to a bigger plan at any time and the new modules switch on in the same workspace — your employee records, attendance and payroll history stay exactly where they are.",
+      },
+      {
+        q: "How is the employee count worked out?",
+        a: "Each plan includes up to 20 or 50 employees. Every active employee beyond that is charged at the plan's per-employee rate.",
+      },
+      {
+        q: "Do you offer a free trial?",
+        a: "Yes, on Core, Premium and Ultimate. Request a trial and our team sets up a workspace for you; there is no public sign-up.",
+      },
+      {
+        q: "Who owns my data?",
+        a: "You do. You can export your employee data to Excel at any time, and your workspace is kept separate from every other company's.",
       },
     ],
   },

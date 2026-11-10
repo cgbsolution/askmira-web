@@ -5,9 +5,13 @@ import { cn } from "@/lib/utils";
 /* Tier 1 surface: tables carry payroll and statutory data, so they stay dense
    and flat. The wrapper scrolls horizontally rather than letting the page do
    it — a page body must never scroll sideways. */
-function Table({ className, ...props }: React.ComponentProps<"table">) {
+function Table({
+  className,
+  containerClassName,
+  ...props
+}: React.ComponentProps<"table"> & { containerClassName?: string }) {
   return (
-    <div data-slot="table-container" className="relative w-full overflow-x-auto">
+    <div data-slot="table-container" className={cn("relative w-full overflow-x-auto", containerClassName)}>
       <table
         data-slot="table"
         className={cn("w-full caption-bottom text-sm", className)}

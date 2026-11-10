@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
  *
  *   default  AskMira Red — the one primary action in a view
  *   deep     the deepest brand red, for CTAs on cream sections
+ *   marigold the free plan's call to action
  *   soft     blush, the secondary action next to a primary one
  *   outline  hairline, quiet actions
  *   inverse  white on the dark bands
@@ -27,6 +28,7 @@ const buttonVariants = cva(
         default:
           "bg-primary text-primary-foreground shadow-[0_8px_20px_-8px_rgb(235_6_29/0.6)] hover:bg-brand-600 hover:shadow-[0_10px_24px_-8px_rgb(235_6_29/0.7)]",
         deep: "bg-brand-800 text-white shadow-soft hover:bg-brand-900",
+        marigold: "bg-marigold-500 text-ink-950 shadow-soft hover:bg-marigold-400",
         soft: "bg-blush-100 text-brand-800 hover:bg-blush-200",
         outline: "border border-cream-300 bg-card text-ink-900 shadow-soft hover:border-cream-400 hover:bg-cream-50",
         inverse: "bg-white text-ink-950 shadow-soft hover:bg-cream-100",

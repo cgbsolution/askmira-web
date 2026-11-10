@@ -65,4 +65,4 @@ export const siteConfig: SiteConfig = {
 export const signInUrl = `${siteConfig.appUrl}/signin`;
 
 /** Routes whose hero is the dark band, so the header starts in its light-on-dark state. */
-export const DARK_HERO_ROUTES = new Set(["/", "/platform", "/ai", "/demo", "/connected-platform"]);
+export const DARK_HERO_ROUTES = new Set(["/", "/platform", "/ai", "/demo", "/connected-platform", "/pricing"]);
