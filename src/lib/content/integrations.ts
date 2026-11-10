@@ -1,7 +1,7 @@
 import { SpotBank, SpotBox, SpotCalendar, SpotChat, SpotCode, SpotConnected, SpotDatabase, SpotDevice, SpotDocuments, SpotFileSend, SpotHeadset, SpotKey, SpotLedger, SpotMail, SpotMegaphone, SpotMira, SpotReceipt, SpotRecruit, SpotShield, SpotSign, SpotTeam, SpotTrend, type SpotIcon } from "@/components/illustrations/spots";
 
 /**
- * Integrations AskMira ships. Each connects with the customer's own account at
+ * Integrations AskMiraa ships. Each connects with the customer's own account at
  * the partner (their bot, their keys, their board subscription).
  *
  * Tiles show a spot illustration of what each integration does, not the
@@ -54,14 +54,14 @@ export const integrations: Integration[] = [
   { name: "Slack", spot: SpotChat, category: "Notifications", status: "available", description: "Approvals and updates as direct messages from your own Slack app, with Approve and Reject buttons." },
   { name: "Microsoft Teams", spot: SpotChat, category: "Notifications", status: "available", description: "Approvals and updates in Teams chats from your own Teams bot, with Approve and Reject buttons." },
 
-  { name: "Claude", spot: SpotMira, category: "AI assistants", status: "available", description: "Connect AskMira to Claude over MCP; it acts as the signed-in person, with their permissions." },
+  { name: "Claude", spot: SpotMira, category: "AI assistants", status: "available", description: "Connect AskMiraa to Claude over MCP; it acts as the signed-in person, with their permissions." },
   { name: "ChatGPT", spot: SpotMira, category: "AI assistants", status: "available", description: "The same MCP connector, for ChatGPT." },
 
   { name: "AnytimeHire", spot: SpotRecruit, category: "Connected products", status: "available", description: "Connected in one click: approved requisitions open their job there, and hired candidates come back as joiners." },
-  { name: "Expense Genie", spot: SpotReceipt, category: "Connected products", status: "available", description: "Claims and totals inside AskMira; approved claims are paid with salary in payroll." },
-  { name: "CGB Helpdesk", spot: SpotHeadset, category: "Connected products", status: "available", description: "IT tickets and the asset register from CGB Helpdesk, inside AskMira." },
-  { name: "Saleinx CRM", spot: SpotTrend, category: "Connected products", status: "available", description: "Deals, the pipeline and Wons to approve inside AskMira; a won order opens its positions; the pipeline sits beside department budgets." },
-  { name: "ProcureFlow", spot: SpotBox, category: "Connected products", status: "available", description: "Approvals, orders, invoices and cost-centre budgets inside AskMira; received equipment added to the asset register." },
+  { name: "Expense Genie", spot: SpotReceipt, category: "Connected products", status: "available", description: "Claims and totals inside AskMiraa; approved claims are paid with salary in payroll." },
+  { name: "CGB Helpdesk", spot: SpotHeadset, category: "Connected products", status: "available", description: "IT tickets and the asset register from CGB Helpdesk, inside AskMiraa." },
+  { name: "Saleinx CRM", spot: SpotTrend, category: "Connected products", status: "available", description: "Deals, the pipeline and Wons to approve inside AskMiraa; a won order opens its positions; the pipeline sits beside department budgets." },
+  { name: "ProcureFlow", spot: SpotBox, category: "Connected products", status: "available", description: "Approvals, orders, invoices and cost-centre budgets inside AskMiraa; received equipment added to the asset register." },
   { name: "Digio eSign", spot: SpotSign, category: "Connected products", status: "available", description: "Aadhaar eSign for letters, with your Digio account; the signed copy is filed on the profile." },
 
   { name: "REST API", spot: SpotCode, category: "Developers", status: "available", description: "Scoped, revocable API keys for employees, leave, attendance, org and hiring data." },

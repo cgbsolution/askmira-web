@@ -136,7 +136,7 @@ export function FeatureMosaic() {
             note="pick what you need"
             align="left"
             title={<>Twelve modules. <Emph underline={false}>One employee <Squiggle>record.</Squiggle></Emph></>}
-            lead="Each part of AskMira works on its own, and better together — because they all read and write the same record."
+            lead="Each part of AskMiraa works on its own, and better together — because they all read and write the same record."
           />
           <OneRecordHub className="max-w-[26rem] sm:max-w-[30rem]" />
         </div>

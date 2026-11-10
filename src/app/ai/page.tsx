@@ -13,9 +13,9 @@ import { faqGroups } from "@/lib/content/faq";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Ask Mira — the HR companion with guardrails",
+  title: "Ask Miraa — the HR companion with guardrails",
   description:
-    "Ask Mira answers HR questions from your own policies with the source quoted, looks things up and acts with the asker's permissions once they confirm, and is off until your admin switches it on.",
+    "Ask Miraa answers HR questions from your own policies with the source quoted, looks things up and acts with the asker's permissions once they confirm, and is off until your admin switches it on.",
   path: "/ai",
 });
 
@@ -23,20 +23,20 @@ const CAPABILITIES: { icon: SpotIcon; title: string; body: string; points: strin
   {
     icon: SpotBook,
     title: "Policy answers, with the source quoted",
-    body: "Employees ask in their own words. Mira answers from your handbook and policies, and names the document and section it used.",
+    body: "Employees ask in their own words. Miraa answers from your handbook and policies, and names the document and section it used.",
     points: ["No more hunting through PDFs", "An answer anyone can check", "The helpdesk is there when a person is needed"],
   },
   {
     icon: SpotChart,
     title: "Reports, asked in plain words",
-    body: "Ask \"how many joiners in Pune this quarter?\" and Mira turns it into a report definition. The model sees field names, never a single row.",
+    body: "Ask \"how many joiners in Pune this quarter?\" and Miraa turns it into a report definition. The model sees field names, never a single row.",
     points: ["The same safeguards as the report builder", "Shows how it read your question", "Rows scoped to what you may see"],
   },
   {
     icon: SpotToggle,
     title: "Does it for you, when you confirm",
-    body: "Apply for leave, raise an attendance correction or a ticket, approve what waits on you, move a deal in Saleinx or approve in ProcureFlow. Mira shows what it will do; nothing happens until you confirm.",
-    points: ["The module's own rules are checked first", "Leave only against the balance you have", "Recorded as done through Ask Mira"],
+    body: "Apply for leave, raise an attendance correction or a ticket, approve what waits on you, move a deal in Saleinx or approve in ProcureFlow. Miraa shows what it will do; nothing happens until you confirm.",
+    points: ["The module's own rules are checked first", "Leave only against the balance you have", "Recorded as done through Ask Miraa"],
   },
   {
     icon: SpotChart,
@@ -47,8 +47,8 @@ const CAPABILITIES: { icon: SpotIcon; title: string; body: string; points: strin
   {
     icon: SpotPlug,
     title: "Your AI assistant, connected",
-    body: "Connect AskMira to Claude or ChatGPT over MCP. The assistant signs in as the person and gets exactly their permissions.",
-    points: ["Sign-in with OAuth", "Every call recorded", "The same permissions as in AskMira"],
+    body: "Connect AskMiraa to Claude or ChatGPT over MCP. The assistant signs in as the person and gets exactly their permissions.",
+    points: ["Sign-in with OAuth", "Every call recorded", "The same permissions as in AskMiraa"],
   },
 ];
 
@@ -71,8 +71,8 @@ const RULES: { icon: SpotIcon; title: string; body: string }[] = [
   { icon: SpotPrivacy, title: "Consent comes first", body: "Where the data is an employee's own, their consent for that purpose must allow it. A blank is not a yes." },
   { icon: SpotPlane, title: "Transfers are recorded", body: "Any data sent to a provider outside India is recorded with the provider, the purpose and the categories of data." },
   { icon: SpotAuditLog, title: "Every request logged", body: "The model used, the outcome and who asked — published to admins in the AI Trust Center." },
-  { icon: SpotLock, title: "Never more than the asker", body: "Mira works with the signed-in person's permissions. It cannot see what they cannot." },
-  { icon: SpotMira, title: "Quick lookups without AI", body: "With AI off, Mira still answers common questions by rule, and nothing leaves AskMira." },
+  { icon: SpotLock, title: "Never more than the asker", body: "Miraa works with the signed-in person's permissions. It cannot see what they cannot." },
+  { icon: SpotMira, title: "Quick lookups without AI", body: "With AI off, Miraa still answers common questions by rule, and nothing leaves AskMiraa." },
   { icon: SpotPlug, title: "Your choice of AI", body: "Each workspace picks Anthropic, OpenAI, Google Gemini or its own Ollama server, with its own key." },
 ];
 
@@ -81,11 +81,11 @@ export default function AiPage() {
   return (
     <>
       <DarkHero
-        eyebrow="Ask Mira AI"
+        eyebrow="Ask Miraa AI"
         eyebrowIcon={SpotMira}
         title="An HR companion that shows its working"
-        lead="Ask Mira answers questions from your own policies and records, quotes where the answer came from, and never sees more than the person asking."
-        secondary={{ label: "The rules Mira follows", href: "#guardrails" }}
+        lead="Ask Miraa answers questions from your own policies and records, quotes where the answer came from, and never sees more than the person asking."
+        secondary={{ label: "The rules Miraa follows", href: "#guardrails" }}
         visual={
           <AppWindow screen={screens.amMira} priority className="mx-auto max-w-5xl shadow-frame" />
         }
@@ -96,7 +96,7 @@ export default function AiPage() {
           <SectionHeading
             id="capabilities-heading"
             eyebrow="What it does"
-            title="Three ways AI helps inside AskMira"
+            title="Three ways AI helps inside AskMiraa"
             lead="Each one is built so a person can check the result — not just trust it."
           />
           <Stagger className="mt-14 grid gap-4 lg:grid-cols-3">
@@ -125,10 +125,10 @@ export default function AiPage() {
         <div className="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <h2 id="lookups-heading" className="font-display text-display-3 font-semibold text-ink-950">
-              What Mira can look up for you
+              What Miraa can look up for you
             </h2>
             <p className="mt-4 text-lead text-ink-600">
-              Mira changes something only when the person asking confirms it, through the module&apos;s own rules. These
+              Miraa changes something only when the person asking confirms it, through the module&apos;s own rules. These
               are the things it can read — each one only as far as the person asking is allowed to see.
             </p>
             <ul className="mt-8 flex flex-wrap gap-2">
@@ -153,8 +153,8 @@ export default function AiPage() {
           <SectionHeading
             id="across-heading"
             eyebrow="Across your apps"
-            title="Questions managers ask, and what Mira answers today"
-            lead="Mira reads AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow where they are connected, and AskMira's own budgets. It acts only when the person asking confirms."
+            title="Questions managers ask, and what Miraa answers today"
+            lead="Miraa reads AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow where they are connected, and AskMiraa's own budgets. It acts only when the person asking confirms."
           />
           <MiraAcross className="mt-12" />
         </div>
@@ -166,7 +166,7 @@ export default function AiPage() {
             id="rules-heading"
             tone="dark"
             eyebrow="Guardrails"
-            title="The rules Mira follows"
+            title="The rules Miraa follows"
             lead="These are enforced in the product's code, not in a policy document."
           />
           <Stagger className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -190,7 +190,7 @@ export default function AiPage() {
         </div>
       </section>
 
-      <CtaBand title="See Ask Mira answer your questions" lead="Bring a policy question your team asks every week. We will show you the answer, and where it came from." />
+      <CtaBand title="See Ask Miraa answer your questions" lead="Bring a policy question your team asks every week. We will show you the answer, and where it came from." />
     </>
   );
 }

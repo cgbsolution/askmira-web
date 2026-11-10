@@ -99,7 +99,7 @@ export const PLANS: Plan[] = [
     id: "ultimate",
     segment: "Complete suite",
     name: "Ultimate",
-    tagline: "Everything AskMira does — from hiring to performance, culture and Ask Mira.",
+    tagline: "Everything AskMiraa does — from hiring to performance, culture and Ask Miraa.",
     price: 6999,
     period: "/month",
     includedEmployees: 50,
@@ -113,7 +113,7 @@ export const PLANS: Plan[] = [
       "Culture: shoutouts, awards and clubs",
       "Hiring and careers site",
       "Learning and rewards",
-      "Ask Mira, the AI companion",
+      "Ask Miraa, the AI companion",
     ],
   },
 ];
@@ -206,7 +206,7 @@ export const COMPARISON: ComparisonGroup[] = [
     rows: [
       { feature: "Requisitions, pipeline, interviews and offers", from: "ultimate" },
       { feature: "Careers site and job boards", from: "ultimate" },
-      { feature: "Ask Mira, the AI companion", from: "ultimate" },
+      { feature: "Ask Miraa, the AI companion", from: "ultimate" },
     ],
   },
   {

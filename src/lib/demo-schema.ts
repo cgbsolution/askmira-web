@@ -18,7 +18,7 @@ export const INTERESTS = [
   { value: "hiring", label: "Hiring & onboarding" },
   { value: "performance", label: "Performance" },
   { value: "engagement", label: "Engagement" },
-  { value: "ai", label: "Ask Mira AI" },
+  { value: "ai", label: "Ask Miraa AI" },
   { value: "expenses", label: "Expense Genie" },
   { value: "helpdesk", label: "CGB Helpdesk" },
   { value: "crm", label: "Saleinx CRM" },

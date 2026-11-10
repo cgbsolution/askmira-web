@@ -16,7 +16,7 @@ export function ResourcesFaq() {
           eyebrow="Resources"
           note="free to read"
           title={<>Practical help for <Emph underline={false}>Indian <Squiggle>HR teams</Squiggle></Emph></>}
-          lead="Guides you can use whether or not you choose AskMira, and what we have shipped lately."
+          lead="Guides you can use whether or not you choose AskMiraa, and what we have shipped lately."
         />
         <div className="mt-12 grid gap-4 sm:mt-14 md:grid-cols-2 lg:grid-cols-3">
           {guides.map((g) => (

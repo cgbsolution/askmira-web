@@ -20,7 +20,7 @@ export const features: Feature[] = [
     whatIs: {
       title: "The record everything else reads from",
       body: [
-        "Employee information is AskMira's system of record. Payroll takes salary and bank details from it, attendance takes shifts and work locations, and the org chart draws itself from reporting lines.",
+        "Employee information is AskMiraa's system of record. Payroll takes salary and bank details from it, attendance takes shifts and work locations, and the org chart draws itself from reporting lines.",
         "Because there is one record, a change made once — a transfer, a new bank account, a promotion — is right everywhere the next time anyone looks.",
       ],
     },
@@ -69,7 +69,7 @@ export const features: Feature[] = [
     ],
     faqs: [
       { q: "Can employees edit their own details?", a: "They can request a change from their profile. HR sees the old and new values side by side and approves or rejects it. Admins and HR change records directly, without raising a request." },
-      { q: "How do we move our existing data in?", a: "Upload your employee sheet in Excel. AskMira checks every row first and gives you a file of any rows it could not add, with the reason, so you can fix and re-upload just those." },
+      { q: "How do we move our existing data in?", a: "Upload your employee sheet in Excel. AskMiraa checks every row first and gives you a file of any rows it could not add, with the reason, so you can fix and re-upload just those." },
       { q: "Where are sensitive fields like PAN kept?", a: "In the database, encrypted at rest, and shown only to roles that are allowed to see them." },
     ],
     related: ["recruitment-onboarding", "documents", "access-control"],
@@ -91,7 +91,7 @@ export const features: Feature[] = [
     whatIs: {
       title: "One path from open role to productive teammate",
       body: [
-        "Hiring and onboarding are one flow in AskMira. The candidate you hire becomes the employee you onboard — no re-keying, no lost documents between teams.",
+        "Hiring and onboarding are one flow in AskMiraa. The candidate you hire becomes the employee you onboard — no re-keying, no lost documents between teams.",
         "Managers raise and approve roles, recruiters run the pipeline, and HR, IT and the manager each get the onboarding tasks that belong to them.",
       ],
     },
@@ -124,7 +124,7 @@ export const features: Feature[] = [
     ],
     highlights: [
       { icon: SpotTrend, title: "Hiring analytics", body: "Funnel, sources and time to hire for every requisition." },
-      { icon: SpotMegaphone, title: "Job boards", body: "Post openings to LinkedIn, Naukri and Indeed from AskMira, with your own accounts there." },
+      { icon: SpotMegaphone, title: "Job boards", body: "Post openings to LinkedIn, Naukri and Indeed from AskMiraa, with your own accounts there." },
       { icon: SpotConnected, title: "Already use AnytimeHire?", body: "Connect it: approved requisitions open their job there, and hired candidates come back as joiners." },
     ],
     faqs: [
@@ -151,7 +151,7 @@ export const features: Feature[] = [
     whatIs: {
       title: "From punch to payroll, without a spreadsheet in between",
       body: [
-        "Attendance in AskMira is built backwards from payroll. Every punch, shift, holiday and approved leave becomes payable days and loss-of-pay days for the period.",
+        "Attendance in AskMiraa is built backwards from payroll. Every punch, shift, holiday and approved leave becomes payable days and loss-of-pay days for the period.",
         "When HR locks the month, nothing can change behind payroll's back. If something must change, unlock, fix and lock again — with each step recorded.",
       ],
     },
@@ -196,11 +196,11 @@ export const features: Feature[] = [
     ],
     highlights: [
       { icon: SpotPin, title: "Geofenced punch", body: "Punches outside a work location's radius are flagged, not silently accepted." },
-      { icon: SpotDevice, title: "Biometric devices", body: "Point eSSL or ZKTeco devices at AskMira and punches arrive on their own." },
+      { icon: SpotDevice, title: "Biometric devices", body: "Point eSSL or ZKTeco devices at AskMiraa and punches arrive on their own." },
       { icon: SpotClock, title: "Nightly recompute", body: "Days are recalculated every night until the period is locked." },
     ],
     faqs: [
-      { q: "Which biometric devices work with AskMira?", a: "eSSL and ZKTeco devices that support the ADMS push protocol, which covers most terminals sold in India. Each device is registered to your workspace and its serial number is checked on every upload." },
+      { q: "Which biometric devices work with AskMiraa?", a: "eSSL and ZKTeco devices that support the ADMS push protocol, which covers most terminals sold in India. Each device is registered to your workspace and its serial number is checked on every upload." },
       { q: "Can employees punch from their phone?", a: "Yes, from the phone's browser, with location shared. If a work location has a geofence, punches outside it are flagged for review." },
       { q: "What stops someone changing attendance after payroll has run?", a: "The period lock. Once HR locks a month, no recompute or regularisation can change it until it is unlocked, and both actions are recorded." },
     ],
@@ -218,12 +218,12 @@ export const features: Feature[] = [
     group: "Time & pay",
     headline: "Run Indian payroll with the statutory work done for you",
     intro:
-      "AskMira computes salaries from locked attendance, applies PF, ESI, professional tax, LWF and TDS, and produces payslips, the bank file and the return files — with a check at every step before money moves.",
+      "AskMiraa computes salaries from locked attendance, applies PF, ESI, professional tax, LWF and TDS, and produces payslips, the bank file and the return files — with a check at every step before money moves.",
     heroMockup: "payroll",
     whatIs: {
       title: "Payroll that shows its working",
       body: [
-        "A payroll run in AskMira is a sequence you can follow: lock attendance, compute, review each employee's pay, approve, then generate the bank file and statutory files.",
+        "A payroll run in AskMiraa is a sequence you can follow: lock attendance, compute, review each employee's pay, approve, then generate the bank file and statutory files.",
         "Statutory rates are kept as dated versions, never overwritten. A run from last year recomputes exactly as it did then, even after the rules have changed.",
       ],
     },
@@ -271,10 +271,10 @@ export const features: Feature[] = [
       { icon: SpotCash, title: "Double-pay guards", body: "The same month cannot be paid twice, and held salaries stay held." },
     ],
     faqs: [
-      { q: "Which statutory deductions does AskMira handle?", a: "Provident Fund, ESI, professional tax and labour welfare fund by state, and TDS on salary under both tax regimes, with investment declarations, proofs, 24Q returns, challans and Form 16." },
+      { q: "Which statutory deductions does AskMiraa handle?", a: "Provident Fund, ESI, professional tax and labour welfare fund by state, and TDS on salary under both tax regimes, with investment declarations, proofs, 24Q returns, challans and Form 16." },
       { q: "Can we run payroll before attendance is final?", a: "No. A run needs a locked attendance period. That rule is what keeps loss-of-pay days and payable days from changing after the money has gone." },
       { q: "Which banks are supported for salary transfer files?", a: "HDFC, ICICI, SBI, Axis and Kotak formats ship today. A new bank is usually a new format definition rather than new code." },
-      { q: "Do you post payroll to our accounting software?", a: "Yes. Map each payslip line to a ledger once, and AskMira exports the journal for Tally or Zoho Books. An export with an unmapped line is refused rather than guessed." },
+      { q: "Do you post payroll to our accounting software?", a: "Yes. Map each payslip line to a ledger once, and AskMiraa exports the journal for Tally or Zoho Books. An export with an unmapped line is refused rather than guessed." },
     ],
     related: ["attendance-leave", "expenses", "analytics"],
     seoTitle: "Payroll software with Indian statutory compliance",
@@ -388,8 +388,8 @@ export const features: Feature[] = [
         body: "Every page works on a phone browser and can be added to the home screen.",
         points: [
           "Punch in, apply for leave and approve from a phone",
-          "Add AskMira to the home screen like an app",
-          "The AskMira app for Android: punch, leave, approvals and payslips",
+          "Add AskMiraa to the home screen like an app",
+          "The AskMiraa app for Android: punch, leave, approvals and payslips",
           "Email approvals for managers on the move",
         ],
         mockup: "mobile",
@@ -401,7 +401,7 @@ export const features: Feature[] = [
       { icon: SpotBell, title: "Notifications", body: "In the app, by email, and on WhatsApp, Slack or Microsoft Teams when you connect them." },
     ],
     faqs: [
-      { q: "Is there a mobile app?", a: "Yes, the AskMira app for Android, for punching in, leave, approvals, payslips and Ask Mira. Every page also works in a phone browser, including on iPhone, and can be added to the home screen." },
+      { q: "Is there a mobile app?", a: "Yes, the AskMiraa app for Android, for punching in, leave, approvals, payslips and Ask Miraa. Every page also works in a phone browser, including on iPhone, and can be added to the home screen." },
       { q: "Can employees see each other's pay?", a: "No. Employees see their own pay and documents. What managers and HR can see is controlled by role." },
     ],
     related: ["attendance-leave", "payroll", "workflows"],
@@ -446,7 +446,7 @@ export const features: Feature[] = [
         body: "Expenses fit around your payroll and the tools you already use.",
         points: [
           "Salary reimbursements paid through the payroll run",
-          "Already on Expense Genie? Connect it and see claims inside AskMira",
+          "Already on Expense Genie? Connect it and see claims inside AskMiraa",
           "Exports for finance at month end",
         ],
         mockup: "workflow",
@@ -459,7 +459,7 @@ export const features: Feature[] = [
     ],
     faqs: [
       { q: "Can reimbursements be paid with salary?", a: "Yes. Approved salary reimbursements are picked up by the next payroll run." },
-      { q: "We already use Expense Genie. Do we have to switch?", a: "No. Connect Expense Genie and its claims, approvals and totals appear inside AskMira." },
+      { q: "We already use Expense Genie. Do we have to switch?", a: "No. Connect Expense Genie and its claims, approvals and totals appear inside AskMiraa." },
     ],
     related: ["payroll", "workflows", "analytics"],
     seoTitle: "Expense and travel management",
@@ -480,7 +480,7 @@ export const features: Feature[] = [
     whatIs: {
       title: "Your templates, everyone's documents",
       body: [
-        "HR writes a template once, with fields like name, designation and salary. AskMira fills them in for one person or a whole batch.",
+        "HR writes a template once, with fields like name, designation and salary. AskMiraa fills them in for one person or a whole batch.",
         "Issued letters, uploaded proofs and acknowledged policies are filed on each employee's profile, in private storage.",
       ],
     },
@@ -511,7 +511,7 @@ export const features: Feature[] = [
       },
     ],
     highlights: [
-      { icon: SpotVault, title: "Private storage", body: "Files sit in a private store and are served only through AskMira, which checks who is asking and records it." },
+      { icon: SpotVault, title: "Private storage", body: "Files sit in a private store and are served only through AskMiraa, which checks who is asking and records it." },
       { icon: SpotFileSend, title: "Bulk letters", body: "Increment season, done in one batch rather than one hundred Word files." },
       { icon: SpotShield, title: "Retention", body: "Keep records as long as the law requires, and no longer." },
     ],
@@ -539,7 +539,7 @@ export const features: Feature[] = [
       title: "Rules you set once, followed every time",
       body: [
         "Approval chains decide who approves what, by role, manager or department. Reminders keep things moving and every decision is recorded.",
-        "For anything AskMira does not cover, webhooks and the API let your own systems react the moment something changes.",
+        "For anything AskMiraa does not cover, webhooks and the API let your own systems react the moment something changes.",
       ],
     },
     blocks: [
@@ -575,7 +575,7 @@ export const features: Feature[] = [
     ],
     faqs: [
       { q: "Can managers approve without signing in?", a: "Yes. Approval emails carry Approve and Reject buttons. Each link names one approver and one request, and once the request is decided the link cannot change it." },
-      { q: "Can we connect AskMira to our own systems?", a: "Yes. Create scoped API keys and webhook endpoints in Settings. Webhooks are signed so your system can verify they came from AskMira." },
+      { q: "Can we connect AskMiraa to our own systems?", a: "Yes. Create scoped API keys and webhook endpoints in Settings. Webhooks are signed so your system can verify they came from AskMiraa." },
     ],
     related: ["attendance-leave", "expenses", "access-control"],
     seoTitle: "HR workflow automation and approvals",
@@ -712,7 +712,7 @@ export const features: Feature[] = [
     whatIs: {
       title: "Permissions enforced on the server, not just hidden in the menu",
       body: [
-        "Hiding a button is not security. AskMira checks the role on every request, so data a person cannot see never leaves the server.",
+        "Hiding a button is not security. AskMiraa checks the role on every request, so data a person cannot see never leaves the server.",
         "Managing people is a place in the org chart, not a role you hand out: anyone with direct reports gets manager rights for their team, and loses them when the team changes.",
       ],
     },
@@ -748,7 +748,7 @@ export const features: Feature[] = [
       { icon: SpotKey, title: "SSO and 2-step", body: "OIDC single sign-on, Google and Microsoft, and two-step verification." },
     ],
     faqs: [
-      { q: "Can we use our company's single sign-on?", a: "Yes. AskMira supports OpenID Connect single sign-on, plus Google and Microsoft sign-in. Admins can require SSO for everyone." },
+      { q: "Can we use our company's single sign-on?", a: "Yes. AskMiraa supports OpenID Connect single sign-on, plus Google and Microsoft sign-in. Admins can require SSO for everyone." },
       { q: "Who can see salaries?", a: "Employees see their own. Payroll and admin roles see what their role allows. Every view of sensitive data follows the same server-side rules." },
       { q: "Can a payroll bureau or CA firm work in our workspace?", a: "Yes, through operator access you grant. Their actions are recorded as theirs, so you can always tell your staff from the bureau's." },
     ],

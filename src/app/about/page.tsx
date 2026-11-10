@@ -7,9 +7,9 @@ import { IconChip, SectionHeading } from "@/components/sections/primitives";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "About AskMira",
+  title: "About AskMiraa",
   description:
-    "AskMira is an HR platform built for Indian companies, on a few principles: real numbers, unchangeable history, separated data and AI that shows its working.",
+    "AskMiraa is an HR platform built for Indian companies, on a few principles: real numbers, unchangeable history, separated data and AI that shows its working.",
   path: "/about",
 });
 
@@ -17,7 +17,7 @@ const PRINCIPLES: { icon: SpotIcon; title: string; body: string }[] = [
   {
     icon: SpotChart,
     title: "Every number on screen is real",
-    body: "Every figure on a screen is your own. AskMira never fills a screen with sample figures that a customer might mistake for theirs.",
+    body: "Every figure on a screen is your own. AskMiraa never fills a screen with sample figures that a customer might mistake for theirs.",
   },
   {
     icon: SpotAuditLog,
@@ -47,7 +47,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="HR software for the way Indian companies actually work"
-        lead="In most Indian companies, HR spends the month moving data between spreadsheets so that payroll can be right. AskMira is built to make that unnecessary — and to give the time back to people."
+        lead="In most Indian companies, HR spends the month moving data between spreadsheets so that payroll can be right. AskMiraa is built to make that unnecessary — and to give the time back to people."
         secondary={{ label: "Contact us", href: "/contact" }}
       />
 
@@ -57,7 +57,7 @@ export default function AboutPage() {
             id="principles-heading"
             eyebrow="What we hold ourselves to"
             title="The principles behind the product"
-            lead="These are written into how AskMira is built and tested, not just into this page."
+            lead="These are written into how AskMiraa is built and tested, not just into this page."
           />
           <Stagger className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {PRINCIPLES.map(({ icon: Icon, title, body }, i) => (
@@ -80,7 +80,7 @@ export default function AboutPage() {
               Connected to the products around it
             </h2>
             <p className="mt-4 max-w-3xl text-lead text-ink-700">
-              AskMira connects in one click to AnytimeHire for hiring, Expense Genie for expenses and CGB Helpdesk for IT
+              AskMiraa connects in one click to AnytimeHire for hiring, Expense Genie for expenses and CGB Helpdesk for IT
               tickets and assets — so a company already using them sees everything in one place, with one sign-in.
             </p>
           </div>

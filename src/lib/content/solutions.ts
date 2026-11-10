@@ -23,7 +23,7 @@ export type Solution = {
 export const solutions: Solution[] = [
   {
     slug: "hr-teams",
-    name: "AskMira for HR teams",
+    name: "AskMiraa for HR teams",
     label: "HR teams",
     short: "Spend the month on people, not on chasing data.",
     icon: SpotTeam,
@@ -72,11 +72,11 @@ export const solutions: Solution[] = [
     ],
     features: ["employee-management", "attendance-leave", "self-service", "workflows", "documents", "analytics"],
     seoDescription:
-      "How AskMira helps HR teams: one employee record, attendance settled before payroll, self-service answers and approvals that route themselves.",
+      "How AskMiraa helps HR teams: one employee record, attendance settled before payroll, self-service answers and approvals that route themselves.",
   },
   {
     slug: "employees",
-    name: "AskMira for employees",
+    name: "AskMiraa for employees",
     label: "Employees",
     short: "Your leave, pay and documents, without asking anyone.",
     icon: SpotPerson,
@@ -125,11 +125,11 @@ export const solutions: Solution[] = [
     ],
     features: ["self-service", "attendance-leave", "payroll", "engagement", "documents", "expenses"],
     seoDescription:
-      "How AskMira helps employees: punch in, leave, payslips, tax declarations, documents and recognition from any phone.",
+      "How AskMiraa helps employees: punch in, leave, payslips, tax declarations, documents and recognition from any phone.",
   },
   {
     slug: "managers",
-    name: "AskMira for managers",
+    name: "AskMiraa for managers",
     label: "Managers",
     short: "Lead your team without the admin.",
     icon: SpotOrg,
@@ -178,11 +178,11 @@ export const solutions: Solution[] = [
     ],
     features: ["workflows", "attendance-leave", "performance", "recruitment-onboarding", "analytics", "engagement"],
     seoDescription:
-      "How AskMira helps managers: one approvals inbox with email approvals, team attendance, goals, one-on-ones and reviews.",
+      "How AskMiraa helps managers: one approvals inbox with email approvals, team attendance, goals, one-on-ones and reviews.",
   },
   {
     slug: "finance-payroll",
-    name: "AskMira for finance and payroll",
+    name: "AskMiraa for finance and payroll",
     label: "Finance & payroll",
     short: "Close payroll with numbers you can defend.",
     icon: SpotCalculator,
@@ -231,11 +231,11 @@ export const solutions: Solution[] = [
     ],
     features: ["payroll", "attendance-leave", "expenses", "analytics", "access-control", "workflows"],
     seoDescription:
-      "How AskMira helps finance and payroll teams: payroll on locked attendance, statutory files, bank files and Tally/Zoho journals.",
+      "How AskMiraa helps finance and payroll teams: payroll on locked attendance, statutory files, bank files and Tally/Zoho journals.",
   },
   {
     slug: "growing-businesses",
-    name: "AskMira for growing businesses",
+    name: "AskMiraa for growing businesses",
     label: "Growing businesses",
     short: "Grow past spreadsheets without an HR systems project.",
     icon: SpotGrowth,
@@ -254,7 +254,7 @@ export const solutions: Solution[] = [
       {
         eyebrow: "Start fast",
         title: "Your existing sheet is the starting point",
-        body: "Import employees from Excel; AskMira checks every row and tells you exactly what to fix.",
+        body: "Import employees from Excel; AskMiraa checks every row and tells you exactly what to fix.",
         points: ["Row-by-row checks", "Download of rows not added", "One person at a time with the joiner wizard"],
         feature: "employee-management",
         mockup: "import",
@@ -279,16 +279,16 @@ export const solutions: Solution[] = [
     month: [
       { title: "Day 1", body: "Your workspace and first admin are set up with you on the call." },
       { title: "Week 1", body: "Employees imported from Excel; leave and attendance policies set." },
-      { title: "First month-end", body: "Attendance locked and your first payroll run in AskMira." },
+      { title: "First month-end", body: "Attendance locked and your first payroll run in AskMiraa." },
       { title: "Later", body: "Hiring, performance and culture switched on as the team grows." },
     ],
     features: ["employee-management", "payroll", "attendance-leave", "self-service", "recruitment-onboarding", "documents"],
     seoDescription:
-      "AskMira for growing Indian businesses: Excel import, statutory payroll from month one, and modules switched on as you grow.",
+      "AskMiraa for growing Indian businesses: Excel import, statutory payroll from month one, and modules switched on as you grow.",
   },
   {
     slug: "enterprise",
-    name: "AskMira for enterprises",
+    name: "AskMiraa for enterprises",
     label: "Enterprise",
     short: "Multi-entity HR with the controls your auditors expect.",
     icon: SpotBuildings,
@@ -337,7 +337,7 @@ export const solutions: Solution[] = [
     ],
     features: ["access-control", "employee-management", "payroll", "workflows", "analytics", "documents"],
     seoDescription:
-      "AskMira for enterprises: multiple legal entities, SSO and SCIM, IP allowlists, insert-only audit log, API and webhooks.",
+      "AskMiraa for enterprises: multiple legal entities, SSO and SCIM, IP allowlists, insert-only audit log, API and webhooks.",
   },
 ];
 

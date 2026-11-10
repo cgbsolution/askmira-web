@@ -2,11 +2,11 @@ import { SpotBox, SpotDashboard, SpotHeadset, SpotMira, SpotReceipt, SpotRecruit
 import type { Accent } from "./types";
 
 /*
- * The AskMira platform: the HRMS at the centre and the business apps around it.
+ * The AskMiraa platform: the HRMS at the centre and the business apps around it.
  *
  * Every connection here is built and was checked on 2026-11-05 against each
  * product's own code:
- *   - AskMira:      C:\cgbcode\askmira (backend/app/services/products, hiring/linked_jobs,
+ *   - AskMiraa:      C:\cgbcode\askmira (backend/app/services/products, hiring/linked_jobs,
  *                   onboarding/linked_hires, payroll/linked_expenses, positions/spend,
  *                   assets/received, companion)
  *   - AnytimeHire:  app/routers/askmira.py (job.open, hires)
@@ -38,7 +38,7 @@ export type PlatformApp = {
   summary: string;
   /** Capabilities seen in the product's own code. */
   capabilities: string[];
-  /** How it connects to the AskMira HRMS. */
+  /** How it connects to the AskMiraa HRMS. */
   connection: { status: ConnectionStatus; detail: string };
   /** Where a visitor reads more. */
   href: string;
@@ -47,7 +47,7 @@ export type PlatformApp = {
 export const platformApps: PlatformApp[] = [
   {
     key: "hrms",
-    name: "AskMira HRMS",
+    name: "AskMiraa HRMS",
     kind: "People, time and payroll",
     icon: SpotDashboard,
     accent: "red",
@@ -81,7 +81,7 @@ export const platformApps: PlatformApp[] = [
     connection: {
       status: "live",
       detail:
-        "One-click connect, single sign-on and people sync. An approved AskMira requisition opens its job here; a hired candidate comes back to AskMira to add as a joiner.",
+        "One-click connect, single sign-on and people sync. An approved AskMiraa requisition opens its job here; a hired candidate comes back to AskMiraa to add as a joiner.",
     },
     href: "/connected-platform#anytimehire",
   },
@@ -103,7 +103,7 @@ export const platformApps: PlatformApp[] = [
     connection: {
       status: "live",
       detail:
-        "One-click connect, single sign-on, people sync and claims inside AskMira. Approved claims are paid with salary in AskMira payroll and marked paid here.",
+        "One-click connect, single sign-on, people sync and claims inside AskMiraa. Approved claims are paid with salary in AskMiraa payroll and marked paid here.",
     },
     href: "/connected-platform#expense-genie",
   },
@@ -125,7 +125,7 @@ export const platformApps: PlatformApp[] = [
     connection: {
       status: "live",
       detail:
-        "People raise and reply to tickets inside AskMira and see the assets they hold. Equipment received in ProcureFlow is added to the register from AskMira.",
+        "People raise and reply to tickets inside AskMiraa and see the assets they hold. Equipment received in ProcureFlow is added to the register from AskMiraa.",
     },
     href: "/connected-platform#helpdesk",
   },
@@ -146,7 +146,7 @@ export const platformApps: PlatformApp[] = [
     connection: {
       status: "live",
       detail:
-        "One-click connect, single sign-on and people sync with each person's Saleinx role. Deals, the pipeline and Wons to approve open inside AskMira, and the pipeline sits beside department budgets.",
+        "One-click connect, single sign-on and people sync with each person's Saleinx role. Deals, the pipeline and Wons to approve open inside AskMiraa, and the pipeline sits beside department budgets.",
     },
     href: "/connected-platform#saleinx",
   },
@@ -167,18 +167,18 @@ export const platformApps: PlatformApp[] = [
     connection: {
       status: "live",
       detail:
-        "One-click connect, single sign-on and people sync with each person's ProcureFlow role. Approvals, requisitions, orders, invoices and budgets open inside AskMira; received equipment goes to the asset register.",
+        "One-click connect, single sign-on and people sync with each person's ProcureFlow role. Approvals, requisitions, orders, invoices and budgets open inside AskMiraa; received equipment goes to the asset register.",
     },
     href: "/connected-platform#procureflow",
   },
   {
     key: "mira",
-    name: "Ask Mira",
+    name: "Ask Miraa",
     kind: "AI companion",
     icon: SpotMira,
     accent: "marigold",
     summary:
-      "Answers questions across AskMira and the connected apps, and does what the person asks once they confirm — always as them, with their permissions.",
+      "Answers questions across AskMiraa and the connected apps, and does what the person asks once they confirm — always as them, with their permissions.",
     capabilities: [
       "Policies, people, leave, attendance, payroll and workforce reports",
       "Department budgets: what is left, and whether more hires fit",
@@ -188,7 +188,7 @@ export const platformApps: PlatformApp[] = [
     ],
     connection: {
       status: "live",
-      detail: "Works across AskMira, AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow.",
+      detail: "Works across AskMiraa, AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow.",
     },
     href: "/ai",
   },
@@ -220,16 +220,16 @@ export const journey: JourneyStep[] = [
     summary: "Deals move through their stages in the CRM, and a manager approves each Won.",
     example: "Sales West's pipeline for the quarter is running 28% above plan, and a new order is Won.",
     status: "live",
-    today: "Saleinx's own rules decide each stage. Ask Mira can add a lead from a note or move a deal, as the rep, once they confirm.",
+    today: "Saleinx's own rules decide each stage. Ask Miraa can add a lead from a note or move a deal, as the rep, once they confirm.",
   },
   {
     id: "order",
     title: "Booking the order",
     app: "mira",
     summary: "The signed order opens its positions and writes its prospective P&L.",
-    example: "Ask Mira checks the Won is approved and the PO matches the team's billing, then opens two positions.",
+    example: "Ask Miraa checks the Won is approved and the PO matches the team's billing, then opens two positions.",
     status: "live",
-    today: "Positions open in AnytimeHire and the forecast is written in AskMira, step by step; a step that fails undoes the ones before it.",
+    today: "Positions open in AnytimeHire and the forecast is written in AskMiraa, step by step; a step that fails undoes the ones before it.",
   },
   {
     id: "budget",
@@ -265,7 +265,7 @@ export const journey: JourneyStep[] = [
     summary: "The approved role is recruited for, with AI screening and interviews.",
     example: "140 applicants matched to the job, 12 AI interviews scored, two offers accepted.",
     status: "live",
-    today: "Recruiters work in AnytimeHire, signed in from AskMira, with the people AskMira sends it.",
+    today: "Recruiters work in AnytimeHire, signed in from AskMiraa, with the people AskMiraa sends it.",
   },
   {
     id: "onboarding",
@@ -283,7 +283,7 @@ export const journey: JourneyStep[] = [
     summary: "The manager requests laptops and software against the cost-centre budget.",
     example: "Two laptops and two CRM seats are requested and approved; supplier quotes come back through the vendor portal.",
     status: "live",
-    today: "ProcureFlow checks each request against its cost-centre budget. Ask Mira approves what waits on you, once you confirm.",
+    today: "ProcureFlow checks each request against its cost-centre budget. Ask Miraa approves what waits on you, once you confirm.",
   },
   {
     id: "assets",
@@ -292,7 +292,7 @@ export const journey: JourneyStep[] = [
     summary: "Purchased equipment is registered and assigned to the new employees.",
     example: "Both laptops are registered from the goods receipt and assigned before day one.",
     status: "live",
-    today: "Received units go to the asset register — CGB Helpdesk's, or AskMira's — once each, with serial, cost and vendor.",
+    today: "Received units go to the asset register — CGB Helpdesk's, or AskMiraa's — once each, with serial, cost and vendor.",
   },
   {
     id: "expenses",
@@ -301,7 +301,7 @@ export const journey: JourneyStep[] = [
     summary: "Employees claim expenses and policies route them for approval.",
     example: "A client-visit taxi is claimed in chat with a receipt photo; the policy cap is applied.",
     status: "live",
-    today: "Approved claims are paid with salary in AskMira payroll, untaxed, and marked paid in Expense Genie.",
+    today: "Approved claims are paid with salary in AskMiraa payroll, untaxed, and marked paid in Expense Genie.",
   },
   {
     id: "helpdesk",
@@ -310,20 +310,20 @@ export const journey: JourneyStep[] = [
     summary: "Employees raise tickets for IT, HR, equipment and operations.",
     example: "A VPN access ticket in week one is resolved inside its SLA.",
     status: "live",
-    today: "Tickets are raised and answered from inside AskMira; managers see their team's in Ask Mira.",
+    today: "Tickets are raised and answered from inside AskMiraa; managers see their team's in Ask Miraa.",
   },
   {
     id: "reporting",
     title: "Management reporting",
     app: "mira",
     summary: "Managers review budget, hiring, spend and support in one place.",
-    example: "HR asks Mira whether Sales West can afford the two hires, and what is left this year.",
+    example: "HR asks Miraa whether Sales West can afford the two hires, and what is left this year.",
     status: "live",
-    today: "Workforce reports in AskMira; Ask Mira answers across budgets, hiring, expenses, purchasing, sales and support.",
+    today: "Workforce reports in AskMiraa; Ask Miraa answers across budgets, hiring, expenses, purchasing, sales and support.",
   },
 ];
 
-/* ── What Ask Mira answers across the platform ─────────────────────────── */
+/* ── What Ask Miraa answers across the platform ─────────────────────────── */
 
 export type MiraQuestion = {
   q: string;
@@ -336,7 +336,7 @@ export const miraQuestions: MiraQuestion[] = [
   {
     q: "Summarise our current recruitment pipeline.",
     status: "live",
-    how: "Jobs, candidates by stage and upcoming interviews from AnytimeHire (or AskMira's own hiring module).",
+    how: "Jobs, candidates by stage and upcoming interviews from AnytimeHire (or AskMiraa's own hiring module).",
   },
   {
     q: "Summarise this month's employee expense submissions.",
@@ -351,7 +351,7 @@ export const miraQuestions: MiraQuestion[] = [
   {
     q: "Which employees still need equipment assigned?",
     status: "live",
-    how: "This month's joiners and what each holds in the asset register — CGB Helpdesk's, or AskMira's.",
+    how: "This month's joiners and what each holds in the asset register — CGB Helpdesk's, or AskMiraa's.",
   },
   {
     q: "Can our department afford to hire two more people?",
@@ -386,20 +386,20 @@ export type Connection = {
 
 export const connections: Connection[] = [
   {
-    from: "AskMira",
+    from: "AskMiraa",
     to: "AnytimeHire",
     status: "live",
-    what: "One-click connect with a per-workspace secret, single sign-on, people sync, Ask Mira lookups.",
+    what: "One-click connect with a per-workspace secret, single sign-on, people sync, Ask Miraa lookups.",
   },
   {
-    from: "AskMira requisition",
+    from: "AskMiraa requisition",
     to: "AnytimeHire job",
     status: "live",
     what: "The last approval opens the job in AnytimeHire, once; HR can try again if AnytimeHire refuses.",
   },
   {
     from: "AnytimeHire hire",
-    to: "AskMira joiner",
+    to: "AskMiraa joiner",
     status: "live",
     what: "Candidates marked Hired are listed under Add employees, with name, email, phone, job and department filled in.",
   },
@@ -407,47 +407,47 @@ export const connections: Connection[] = [
     from: "Saleinx order",
     to: "AnytimeHire and the P&L",
     status: "live",
-    what: "Ask Mira books a won, approved order: its positions open in AnytimeHire and its prospective P&L in AskMira.",
+    what: "Ask Miraa books a won, approved order: its positions open in AnytimeHire and its prospective P&L in AskMiraa.",
   },
   {
-    from: "AskMira",
+    from: "AskMiraa",
     to: "Expense Genie",
     status: "live",
-    what: "One-click connect, single sign-on, people sync, claims inside AskMira, Ask Mira lookups.",
+    what: "One-click connect, single sign-on, people sync, claims inside AskMiraa, Ask Miraa lookups.",
   },
   {
     from: "Expense Genie claims",
-    to: "AskMira payroll",
+    to: "AskMiraa payroll",
     status: "live",
     what: "Approved claims are paid with salary, untaxed, once each, and marked paid in Expense Genie.",
   },
   {
     from: "Expense Genie spend",
-    to: "AskMira department budgets",
+    to: "AskMiraa department budgets",
     status: "live",
     what: "Approved claims added up by each submitter's department, beside the budget.",
   },
   {
-    from: "AskMira",
+    from: "AskMiraa",
     to: "CGB Helpdesk",
     status: "live",
-    what: "Raise and reply to tickets inside AskMira, the asset register, Ask Mira lookups and ticket actions.",
+    what: "Raise and reply to tickets inside AskMiraa, the asset register, Ask Miraa lookups and ticket actions.",
   },
   {
-    from: "AskMira",
+    from: "AskMiraa",
     to: "Saleinx",
     status: "live",
-    what: "One-click connect, single sign-on, people sync with Saleinx's own roles; deals, pipeline and Wons to approve inside AskMira.",
+    what: "One-click connect, single sign-on, people sync with Saleinx's own roles; deals, pipeline and Wons to approve inside AskMiraa.",
   },
   {
-    from: "AskMira",
+    from: "AskMiraa",
     to: "ProcureFlow",
     status: "live",
-    what: "One-click connect, single sign-on, people sync with ProcureFlow's own roles; approvals, orders, invoices and budgets inside AskMira.",
+    what: "One-click connect, single sign-on, people sync with ProcureFlow's own roles; approvals, orders, invoices and budgets inside AskMiraa.",
   },
   {
     from: "ProcureFlow budgets",
-    to: "AskMira department budgets",
+    to: "AskMiraa department budgets",
     status: "live",
     what: "Each cost centre's allocated, committed and available amounts, beside the department of the same name.",
   },
@@ -455,10 +455,10 @@ export const connections: Connection[] = [
     from: "ProcureFlow receipt",
     to: "Asset register",
     status: "live",
-    what: "Received units become assets — in CGB Helpdesk's register or AskMira's — once each, ready to hand over.",
+    what: "Received units become assets — in CGB Helpdesk's register or AskMiraa's — once each, ready to hand over.",
   },
   {
-    from: "Ask Mira",
+    from: "Ask Miraa",
     to: "Every connected app",
     status: "live",
     what: "Lookups and confirmed actions in each app, under the asker's own permissions there.",

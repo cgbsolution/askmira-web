@@ -382,7 +382,7 @@ export function DemoForm({
               </FormControl>
               <div className="grid gap-1">
                 <FormLabel className="block text-sm leading-snug font-normal text-ink-600">
-                  AskMira may contact me about this request. My details are handled as described in the{" "}
+                  AskMiraa may contact me about this request. My details are handled as described in the{" "}
                   <Link href="/privacy" className="font-semibold text-brand-800 underline underline-offset-2">
                     privacy policy
                   </Link>

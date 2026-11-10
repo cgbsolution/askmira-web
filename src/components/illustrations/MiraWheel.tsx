@@ -16,9 +16,9 @@ import {
 import { cn } from "@/lib/utils";
 
 /*
- * Ask Mira on a turning sunburst: a question, Mira "typing", then the answer
+ * Ask Miraa on a turning sunburst: a question, Miraa "typing", then the answer
  * with the apps it drew on. It moves through a few example questions on its
- * own; picking a chip shows that one. The examples are things Mira does today
+ * own; picking a chip shows that one. The examples are things Miraa does today
  * (policy answers with the source, expense data, order win → hiring requests,
  * joiners and their IT tickets); the numbers are sample data.
  */
@@ -97,7 +97,7 @@ function Wheel() {
 
 function TypingDots() {
   return (
-    <span className="flex items-center gap-1.5 py-1.5" aria-label="Mira is typing">
+    <span className="flex items-center gap-1.5 py-1.5" aria-label="Miraa is typing">
       {[0, 1, 2].map((i) => (
         <span key={i} className="animate-typing size-2 rounded-full bg-marigold-400" style={{ animationDelay: `${i * 0.15}s` }} />
       ))}
@@ -113,7 +113,7 @@ export function MiraWheel({ className }: { className?: string }) {
   const inView = useInView(ref, { amount: 0.3 });
   const reduce = useReducedMotion();
 
-  // Mira "types" for a moment before each answer.
+  // Miraa "types" for a moment before each answer.
   useEffect(() => {
     if (!inView && !picked) return;
     setTyping(true);
@@ -181,7 +181,7 @@ export function MiraWheel({ className }: { className?: string }) {
               <span className="grid size-5 place-items-center rounded-md bg-cream-25 p-0.5 [--spot-tile:var(--color-cream-25)]">
                 <SpotMira className="size-full" />
               </span>
-              Mira
+              Miraa
             </small>
             <AnimatePresence mode="wait" initial={false}>
               {typing ? (

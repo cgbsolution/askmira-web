@@ -2,7 +2,7 @@ import { AppWindow } from "@/components/product/AppWindow";
 import { APPS, screens, type Screen } from "@/lib/content/screens";
 import { cn } from "@/lib/utils";
 
-/** Real windows of the connected apps, stacked around AskMira, for a dark hero. */
+/** Real windows of the connected apps, stacked around AskMiraa, for a dark hero. */
 export function WindowStack({ className }: { className?: string }) {
   return (
     <div className={cn("relative mx-auto max-w-6xl pb-6 lg:pb-24", className)}>

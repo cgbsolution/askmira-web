@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 import { AskMiraLogo } from "./Logo";
 
 const SOCIAL = [
-  { key: "linkedin", label: "AskMira on LinkedIn", icon: Linkedin },
-  { key: "x", label: "AskMira on X", icon: Twitter },
-  { key: "youtube", label: "AskMira on YouTube", icon: Youtube },
-  { key: "instagram", label: "AskMira on Instagram", icon: Instagram },
+  { key: "linkedin", label: "AskMiraa on LinkedIn", icon: Linkedin },
+  { key: "x", label: "AskMiraa on X", icon: Twitter },
+  { key: "youtube", label: "AskMiraa on YouTube", icon: Youtube },
+  { key: "instagram", label: "AskMiraa on Instagram", icon: Instagram },
 ] as const;
 
 const linkClass =
@@ -124,12 +124,12 @@ export function SiteFooter() {
             ))}
             <li>
               <a href={signInUrl} className={cn(linkClass, "text-sm")}>
-                Sign in to AskMira
+                Sign in to AskMiraa
               </a>
             </li>
           </ul>
           <p>
-            © {year} {legalName || "AskMira"}. All rights reserved.
+            © {year} {legalName || "AskMiraa"}. All rights reserved.
           </p>
         </div>
       </div>

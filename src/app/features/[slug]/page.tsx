@@ -108,7 +108,7 @@ export default async function FeaturePage({ params }: Props) {
 
       <section className="section-y bg-background" aria-labelledby="faq-heading">
         <div className="container-site grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <SectionHeading id="faq-heading" align="left" title="Questions about this" lead={`${feature.name} in AskMira, in a few short answers.`} />
+          <SectionHeading id="faq-heading" align="left" title="Questions about this" lead={`${feature.name} in AskMiraa, in a few short answers.`} />
           <FaqList items={feature.faqs} />
         </div>
       </section>
@@ -122,7 +122,7 @@ export default async function FeaturePage({ params }: Props) {
         </div>
       </section>
 
-      <CtaBand title={`See ${feature.name.toLowerCase()} in AskMira`} />
+      <CtaBand title={`See ${feature.name.toLowerCase()} in AskMiraa`} />
     </>
   );
 }

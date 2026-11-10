@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Frequently asked questions",
-  description: "Answers about getting started with AskMira, Indian payroll and compliance, security, AI and pricing.",
+  description: "Answers about getting started with AskMiraa, Indian payroll and compliance, security, AI and pricing.",
   path: "/resources/faq",
 });
 

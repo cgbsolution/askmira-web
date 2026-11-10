@@ -11,7 +11,7 @@ import { siteConfig, signInUrl } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: "Ask about AskMira, pricing, partnerships or integrations. Existing customers can find help inside the product.",
+  description: "Ask about AskMiraa, pricing, partnerships or integrations. Existing customers can find help inside the product.",
   path: "/contact",
 });
 
@@ -22,7 +22,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         eyebrowIcon={SpotChat}
-        title="Talk to the AskMira team"
+        title="Talk to the AskMiraa team"
         lead="Questions about the product, pricing, a partnership or a security review — send us a note and we will reply by email."
         primary={null}
       />
@@ -34,7 +34,7 @@ export default function ContactPage() {
           <Reveal delay={0.1} className="grid content-start gap-4">
             <div className="rounded-3xl border border-cream-200 bg-white p-7">
               <SpotTile icon={SpotHeadset} size="lg" />
-              <h2 className="mt-4 font-display text-xl font-semibold text-ink-950">Already using AskMira?</h2>
+              <h2 className="mt-4 font-display text-xl font-semibold text-ink-950">Already using AskMiraa?</h2>
               <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">
                 Sign in — every page has a short help guide, and your HR team can answer workspace questions.
               </p>
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 href={signInUrl}
                 className="mt-4 inline-flex rounded-sm font-semibold text-brand-800 underline underline-offset-4 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50"
               >
-                Sign in to AskMira
+                Sign in to AskMiraa
               </a>
             </div>
             <div className="rounded-3xl border border-cream-200 bg-white p-7">

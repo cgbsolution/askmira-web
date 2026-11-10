@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Terms of service",
-  description: "The terms for using the AskMira website.",
+  description: "The terms for using the AskMiraa website.",
   path: "/terms",
 });
 
@@ -12,7 +12,7 @@ export default function TermsPage() {
     <LegalPage
       title="Terms of service"
       updated="27 October 2026"
-      intro="These terms cover your use of this website. Use of the AskMira platform itself is governed by the agreement each customer signs with us."
+      intro="These terms cover your use of this website. Use of the AskMiraa platform itself is governed by the agreement each customer signs with us."
       sections={[
         {
           heading: "Using this website",
@@ -31,7 +31,7 @@ export default function TermsPage() {
         {
           heading: "Trademarks",
           paragraphs: [
-            "AskMira and its logo are our marks. Other product names mentioned on this website belong to their owners and are used only to describe what AskMira works with.",
+            "AskMiraa and its logo are our marks. Other product names mentioned on this website belong to their owners and are used only to describe what AskMiraa works with.",
           ],
         },
         {

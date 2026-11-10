@@ -86,9 +86,9 @@ export const guides: Guide[] = [
         note: "Due dates are general guidance as of October 2026 and can be extended by notification. Confirm with your tax adviser before relying on them.",
       },
       {
-        heading: "How AskMira helps",
+        heading: "How AskMiraa helps",
         paragraphs: [
-          "In AskMira the order above is built in: a payroll run needs a locked attendance period, each employee's pay is reviewed before approval, and the bank file, ECR, challans, 24Q and Form 16 come from the approved run. Statutory rates are kept as dated versions, so an old run recomputes exactly as it did at the time.",
+          "In AskMiraa the order above is built in: a payroll run needs a locked attendance period, each employee's pay is reviewed before approval, and the bank file, ECR, challans, 24Q and Form 16 come from the approved run. Statutory rates are kept as dated versions, so an old run recomputes exactly as it did at the time.",
         ],
       },
     ],
@@ -97,7 +97,7 @@ export const guides: Guide[] = [
     slug: "prepare-employee-data-for-import",
     title: "Moving off spreadsheets: preparing your employee data",
     summary:
-      "How to get your employee sheet ready for AskMira, what the import checks, and how to fix the rows it sends back.",
+      "How to get your employee sheet ready for AskMiraa, what the import checks, and how to fix the rows it sends back.",
     category: "Getting started",
     icon: SpotSheet,
     readMinutes: 5,
@@ -106,7 +106,7 @@ export const guides: Guide[] = [
       {
         heading: "Start from what you already have",
         paragraphs: [
-          "You do not need to rebuild your data in a new format. AskMira reads its own template, and it also reads exports from other HR systems as they come: headers are matched whatever their case and spacing.",
+          "You do not need to rebuild your data in a new format. AskMiraa reads its own template, and it also reads exports from other HR systems as they come: headers are matched whatever their case and spacing.",
         ],
       },
       {
@@ -124,7 +124,7 @@ export const guides: Guide[] = [
       {
         heading: "Tidy these before you upload",
         list: [
-          "One person, one work email. AskMira refuses a second row with the same email, because one email is one login.",
+          "One person, one work email. AskMiraa refuses a second row with the same email, because one email is one login.",
           "Reporting managers who are themselves in the sheet, so the org chart can be drawn.",
           "Consistent names for departments, locations and legal entities, so they do not split into near-duplicates.",
           "Dates in one format throughout the sheet.",
@@ -149,7 +149,7 @@ export const guides: Guide[] = [
     slug: "biometric-attendance-essl-zkteco",
     title: "Connecting eSSL and ZKTeco biometric devices",
     summary:
-      "How AskMira receives punches from biometric terminals, what to set on the device, and how to check it is working.",
+      "How AskMiraa receives punches from biometric terminals, what to set on the device, and how to check it is working.",
     category: "Attendance",
     icon: SpotDevice,
     readMinutes: 4,
@@ -158,33 +158,33 @@ export const guides: Guide[] = [
       {
         heading: "How it works",
         paragraphs: [
-          "Most biometric terminals sold in India can push attendance logs to a server using the ADMS (\"iclock\") protocol. AskMira speaks that protocol: the device sends each punch as it happens, and AskMira files it against the right employee with the device's time zone applied.",
-          "AskMira never sends commands or user lists back to a device — only the acknowledgements the protocol needs.",
+          "Most biometric terminals sold in India can push attendance logs to a server using the ADMS (\"iclock\") protocol. AskMiraa speaks that protocol: the device sends each punch as it happens, and AskMiraa files it against the right employee with the device's time zone applied.",
+          "AskMiraa never sends commands or user lists back to a device — only the acknowledgements the protocol needs.",
         ],
       },
       {
         heading: "Register the device",
         list: [
-          "In AskMira, go to Settings → Devices and add the device with the serial number printed on its label.",
-          "AskMira gives the device its own push address, containing a token unique to that device.",
-          "Enrol each person on the device with their AskMira employee code as the device user ID — that is how punches are matched to people.",
+          "In AskMiraa, go to Settings → Devices and add the device with the serial number printed on its label.",
+          "AskMiraa gives the device its own push address, containing a token unique to that device.",
+          "Enrol each person on the device with their AskMiraa employee code as the device user ID — that is how punches are matched to people.",
         ],
       },
       {
-        heading: "Point the device at AskMira",
+        heading: "Point the device at AskMiraa",
         list: [
-          "In the device's communication or cloud server settings, enter the push address AskMira gave you.",
+          "In the device's communication or cloud server settings, enter the push address AskMiraa gave you.",
           "If the device's firmware only accepts a host and port, HR can allow serial-number-only push for that one device.",
           "Save, and make a test punch.",
         ],
-        note: "The serial number in every upload must match the registered device. If two workspaces register the same serial for serial-only push, AskMira refuses it rather than guessing.",
+        note: "The serial number in every upload must match the registered device. If two workspaces register the same serial for serial-only push, AskMiraa refuses it rather than guessing.",
       },
       {
         heading: "Check it is working",
         list: [
           "Settings → Devices shows when each device was last heard from, and flags one that has gone quiet.",
           "The test punch appears on the employee's attendance for today.",
-          "Punches with a code AskMira does not recognise are parked as exceptions for HR, not dropped.",
+          "Punches with a code AskMiraa does not recognise are parked as exceptions for HR, not dropped.",
         ],
       },
     ],
@@ -211,7 +211,7 @@ export const productUpdates: ProductUpdate[] = [
   {
     date: "2026-11-05",
     title: "Department budgets, with the year's spend beside them",
-    body: "Employees → Positions → Budget now shows each department's approved positions and cost beside payroll paid, Expense Genie claims, ProcureFlow purchasing and the Saleinx pipeline. Ask Mira answers “can we afford two more hires?” from the same figures.",
+    body: "Employees → Positions → Budget now shows each department's approved positions and cost beside payroll paid, Expense Genie claims, ProcureFlow purchasing and the Saleinx pipeline. Ask Miraa answers “can we afford two more hires?” from the same figures.",
     tags: ["Core HR", "AI"],
   },
   {
@@ -228,20 +228,20 @@ export const productUpdates: ProductUpdate[] = [
   },
   {
     date: "2026-11-03",
-    title: "Saleinx and ProcureFlow connect to AskMira",
-    body: "Both connect in one click. Deals, the pipeline and Wons to approve, and procurement approvals, orders, invoices and budgets show inside AskMira. Ask Mira adds leads, moves deals, approves in ProcureFlow and books won orders, once you confirm.",
+    title: "Saleinx and ProcureFlow connect to AskMiraa",
+    body: "Both connect in one click. Deals, the pipeline and Wons to approve, and procurement approvals, orders, invoices and budgets show inside AskMiraa. Ask Miraa adds leads, moves deals, approves in ProcureFlow and books won orders, once you confirm.",
     tags: ["Integrations", "AI"],
   },
   {
     date: "2026-10-31",
-    title: "Ask Mira: charts, conversations and your choice of AI",
-    body: "Ask for any figure or trend over your data and get a chart with the table beside it. Mira holds a conversation, applies for leave and raises requests once you confirm, and runs on Anthropic, OpenAI, Gemini or your own Ollama server.",
+    title: "Ask Miraa: charts, conversations and your choice of AI",
+    body: "Ask for any figure or trend over your data and get a chart with the table beside it. Miraa holds a conversation, applies for leave and raises requests once you confirm, and runs on Anthropic, OpenAI, Gemini or your own Ollama server.",
     tags: ["AI"],
   },
   {
     date: "2026-10-26",
-    title: "A new look, from the AskMira brand kit",
-    body: "The portal, emails, payslips and the employee app now use the AskMira logo and colours. Status colours stay separate from the brand red, so an error never looks like a button.",
+    title: "A new look, from the AskMiraa brand kit",
+    body: "The portal, emails, payslips and the employee app now use the AskMiraa logo and colours. Status colours stay separate from the brand red, so an error never looks like a button.",
     tags: ["Design"],
   },
   {
@@ -288,7 +288,7 @@ export const productUpdates: ProductUpdate[] = [
   },
   {
     date: "2026-10-20",
-    title: "Ask Mira, your HR companion",
+    title: "Ask Miraa, your HR companion",
     body: "A companion in the sidebar that answers policy questions and looks up people, leave, attendance and reports as the signed-in person, within their permissions. Every page also gained a short help guide.",
     tags: ["AI"],
   },
@@ -312,5 +312,5 @@ export const resourceHubs: ResourceCategory[] = [
   { slug: "guides", title: "Guides", description: "Practical how-tos for payroll, attendance and getting started.", href: "/resources#guides" },
   { slug: "updates", title: "Product updates", description: "What we have shipped recently, newest first.", href: "/resources/product-updates" },
   { slug: "faq", title: "FAQ", description: "Answers about setup, payroll, security and AI.", href: "/resources/faq" },
-  { slug: "stories", title: "Customer stories", description: "How teams run HR on AskMira.", href: "/customers" },
+  { slug: "stories", title: "Customer stories", description: "How teams run HR on AskMiraa.", href: "/customers" },
 ];

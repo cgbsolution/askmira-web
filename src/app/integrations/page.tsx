@@ -13,7 +13,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Integrations",
   description:
-    "AskMira works with eSSL and ZKTeco devices, Indian bank files, Tally and Zoho Books, Google and Microsoft sign-in, WhatsApp, Claude and ChatGPT, plus a REST API and webhooks.",
+    "AskMiraa works with eSSL and ZKTeco devices, Indian bank files, Tally and Zoho Books, Google and Microsoft sign-in, WhatsApp, Claude and ChatGPT, plus a REST API and webhooks.",
   path: "/integrations",
 });
 
@@ -146,7 +146,7 @@ export default function IntegrationsPage() {
 
       <CtaBand
         title="Need something that is not listed?"
-        lead="Tell us what you run today. We will tell you honestly whether AskMira connects to it, and how."
+        lead="Tell us what you run today. We will tell you honestly whether AskMiraa connects to it, and how."
         primary={{ label: "Ask about an integration", href: "/contact" }}
         secondary={{ label: "Book a demo", href: "/demo" }}
       />

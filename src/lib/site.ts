@@ -24,13 +24,13 @@ type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "AskMira",
-  title: "AskMira — HR, payroll and culture for Indian companies",
+  name: "AskMiraa",
+  title: "AskMiraa — HR, payroll and culture for Indian companies",
   description:
-    "AskMira runs attendance, leave, payroll and statutory filings for Indian companies, and connects HR to hiring, expenses, support, sales and procurement apps.",
+    "AskMiraa runs attendance, leave, payroll and statutory filings for Indian companies, and connects HR to hiring, expenses, support, sales and procurement apps.",
   /** This website's public address — canonical URLs, sitemap, Open Graph. */
   url: trimSlash(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3200"),
-  /** The AskMira portal ("Sign in"). */
+  /** The AskMiraa portal ("Sign in"). */
   appUrl: trimSlash(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
   locale: "en_IN",
 

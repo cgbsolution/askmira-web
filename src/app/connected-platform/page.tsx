@@ -18,7 +18,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "The connected platform",
   description:
-    "AskMira HRMS at the centre, connected to AnytimeHire for hiring, Expense Genie for expenses, CGB Helpdesk for IT support, Saleinx for sales and ProcureFlow for procurement. Real screens, and how each connection works.",
+    "AskMiraa HRMS at the centre, connected to AnytimeHire for hiring, Expense Genie for expenses, CGB Helpdesk for IT support, Saleinx for sales and ProcureFlow for procurement. Real screens, and how each connection works.",
   path: "/connected-platform",
 });
 
@@ -29,17 +29,17 @@ const TODAY = [
   "Requisitions with a CTC range, approved in order — then opened in AnytimeHire",
   "Payroll paid, Expense Genie spend and ProcureFlow purchasing beside each budget",
   "The Saleinx pipeline in the same view",
-  "Ask Mira answering “can we afford it?” from the budget",
+  "Ask Miraa answering “can we afford it?” from the budget",
 ];
 
 export default function ConnectedPlatformPage() {
   return (
     <>
       <DarkHero
-        eyebrow="The AskMira platform"
+        eyebrow="The AskMiraa platform"
         eyebrowIcon={SpotConnected}
         title="Your HRMS, connected to the rest of the business"
-        lead="AskMira runs people, attendance and payroll. Hiring, expenses, IT support, sales and procurement connect to it."
+        lead="AskMiraa runs people, attendance and payroll. Hiring, expenses, IT support, sales and procurement connect to it."
         secondary={{ label: "Follow one hire end to end", href: "#journey" }}
         visual={<WindowStack />}
       />
@@ -78,12 +78,12 @@ export default function ConnectedPlatformPage() {
               Can we afford to grow?
             </h2>
             <p className="mt-5 text-lead text-white/75">
-              Headcount budgets live in AskMira, next to the people who fill them — and the spend, purchasing and pipeline that decide them.
+              Headcount budgets live in AskMiraa, next to the people who fill them — and the spend, purchasing and pipeline that decide them.
             </p>
             <div className="mt-8 grid gap-6">
               <div>
                 <p className="flex items-center gap-2 text-sm font-semibold">
-                  <CircleCheck className="size-4 text-success-50" aria-hidden /> In AskMira
+                  <CircleCheck className="size-4 text-success-50" aria-hidden /> In AskMiraa
                 </p>
                 <ul className="mt-3 grid gap-2 text-[0.9375rem] text-white/75">
                   {TODAY.map((t) => (
@@ -113,8 +113,8 @@ export default function ConnectedPlatformPage() {
           <SectionHeading
             id="apps-heading"
             eyebrow="The apps"
-            title="What each app does, and how it joins AskMira"
-            lead="AskMira is the record of who works here. Connected apps read people, departments and managers from it."
+            title="What each app does, and how it joins AskMiraa"
+            lead="AskMiraa is the record of who works here. Connected apps read people, departments and managers from it."
           />
           <div className="mt-12 sm:mt-14">
             <AppDetails />
@@ -127,9 +127,9 @@ export default function ConnectedPlatformPage() {
           <SectionHeading
             id="mira-across-heading"
             tone="dark"
-            eyebrow="Ask Mira"
+            eyebrow="Ask Miraa"
             title="Ask once, answered from the app that knows"
-            lead="Mira works as the person asking, with their permissions. It answers, and acts only when that person confirms."
+            lead="Miraa works as the person asking, with their permissions. It answers, and acts only when that person confirms."
           />
           <div className="mx-auto mt-12 max-w-4xl sm:mt-14">
             <AppWindow screen={screens.amMira} className="shadow-frame" sizes="(min-width: 1024px) 900px, 100vw" />
@@ -154,7 +154,7 @@ export default function ConnectedPlatformPage() {
 
       <DemoSection
         title="See the platform with your own numbers"
-        lead="Tell us which apps you run today. We will show you how they connect to AskMira."
+        lead="Tell us which apps you run today. We will show you how they connect to AskMiraa."
       />
     </>
   );

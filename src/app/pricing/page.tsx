@@ -16,7 +16,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Pricing",
   description:
-    "AskMira plans: Free for up to 20 employees, and Core, Premium and Ultimate from ₹4,999 a month for up to 50 employees, with a low price for each additional employee.",
+    "AskMiraa plans: Free for up to 20 employees, and Core, Premium and Ultimate from ₹4,999 a month for up to 50 employees, with a low price for each additional employee.",
   path: "/pricing",
 });
 

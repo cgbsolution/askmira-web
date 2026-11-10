@@ -6,7 +6,7 @@ import { MockCard, MockFrame, MockShell, Meter, Person, StatTile, Status } from 
 export function DashboardMock({ className }: { className?: string }) {
   return (
     <MockFrame
-      label="Preview of the AskMira home page for an HR admin: headcount, approvals waiting, punch-in card, payroll status and leave balances, with sample data"
+      label="Preview of the AskMiraa home page for an HR admin: headcount, approvals waiting, punch-in card, payroll status and leave balances, with sample data"
       className={className}
     >
       <MockShell active="home">
@@ -116,7 +116,7 @@ export function DashboardMock({ className }: { className?: string }) {
               ))}
             </div>
           </MockCard>
-          <MockCard title="Ask Mira" className="hidden @xl:block">
+          <MockCard title="Ask Miraa" className="hidden @xl:block">
             <div className="rounded-lg bg-cream-50 p-2 text-[10px] text-ink-600">
               <Sparkles className="mb-1 size-3 text-marigold-600" />
               Who is on leave this week?

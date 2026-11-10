@@ -209,7 +209,7 @@ function ProductPanel({ items, apps, pathname }: { items: MenuItem[]; apps: Menu
   return (
     <div className="grid w-[min(64rem,calc(100vw-3rem))] grid-cols-[1fr_1fr_15rem] gap-3 p-3">
       <div className="pt-2">
-        <GroupTitle>AskMira HRMS</GroupTitle>
+        <GroupTitle>AskMiraa HRMS</GroupTitle>
         <ul className="grid gap-0.5">
           {items.map((item) => (
             <li key={item.href}>
@@ -228,7 +228,7 @@ function ProductPanel({ items, apps, pathname }: { items: MenuItem[]; apps: Menu
           ))}
         </ul>
       </div>
-      <PromoCard title="See it with your own data" body="A 30-minute walkthrough of AskMira, shaped around how your company runs HR." />
+      <PromoCard title="See it with your own data" body="A 30-minute walkthrough of AskMiraa, shaped around how your company runs HR." />
     </div>
   );
 }
@@ -282,7 +282,7 @@ function SolutionsPanel({ groups, pathname }: { groups: MenuGroup[]; pathname: s
           </ul>
         </div>
       ))}
-      <PromoCard title="Not sure where to start?" body="Tell us how you run HR today and we will show you the parts of AskMira that matter to you." />
+      <PromoCard title="Not sure where to start?" body="Tell us how you run HR today and we will show you the parts of AskMiraa that matter to you." />
     </div>
   );
 }

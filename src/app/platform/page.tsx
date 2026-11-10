@@ -19,7 +19,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Platform overview",
   description:
-    "How AskMira's twelve modules — core HR, attendance, payroll, talent, culture and more — work on one employee record.",
+    "How AskMiraa's twelve modules — core HR, attendance, payroll, talent, culture and more — work on one employee record.",
   path: "/platform",
 });
 
@@ -39,7 +39,7 @@ export default function PlatformPage() {
         eyebrow="Platform overview"
         eyebrowIcon={SpotDashboard}
         title="One employee record. Every HR process."
-        lead="AskMira is twelve modules built on a single record of each person — so attendance feeds payroll, reviews feed increments, and nothing is typed twice."
+        lead="AskMiraa is twelve modules built on a single record of each person — so attendance feeds payroll, reviews feed increments, and nothing is typed twice."
         secondary={{ label: "See all features", href: "#all-features" }}
         visual={
           <MacBook screen={screens.amHome} priority />
@@ -54,7 +54,7 @@ export default function PlatformPage() {
               align="left"
               eyebrow="How it fits together"
               title="Data moves between modules on its own, with a record of each step"
-              lead="These are the hand-offs that usually happen by spreadsheet and email. In AskMira they are part of the product."
+              lead="These are the hand-offs that usually happen by spreadsheet and email. In AskMiraa they are part of the product."
             />
           </div>
           <Reveal>

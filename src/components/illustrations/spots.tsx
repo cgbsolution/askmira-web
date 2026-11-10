@@ -3,12 +3,12 @@ import type * as React from "react";
 import { cn } from "@/lib/utils";
 
 /*
- * AskMira spot illustrations.
+ * AskMiraa spot illustrations.
  *
  * Small flat pictures, one per idea, drawn on a 48×48 grid in four brand tones:
  *
- *   --spot-d  wine (AskMira Red, darkest)   the main mass
- *   --spot-r  AskMira Red                   one accent per picture
+ *   --spot-d  wine (AskMiraa Red, darkest)   the main mass
+ *   --spot-r  AskMiraa Red                   one accent per picture
  *   --spot-p  soft pink                     the second layer
  *   --spot-m  marigold                      a small highlight, used sparingly
  *   --spot-w  cream                         details cut into dark shapes

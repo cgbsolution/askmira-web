@@ -9,7 +9,7 @@ const POINTS = [
   {
     icon: SpotBook,
     title: "Answers from your own policies",
-    body: "Mira quotes the policy and section it used, so an answer can be checked in seconds.",
+    body: "Miraa quotes the policy and section it used, so an answer can be checked in seconds.",
   },
   {
     icon: SpotConnected,
@@ -29,7 +29,7 @@ export function MiraSection() {
       <div className="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <Reveal>
-            <Eyebrow tone="marigold">Ask Mira</Eyebrow>
+            <Eyebrow tone="marigold">Ask Miraa</Eyebrow>
             <HandNote className="mt-5 flex w-fit" arrow="down-right">
               with the source, every time
             </HandNote>
@@ -40,7 +40,7 @@ export function MiraSection() {
               </Emph>
             </h2>
             <p className="mt-5 text-lead text-ink-600">
-              Ask Mira is the HR companion in every employee&apos;s sidebar. It answers in plain language from your
+              Ask Miraa is the HR companion in every employee&apos;s sidebar. It answers in plain language from your
               company&apos;s own documents and records — with guardrails your admin controls.
             </p>
           </Reveal>
@@ -58,7 +58,7 @@ export function MiraSection() {
             ))}
           </ul>
           <Reveal className="mt-10">
-            <ArrowLink href="/ai">How Ask Mira works</ArrowLink>
+            <ArrowLink href="/ai">How Ask Miraa works</ArrowLink>
           </Reveal>
         </div>
         <Reveal delay={0.1}>

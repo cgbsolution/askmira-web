@@ -24,7 +24,7 @@ export const SECURITY_POINTS: { icon: SpotIcon; title: string; body: string }[] 
   {
     icon: SpotIdLock,
     title: "Sensitive fields protected",
-    body: "PAN and similar fields are encrypted at rest; files are served only through AskMira, never by public link.",
+    body: "PAN and similar fields are encrypted at rest; files are served only through AskMiraa, never by public link.",
   },
   {
     icon: SpotPrivacy,
@@ -50,7 +50,7 @@ export function SecurityGrid() {
           </h2>
           <p className="mt-5 text-lead text-ink-600">
             Salaries, bank accounts and identity numbers deserve more than a promise. These controls are part of how
-            AskMira is built — not settings someone has to remember to turn on.
+            AskMiraa is built — not settings someone has to remember to turn on.
           </p>
           <div className="mt-8 hidden max-w-md lg:block">
             <ProductMockup name="audit" />

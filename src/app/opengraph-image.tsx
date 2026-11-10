@@ -3,7 +3,7 @@ import path from "node:path";
 
 import { ImageResponse } from "next/og";
 
-export const alt = "AskMira — HR, payroll and culture for Indian companies";
+export const alt = "AskMiraa — HR, payroll and culture for Indian companies";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

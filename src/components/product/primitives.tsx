@@ -22,7 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn, initials } from "@/lib/utils";
 
 /*
- * Building blocks for the product previews. They copy the AskMira portal's
+ * Building blocks for the product previews. They copy the AskMiraa portal's
  * shell — ink rail, marigold active chip, cream canvas, Inter — at a smaller
  * scale. Every preview is an illustration with sample data, so its root is
  * `role="img"` with a description, and it carries a "Sample data" tag.
@@ -60,7 +60,7 @@ export function MockFrame({
         <span className="size-2.5 rounded-full bg-cream-300" />
         <span className="size-2.5 rounded-full bg-cream-300" />
         <span className="size-2.5 rounded-full bg-cream-300" />
-        <span className="ml-3 truncate text-[10px] font-medium text-ink-400">AskMira · Demo workspace</span>
+        <span className="ml-3 truncate text-[10px] font-medium text-ink-400">AskMiraa · Demo workspace</span>
         {tag ?? <SampleTag className="ml-auto" />}
       </div>
       <div aria-hidden className={cn("relative", bodyClassName)}>

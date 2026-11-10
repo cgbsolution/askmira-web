@@ -87,7 +87,7 @@ export function Hero() {
         </div>
         <Reveal delay={0.1}>
           <p className="mx-auto mt-6 max-w-2xl text-lead text-white/75">
-            AskMira brings employee records, attendance and leave, Indian statutory payroll and people analytics into one
+            AskMiraa brings employee records, attendance and leave, Indian statutory payroll and people analytics into one
             platform — and connects it to our apps for hiring, expenses and support, with sales and procurement next.
           </p>
         </Reveal>
@@ -128,7 +128,7 @@ export function Hero() {
             className="top-[62%] -right-2 [animation-delay:-4s] xl:-right-12"
           />
           <p className="mt-6 text-center text-xs text-white/50">
-            Real screens from AskMira and the apps connected to it, in a demo workspace with sample data.
+            Real screens from AskMiraa and the apps connected to it, in a demo workspace with sample data.
           </p>
         </Reveal>
       </div>

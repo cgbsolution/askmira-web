@@ -16,7 +16,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 /*
- * The reference puts customer logos here. AskMira has no approved customer
+ * The reference puts customer logos here. AskMiraa has no approved customer
  * logos yet, so the strip shows what the product verifiably handles. When
  * customers agree to be named, add their logo files to `CUSTOMER_LOGOS` and
  * the strip switches to them.
@@ -64,7 +64,7 @@ function Row({ hidden = false }: { hidden?: boolean }) {
 
 export function TrustStrip() {
   const heading =
-    CUSTOMER_LOGOS.length > 0 ? "HR teams that run on AskMira" : "Built for the way Indian companies pay and comply";
+    CUSTOMER_LOGOS.length > 0 ? "HR teams that run on AskMiraa" : "Built for the way Indian companies pay and comply";
   return (
     // A straight, solid band between the hero and the page, with a Marigold rule
     // top and bottom.

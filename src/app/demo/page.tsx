@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Book a demo",
-  description: "Book a 30-minute walkthrough of AskMira, shaped around how your company runs HR and payroll today.",
+  description: "Book a 30-minute walkthrough of AskMiraa, shaped around how your company runs HR and payroll today.",
   path: "/demo",
 });
 
@@ -27,7 +27,7 @@ export default function DemoPage() {
           <Eyebrow tone="dark" icon={<EyebrowSpot icon={SpotCalendarClock} />}>
             Book a demo
           </Eyebrow>
-          <h1 className="mt-5 font-display text-display-2 font-semibold">See AskMira with your own questions</h1>
+          <h1 className="mt-5 font-display text-display-2 font-semibold">See AskMiraa with your own questions</h1>
           <p className="mt-5 text-lead text-white/75">
             Tell us a little about your company. We will set up a walkthrough around how you run HR and payroll today.
           </p>

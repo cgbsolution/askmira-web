@@ -6,10 +6,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   AskMira website — design tokens.
+   AskMiraa website — design tokens.
 
    The colour ramps are the portal's (frontend/src/app/globals.css), from the
-   AskMira logo kit: Red #EB061D, Marigold #F8A01A, Cream #FEF8F4, Ink #100404,
+   AskMiraa logo kit: Red #EB061D, Marigold #F8A01A, Cream #FEF8F4, Ink #100404,
    with Blush as the soft panel colour. Everything a component needs — colour,
    type scale, radius, shadow, spacing — is defined here, so a reskin is a
    change to this file alone. Components never use a raw hex value.
@@ -56,7 +56,7 @@
   --radius-4xl: calc(var(--radius) + 28px);
 
   /* ── Typography ─────────────────────────────────────────────────────────
-     Fraunces, AskMira's display face, for every heading. Plus Jakarta Sans for
+     Fraunces, AskMiraa's display face, for every heading. Plus Jakarta Sans for
      reading. Inter only inside product mockups, because it is what the portal
      itself uses. */
   --font-*: initial;
@@ -139,7 +139,7 @@
     50% { opacity: 0.5; transform: scale(0.85); }
   }
 
-  /* ── Brand ramp — AskMira Red #EB061D ─────────────────────────────── */
+  /* ── Brand ramp — AskMiraa Red #EB061D ─────────────────────────────── */
   --color-brand-25: #fff5f5;
   --color-brand-50: #ffe9eb;
   --color-brand-100: #ffd3d7;
@@ -318,7 +318,7 @@
   padding-block: clamp(3rem, 2rem + 4vw, 5rem);
 }
 
-/* The hero and dark bands: AskMira Red at its deepest, lit from below by the
+/* The hero and dark bands: AskMiraa Red at its deepest, lit from below by the
    two logo colours. */
 @utility bg-deep {
   background-color: var(--color-brand-950);

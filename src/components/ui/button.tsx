@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
  * Fully rounded, like the logo's lettering. One size scale everywhere:
  * `sm` 36px for menus, `default` 44px, `lg` 52px for hero and closing CTAs.
  *
- *   default  AskMira Red — the one primary action in a view
+ *   default  AskMiraa Red — the one primary action in a view
  *   deep     the deepest brand red, for CTAs on cream sections
  *   marigold the free plan's call to action
  *   soft     blush, the secondary action next to a primary one

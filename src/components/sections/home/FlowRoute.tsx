@@ -47,7 +47,7 @@ const STOPS: Stop[] = [
     glow: "bg-marigold-300",
   },
   {
-    app: "AskMira HRMS",
+    app: "AskMiraa HRMS",
     title: "Hire approved",
     body: "Budget, workforce plan and the requisition are approved in order.",
     icon: SpotChecklist,

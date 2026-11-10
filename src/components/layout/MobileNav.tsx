@@ -24,7 +24,7 @@ export function MobileNav({ menus, onDark, pathname }: { menus: SiteMenus; onDar
       value: "product",
       label: "Product",
       groups: [
-        { title: "AskMira", items: menus.product },
+        { title: "AskMiraa", items: menus.product },
         { title: "Connected apps", items: menus.apps },
       ],
     },

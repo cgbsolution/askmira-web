@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata = pageMetadata({
   title: "Privacy policy",
-  description: "How the AskMira website handles the information you share with us.",
+  description: "How the AskMiraa website handles the information you share with us.",
   path: "/privacy",
 });
 
@@ -13,7 +13,7 @@ function grievanceLine(): string {
   const { name, email } = siteConfig.grievanceOfficer;
   if (name && email) return `Our grievance officer is ${name}, at ${email}.`;
   if (email) return `Write to our grievance officer at ${email}.`;
-  return "Send your request through the contact form and the AskMira team's grievance officer will answer it.";
+  return "Send your request through the contact form and the AskMiraa team's grievance officer will answer it.";
 }
 
 export default function PrivacyPage() {
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
     <LegalPage
       title="Privacy policy"
       updated="29 October 2026"
-      intro="This policy covers this website. How AskMira handles employee data inside a customer's workspace is set out in that customer's agreement with us, and in the privacy notice each workspace shows its own employees."
+      intro="This policy covers this website. How AskMiraa handles employee data inside a customer's workspace is set out in that customer's agreement with us, and in the privacy notice each workspace shows its own employees."
       sections={[
         {
           heading: "What we collect",
@@ -51,7 +51,7 @@ export default function PrivacyPage() {
         {
           heading: "Where it is kept, and for how long",
           paragraphs: [
-            "Form submissions are stored in the AskMira platform's database in India, visible only to the AskMira team. Each one is deleted automatically 12 months after the last time we were in touch about it, and sooner if you ask.",
+            "Form submissions are stored in the AskMiraa platform's database in India, visible only to the AskMiraa team. Each one is deleted automatically 12 months after the last time we were in touch about it, and sooner if you ask.",
             "Emails we send you about your request go through our email provider, Google, which may process them outside India.",
           ],
         },

@@ -141,13 +141,13 @@ export function DocumentMock({ className }: { className?: string }) {
   );
 }
 
-/** Ask Mira answering a policy question with its source, then a personal one. */
+/** Ask Miraa answering a policy question with its source, then a personal one. */
 export function MiraChatMock({ className }: { className?: string }) {
   return (
-    <MockPanel label="Preview of Ask Mira answering a leave policy question with the policy section quoted, then the employee's own balance, with sample data" className={className}>
+    <MockPanel label="Preview of Ask Miraa answering a leave policy question with the policy section quoted, then the employee's own balance, with sample data" className={className}>
       <div className="flex items-center gap-2 border-b border-cream-100 px-4 py-3">
         <AskMiraMark className="h-6" />
-        <p className="text-xs font-semibold">Ask Mira</p>
+        <p className="text-xs font-semibold">Ask Miraa</p>
         <SampleTag className="ml-auto" />
       </div>
       <div className="space-y-3 bg-cream-50/60 px-4 py-4 text-[11px]">
@@ -193,7 +193,7 @@ export function MobileMock({ className }: { className?: string }) {
   return (
     <div
       role="img"
-      aria-label="Preview of AskMira on a phone: punch in, leave balances and the latest payslip, with sample data"
+      aria-label="Preview of AskMiraa on a phone: punch in, leave balances and the latest payslip, with sample data"
       className={cn("mx-auto w-full max-w-[17rem] font-ui text-ink-900 select-none", className)}
     >
       <div aria-hidden className="rounded-[2.25rem] border-[7px] border-ink-900 bg-ink-900 shadow-float">

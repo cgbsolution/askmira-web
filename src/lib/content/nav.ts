@@ -9,7 +9,7 @@ export type NavLink = { title: string; href: string; description?: string; icon?
 export const productLinks: NavLink[] = [
   { title: "Platform overview", href: "/platform", description: "How the HRMS modules fit together on one record.", icon: SpotDashboard },
   { title: "Connected platform", href: "/connected-platform", description: "HRMS plus hiring, expenses, support, sales and procurement.", icon: SpotConnected },
-  { title: "Ask Mira AI", href: "/ai", description: "Answers across HR and your connected apps, with guardrails.", icon: SpotMira },
+  { title: "Ask Miraa AI", href: "/ai", description: "Answers across HR and your connected apps, with guardrails.", icon: SpotMira },
   { title: "Integrations", href: "/integrations", description: "Devices, banks, identity, AI assistants and an API.", icon: SpotPlug },
   { title: "Security & privacy", href: "/security", description: "Isolation, audit, sign-in controls and DPDP.", icon: SpotShield },
   { title: "What's new", href: "/resources/product-updates", description: "Recent product updates.", icon: SpotMegaphone },
@@ -41,7 +41,7 @@ export const resourceLinks: NavLink[] = [
   { title: "Guides", href: "/resources", description: "Practical how-tos for payroll, attendance and setup.", icon: SpotBook },
   { title: "Product updates", href: "/resources/product-updates", description: "What we have shipped recently.", icon: SpotNews },
   { title: "FAQ", href: "/resources/faq", description: "Setup, payroll, security and AI questions.", icon: SpotQuestion },
-  { title: "Customer stories", href: "/customers", description: "How teams run HR on AskMira.", icon: SpotQuote },
+  { title: "Customer stories", href: "/customers", description: "How teams run HR on AskMiraa.", icon: SpotQuote },
 ];
 
 export const footerColumns: { title: string; links: NavLink[] }[] = [
@@ -50,7 +50,7 @@ export const footerColumns: { title: string; links: NavLink[] }[] = [
     links: [
       { title: "Platform overview", href: "/platform" },
       { title: "Connected platform", href: "/connected-platform" },
-      { title: "Ask Mira AI", href: "/ai" },
+      { title: "Ask Miraa AI", href: "/ai" },
       { title: "Integrations", href: "/integrations" },
       { title: "Security & privacy", href: "/security" },
       { title: "Pricing", href: "/pricing" },

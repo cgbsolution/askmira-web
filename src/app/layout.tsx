@@ -27,7 +27,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: siteConfig.title, template: "%s · AskMira" },
+  title: { default: siteConfig.title, template: "%s · AskMiraa" },
   description: siteConfig.description,
   applicationName: siteConfig.name,
   keywords: [

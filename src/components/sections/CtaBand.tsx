@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 /** A rounded deep-red panel with one clear next step — the reference's closing band. */
 export function CtaBand({
-  title = "See how AskMira would run your HR",
+  title = "See how AskMiraa would run your HR",
   lead = "A 30-minute walkthrough, shaped around how your company works today.",
   primary = { label: "Book a demo", href: "/demo" },
   secondary = { label: "Talk to us", href: "/contact" },

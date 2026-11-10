@@ -21,9 +21,9 @@ export function pageMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       url: path,
-      title: `${title} · AskMira`,
+      title: `${title} · AskMiraa`,
       description,
     },
-    twitter: { card: "summary_large_image", title: `${title} · AskMira`, description },
+    twitter: { card: "summary_large_image", title: `${title} · AskMiraa`, description },
   };
 }

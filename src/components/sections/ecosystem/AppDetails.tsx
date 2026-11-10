@@ -61,7 +61,7 @@ export function AppDetails() {
                   </ul>
                   <div className="rounded-2xl bg-cream-50 p-5">
                     <p className="flex items-center gap-2 text-sm font-semibold text-ink-900">
-                      <Link2 className="size-4 text-ink-500" aria-hidden /> With AskMira HRMS
+                      <Link2 className="size-4 text-ink-500" aria-hidden /> With AskMiraa HRMS
                     </p>
                     <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{app.connection.detail}</p>
                   </div>

@@ -181,7 +181,7 @@ export function ImportMock({ className }: { className?: string }) {
         {[
           ["Row 18", "Email already in use by another login"],
           ["Row 43", "Joining date is missing"],
-          ["Row 77", "Reporting manager not found in this sheet or in AskMira"],
+          ["Row 77", "Reporting manager not found in this sheet or in AskMiraa"],
           ["Row 102", "'31-02-2024' is not a date (use DD-MM-YYYY)"],
         ].map(([row, msg]) => (
           <li key={row} className="flex items-start gap-2 text-[10px]">

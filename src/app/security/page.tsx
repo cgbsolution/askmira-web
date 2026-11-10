@@ -13,7 +13,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "Security and privacy",
   description:
-    "How AskMira protects HR and payroll data: workspace isolation, an insert-only audit log, SSO and two-step sign-in, encrypted sensitive fields, DPDP tools and AI governance.",
+    "How AskMiraa protects HR and payroll data: workspace isolation, an insert-only audit log, SSO and two-step sign-in, encrypted sensitive fields, DPDP tools and AI governance.",
   path: "/security",
 });
 
@@ -53,7 +53,7 @@ const SIGN_IN = [
 
 const DATA = [
   "PAN and similar identifiers encrypted at rest",
-  "Files kept in private storage and served only through AskMira, which checks who is asking",
+  "Files kept in private storage and served only through AskMiraa, which checks who is asking",
   "Uploads checked by their content, not just their name",
   "Consent recorded per purpose; employees can raise requests about their data",
   "Retention rules decide how long each kind of record is kept",
@@ -68,7 +68,7 @@ export default function SecurityPage() {
         eyebrow="Security & privacy"
         eyebrowIcon={SpotShield}
         title="Built like payroll depends on it"
-        lead="Salaries, bank accounts and identity numbers are some of the most sensitive data a company holds. Here is how AskMira looks after them — described as it is built, not as a promise."
+        lead="Salaries, bank accounts and identity numbers are some of the most sensitive data a company holds. Here is how AskMiraa looks after them — described as it is built, not as a promise."
         secondary={{ label: "Send us your questionnaire", href: "/contact" }}
       />
 
@@ -134,7 +134,7 @@ export default function SecurityPage() {
 
       <CtaBand
         title="Have a security questionnaire?"
-        lead="Send it over. We will answer each question about how AskMira is built, in writing."
+        lead="Send it over. We will answer each question about how AskMiraa is built, in writing."
         primary={{ label: "Contact us", href: "/contact" }}
         secondary={{ label: "Book a demo", href: "/demo" }}
       />

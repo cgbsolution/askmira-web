@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Product updates",
-  description: "What the AskMira team has shipped recently, newest first.",
+  description: "What the AskMiraa team has shipped recently, newest first.",
   path: "/resources/product-updates",
 });
 
@@ -20,7 +20,7 @@ export default function ProductUpdatesPage() {
       <PageHero
         eyebrow="Product updates"
         eyebrowIcon={SpotMegaphone}
-        title="What's new in AskMira"
+        title="What's new in AskMiraa"
         lead="The changes we have shipped lately, newest first."
         primary={null}
       />

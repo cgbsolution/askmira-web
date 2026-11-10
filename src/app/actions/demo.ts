@@ -12,7 +12,7 @@ const GENERIC_ERROR =
   "We couldn't send your request just now. Please try again in a minute — nothing you typed has been lost.";
 
 /**
- * Validates a demo request again on the server, then hands it to the AskMira
+ * Validates a demo request again on the server, then hands it to the AskMiraa
  * API, which stores it for the platform team and emails them.
  *
  * The browser never talks to the API. When `PROXY_SHARED_SECRET` is set, the

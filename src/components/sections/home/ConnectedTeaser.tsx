@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "../primitives";
 import { ScreenTour } from "../screens/ScreenTour";
 
-/** Real screens from AskMira and every app around it. */
+/** Real screens from AskMiraa and every app around it. */
 export function ConnectedTeaser() {
   return (
     <section aria-labelledby="connected-heading" className="section-y bg-cream-50">
@@ -17,7 +17,7 @@ export function ConnectedTeaser() {
           eyebrow="See it for real"
           note="hiring, expenses, IT and more"
           title={<>One HRMS, <Emph underline={false}>and the apps <Squiggle>around it</Squiggle></Emph></>}
-          lead="These are the actual screens. Hiring, expenses, IT support, sales and procurement all connect to AskMira."
+          lead="These are the actual screens. Hiring, expenses, IT support, sales and procurement all connect to AskMiraa."
         />
         <ScreenTour className="mt-12 sm:mt-14" />
         <div className="mt-10 flex justify-center">

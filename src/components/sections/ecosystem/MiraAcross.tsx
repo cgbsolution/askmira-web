@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 import { ConnectionBadge } from "./ConnectionBadge";
 
-/** Questions people ask Mira across the platform, each marked with what works today. */
+/** Questions people ask Miraa across the platform, each marked with what works today. */
 export function MiraAcross({ tone = "light", className }: { tone?: "light" | "dark"; className?: string }) {
   const dark = tone === "dark";
   return (

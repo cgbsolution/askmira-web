@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Customer stories",
-  description: "How HR teams run HR, attendance and payroll on AskMira — published with each customer's approval.",
+  description: "How HR teams run HR, attendance and payroll on AskMiraa — published with each customer's approval.",
   path: "/customers",
 });
 
@@ -41,7 +41,7 @@ export default function CustomersPage() {
       <PageHero
         eyebrow="Customer stories"
         eyebrowIcon={SpotQuote}
-        title="Stories from HR teams on AskMira"
+        title="Stories from HR teams on AskMiraa"
         lead="We are onboarding our first customers now. Their stories will appear here in their own words, with their numbers, and only with their permission."
       />
 
@@ -74,7 +74,7 @@ export default function CustomersPage() {
                     "The company's name and logo, with their written approval",
                     "A quote from a named person, in their own words",
                     "Results they measured themselves, with the period they cover",
-                    "Which AskMira modules they use, and what they replaced",
+                    "Which AskMiraa modules they use, and what they replaced",
                   ]}
                 />
               </Reveal>

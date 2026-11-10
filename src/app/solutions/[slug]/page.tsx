@@ -71,7 +71,7 @@ export default async function SolutionPage({ params }: Props) {
         </div>
       </section>
 
-      <section id="outcomes" className="section-y bg-background" aria-label="How AskMira helps">
+      <section id="outcomes" className="section-y bg-background" aria-label="How AskMiraa helps">
         <div className="container-site grid gap-20 lg:gap-28">
           {solution.outcomes.map((o, i) => {
             const feature = featureBySlug(o.feature);

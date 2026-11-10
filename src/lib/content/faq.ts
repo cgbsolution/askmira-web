@@ -7,12 +7,12 @@ export const faqGroups: FaqGroup[] = [
     title: "Getting started",
     items: [
       {
-        q: "Can I sign up and try AskMira on my own?",
-        a: "No. Every AskMira workspace is set up by our team after a demo, together with your first admin. It keeps strangers off the platform and means your workspace starts with your company's details, entities and locations already in place.",
+        q: "Can I sign up and try AskMiraa on my own?",
+        a: "No. Every AskMiraa workspace is set up by our team after a demo, together with your first admin. It keeps strangers off the platform and means your workspace starts with your company's details, entities and locations already in place.",
       },
       {
         q: "How do we move our employee data in?",
-        a: "Upload your existing employee sheet in Excel — AskMira's template or another HR system's export as it is. Every row is checked first, and you get a file of any rows that could not be added, with the reason for each.",
+        a: "Upload your existing employee sheet in Excel — AskMiraa's template or another HR system's export as it is. Every row is checked first, and you get a file of any rows that could not be added, with the reason for each.",
       },
       {
         q: "Do we have to use every module?",
@@ -20,7 +20,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Does it work on phones?",
-        a: "Yes. Employees punch in, apply for leave, approve, open payslips and ask Mira from the AskMira app for Android, and every page also works in a phone browser — including on iPhone — and can be added to the home screen.",
+        a: "Yes. Employees punch in, apply for leave, approve, open payslips and ask Miraa from the AskMiraa app for Android, and every page also works in a phone browser — including on iPhone — and can be added to the home screen.",
       },
     ],
   },
@@ -28,7 +28,7 @@ export const faqGroups: FaqGroup[] = [
     title: "Payroll and compliance",
     items: [
       {
-        q: "Which statutory requirements does AskMira cover?",
+        q: "Which statutory requirements does AskMiraa cover?",
         a: "Provident Fund with the ECR file, ESI, professional tax and labour welfare fund by state, and TDS on salary under both regimes, with declarations, proofs, challans, 24Q returns and Form 16.",
       },
       {
@@ -57,8 +57,8 @@ export const faqGroups: FaqGroup[] = [
         a: "Email and password with two-step verification, Google and Microsoft sign-in, and single sign-on through any OpenID Connect provider. Admins can require SSO and restrict sign-in to listed IP addresses.",
       },
       {
-        q: "Does AskMira help with the DPDP Act?",
-        a: "AskMira records consent for each purpose, handles requests from employees about their data, and applies retention rules to records. Whether your organisation is compliant depends on your own processes too, so talk to your adviser.",
+        q: "Does AskMiraa help with the DPDP Act?",
+        a: "AskMiraa records consent for each purpose, handles requests from employees about their data, and applies retention rules to records. Whether your organisation is compliant depends on your own processes too, so talk to your adviser.",
       },
     ],
   },
@@ -74,7 +74,7 @@ export const faqGroups: FaqGroup[] = [
         a: "Every AI request is recorded with the model used, the outcome and who asked. Admins see it in the AI Trust Center, and any transfer of data to a provider outside India is recorded with the provider and purpose.",
       },
       {
-        q: "What can Ask Mira look up?",
+        q: "What can Ask Miraa look up?",
         a: "Company policies, your own record, people, who is on leave, attendance, payroll totals, department budgets, reports and charts, and the connected apps — AnytimeHire, Expense Genie, CGB Helpdesk, Saleinx and ProcureFlow. It can also apply for leave, raise requests and tickets, or approve what waits on you, once you confirm. It always works as the signed-in person, with exactly their permissions.",
       },
     ],
@@ -83,7 +83,7 @@ export const faqGroups: FaqGroup[] = [
     title: "Pricing",
     items: [
       {
-        q: "How much does AskMira cost?",
+        q: "How much does AskMiraa cost?",
         a: "Free covers up to 20 employees at no cost. Core is ₹4,999, Premium ₹5,999 and Ultimate ₹6,999 a month for up to 50 employees, plus ₹99, ₹119 or ₹139 a month for each additional employee. Paid plans are billed quarterly; prices exclude GST.",
       },
       {

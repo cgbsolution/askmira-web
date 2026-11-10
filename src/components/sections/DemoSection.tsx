@@ -7,13 +7,13 @@ import { Reveal } from "@/components/motion/Reveal";
 
 const AGENDA = [
   { icon: SpotChat, text: "We start with how you run HR and payroll today." },
-  { icon: SpotDashboard, text: "Then walk through the parts of AskMira that fit — not a fixed script." },
+  { icon: SpotDashboard, text: "Then walk through the parts of AskMiraa that fit — not a fixed script." },
   { icon: SpotCalendarClock, text: "You leave with answers on setup, data import and pricing." },
 ];
 
 /** The closing conversion section: the pitch on the left, the working form on the right. */
 export function DemoSection({
-  title = "See AskMira run your month",
+  title = "See AskMiraa run your month",
   lead = "Tell us a little about your company and we will set up a walkthrough around it.",
   topic = "demo",
 }: {

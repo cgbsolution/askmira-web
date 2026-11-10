@@ -6,7 +6,7 @@ import mark from "@/assets/brand/askmira-mark.png";
 import { cn } from "@/lib/utils";
 
 /*
- * The AskMira logo, rendered from the brand kit's vector (public/brand) to a
+ * The AskMiraa logo, rendered from the brand kit's vector (public/brand) to a
  * high-resolution PNG so next/image can serve a few-kilobyte WebP or AVIF at
  * the size each page needs — the traced SVG is 39 KB even gzipped. The same
  * artwork reads on cream, white and the deep red bands.
@@ -16,7 +16,7 @@ export function AskMiraLogo({ className, priority = false }: { className?: strin
   return (
     <Image
       src={logo}
-      alt="AskMira"
+      alt="AskMiraa"
       priority={priority}
       sizes="160px"
       className={cn("h-9 w-auto select-none", className)}
@@ -33,7 +33,7 @@ export function LogoLink({ className, priority }: { className?: string; priority
   return (
     <Link
       href="/"
-      aria-label="AskMira home"
+      aria-label="AskMiraa home"
       className={cn("inline-flex shrink-0 items-center rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-ring/60", className)}
     >
       <AskMiraLogo priority={priority} className="h-8 sm:h-9" />

@@ -86,7 +86,7 @@ export function Showcase() {
           eyebrow="Product tour"
           note="real screens, not mock-ups"
           title={<>See the screens your team will <Emph tone="dark">use every day</Emph></>}
-          lead="The real AskMira screens, from a demo workspace with sample data."
+          lead="The real AskMiraa screens, from a demo workspace with sample data."
         />
 
         <Tabs defaultValue="dashboard" orientation="vertical" className="mt-12 gap-8 sm:mt-16 lg:flex-row lg:gap-12">

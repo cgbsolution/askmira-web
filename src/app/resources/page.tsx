@@ -14,14 +14,14 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Resources",
-  description: "Practical guides for Indian HR and payroll teams, AskMira product updates, FAQs and customer stories.",
+  description: "Practical guides for Indian HR and payroll teams, AskMiraa product updates, FAQs and customer stories.",
   path: "/resources",
 });
 
 const HUBS = [
   { icon: SpotNews, title: "Product updates", body: "What we have shipped recently, newest first.", href: "/resources/product-updates" },
   { icon: SpotQuestion, title: "FAQ", body: "Setup, payroll, security, AI and pricing questions.", href: "/resources/faq" },
-  { icon: SpotQuote, title: "Customer stories", body: "How teams run HR on AskMira.", href: "/customers" },
+  { icon: SpotQuote, title: "Customer stories", body: "How teams run HR on AskMiraa.", href: "/customers" },
 ];
 
 export default function ResourcesPage() {
@@ -31,7 +31,7 @@ export default function ResourcesPage() {
         eyebrow="Resources"
         eyebrowIcon={SpotBook}
         title="Practical help for Indian HR teams"
-        lead="Guides that are useful whether or not you choose AskMira, a log of what we ship, and straight answers to common questions."
+        lead="Guides that are useful whether or not you choose AskMiraa, a log of what we ship, and straight answers to common questions."
         primary={null}
       />
 
