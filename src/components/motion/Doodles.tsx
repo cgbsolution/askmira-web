@@ -14,13 +14,18 @@ import { cn } from "@/lib/utils";
 
 const EASE = [0.65, 0, 0.35, 1] as const;
 
+/*
+ * Each arrow starts level with the middle of the words, arcs over and comes
+ * down into the heading below. The head is a symmetric chevron laid along the
+ * line's direction at its tip, so it never looks bent.
+ */
 const ARROWS = {
-  /* Curls round and points down-right, towards the heading below. */
-  "down-right": { viewBox: "0 0 60 40", d: "M4 10C18 2 38 2 46 14C50 20 50 27 46 33", head: "M38 29L46 34L50 25" },
-  /* Curls round and points down-left. */
-  "down-left": { viewBox: "0 0 60 40", d: "M56 10C42 2 22 2 14 14C10 20 10 27 14 33", head: "M22 29L14 34L10 25" },
+  /* Leaves the end of the note and hooks down into the heading. */
+  "down-right": { d: "M4 16C14 6 30 4 36 14C40 21 38 31 32 40", head: "M31.8 32L32 40L39.4 37.1" },
+  /* The mirror: leaves the start of the note and hooks down. */
+  "down-left": { d: "M44 16C34 6 18 4 12 14C8 21 10 31 16 40", head: "M16.2 32L16 40L8.6 37.1" },
   /* A loose swoop pointing right. */
-  right: { viewBox: "0 0 60 40", d: "M3 28C16 8 34 6 52 16", head: "M44 9L53 16L45 23" },
+  right: { d: "M4 30C14 14 30 12 44 20", head: "M40.6 12.8L44 20L36 20.7" },
 } as const;
 
 export type ArrowDirection = keyof typeof ARROWS;
@@ -42,7 +47,14 @@ export function HandNote({
 }) {
   const a = arrow ? ARROWS[arrow] : null;
   const svg = a && (
-    <svg aria-hidden viewBox={a.viewBox} className="h-8 w-12 shrink-0 overflow-visible sm:h-9 sm:w-14" fill="none">
+    <svg
+      aria-hidden
+      viewBox="0 0 48 48"
+      // Top-aligned: the line starts at the words' middle and its tip hangs
+      // below them, over the heading.
+      className={cn("size-10 shrink-0 self-start overflow-visible sm:size-11", arrow === "right" && "self-center")}
+      fill="none"
+    >
       <m.path
         d={a.d}
         stroke="currentColor"
@@ -69,7 +81,7 @@ export function HandNote({
   return (
     <m.span
       className={cn(
-        "inline-flex -rotate-3 items-center gap-1.5 font-hand text-[1.5rem] leading-none font-bold sm:text-[1.75rem]",
+        "inline-flex -rotate-2 items-center gap-1 font-hand text-[1.5rem] leading-none font-bold sm:text-[1.75rem]",
         tone === "dark" ? "text-marigold-300" : "text-brand-600",
         className,
       )}
@@ -225,6 +237,22 @@ export function Sparkle({ className, delay = 0 }: { className?: string; delay?: 
       style={{ animationDelay: `${delay}s` }}
     >
       <path d="M12 2C13 8 16 11 22 12C16 13 13 16 12 22C11 16 8 13 2 12C8 11 11 8 12 2Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+/** Rays turning very slowly behind a panel, like sunlight; purely decorative. */
+export function SunRays({ className }: { className?: string }) {
+  const rays = Array.from({ length: 18 }, (_, i) => i * 20);
+  return (
+    <svg
+      aria-hidden
+      viewBox="-300 -300 600 600"
+      className={cn("animate-spin-slow pointer-events-none absolute aspect-square", className)}
+    >
+      {rays.map((a) => (
+        <path key={a} d="M0 0L36 -300H-36Z" transform={`rotate(${a})`} fill="currentColor" />
+      ))}
     </svg>
   );
 }

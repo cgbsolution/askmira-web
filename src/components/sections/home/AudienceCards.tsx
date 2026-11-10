@@ -48,15 +48,22 @@ export function AudienceCards() {
                       tone.card,
                     )}
                   >
-                    <SpotTile
-                      icon={s.icon}
-                      size="xl"
-                      tone={tone.tile}
-                      className={cn(
-                        "size-24 self-end shadow-float transition-transform duration-500 group-hover:rotate-0 motion-reduce:transition-none",
-                        tone.tilt,
-                      )}
-                    />
+                    {/* The tile bobs gently; on hover it straightens up. */}
+                    <span
+                      aria-hidden
+                      className="animate-bob self-end"
+                      style={{ animationDelay: `${-(s.slug.length % 5)}s` }}
+                    >
+                      <SpotTile
+                        icon={s.icon}
+                        size="xl"
+                        tone={tone.tile}
+                        className={cn(
+                          "size-24 border-[3px] border-ink-950 shadow-[4px_5px_0_var(--color-ink-950)] transition-transform duration-500 group-hover:rotate-0 motion-reduce:transition-none",
+                          tone.tilt,
+                        )}
+                      />
+                    </span>
                     <h3 className="relative mt-auto pt-8 font-display text-display-4 font-semibold">{s.label}</h3>
                     <p className={cn("relative mt-2 text-[0.9375rem] leading-relaxed", tone.dark ? "text-white/80" : "text-ink-700")}>
                       {s.short}

@@ -2,6 +2,7 @@ import { CheckCircle2 } from "lucide-react";
 
 import { SpotCalendarClock, SpotChat, SpotDashboard, SpotTile } from "@/components/illustrations/spots";
 import { DemoForm } from "@/components/forms/DemoForm";
+import { Sparkle, SunRays } from "@/components/motion/Doodles";
 import { Reveal } from "@/components/motion/Reveal";
 
 const AGENDA = [
@@ -25,6 +26,9 @@ export function DemoSection({
       <div className="container-site">
         <div className="bg-deep relative isolate overflow-hidden rounded-[2rem] px-5 py-10 text-white sm:px-10 sm:py-14 lg:px-14 lg:py-16">
           <div aria-hidden className="bg-glow pointer-events-none absolute inset-0 -z-10 opacity-70" />
+          <SunRays className="top-1/2 -right-[30%] -z-10 w-[90%] max-w-[60rem] -translate-y-1/2 text-marigold-400 opacity-[0.12]" />
+          <Sparkle className="top-8 right-10 hidden text-marigold-400 sm:block" />
+          <Sparkle className="bottom-10 left-[46%] hidden size-4 text-blush-300 lg:block" delay={-2.5} />
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
             <Reveal>
               <h2 id="demo-heading" className="font-display text-display-2 font-semibold">

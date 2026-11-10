@@ -1,9 +1,9 @@
 import { Emph, HandNote, Squiggle } from "@/components/motion/Doodles";
+import { MiraWheel } from "@/components/illustrations/MiraWheel";
 import { SpotBook, SpotConnected, SpotToggle } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
-import { ProductMockup } from "@/components/product/registry";
 
-import { ArrowLink, Eyebrow, IconChip, MockStage } from "../primitives";
+import { ArrowLink, Eyebrow, IconChip } from "../primitives";
 
 const POINTS = [
   {
@@ -25,7 +25,7 @@ const POINTS = [
 
 export function MiraSection() {
   return (
-    <section aria-labelledby="mira-heading" className="section-y bg-background">
+    <section aria-labelledby="mira-heading" className="section-y overflow-hidden bg-background">
       <div className="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <Reveal>
@@ -62,9 +62,7 @@ export function MiraSection() {
           </Reveal>
         </div>
         <Reveal delay={0.1}>
-          <MockStage tone="marigold">
-            <ProductMockup name="mira" />
-          </MockStage>
+          <MiraWheel />
         </Reveal>
       </div>
     </section>

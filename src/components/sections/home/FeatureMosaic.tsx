@@ -2,6 +2,7 @@ import { Emph, Squiggle } from "@/components/motion/Doodles";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
+import { OneRecordHub } from "@/components/illustrations/OneRecordHub";
 import { SpotCalendarClock, SpotChart, SpotIdCard, SpotPayslip, SpotTile } from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ProductMockup } from "@/components/product/registry";
@@ -126,15 +127,19 @@ function FeatureTile({ feature, tile }: { feature: Feature; tile: Tile }) {
 
 export function FeatureMosaic() {
   return (
-    <section aria-labelledby="mosaic-heading" className="section-y bg-white">
+    <section aria-labelledby="mosaic-heading" className="section-y overflow-x-clip bg-white">
       <div className="container-site">
-        <SectionHeading
-          id="mosaic-heading"
-          eyebrow="Features"
-          note="pick what you need"
-          title={<>Twelve modules. <Emph underline={false}>One employee <Squiggle>record.</Squiggle></Emph></>}
-          lead="Each part of AskMira works on its own, and better together — because they all read and write the same record."
-        />
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:gap-16">
+          <SectionHeading
+            id="mosaic-heading"
+            eyebrow="Features"
+            note="pick what you need"
+            align="left"
+            title={<>Twelve modules. <Emph underline={false}>One employee <Squiggle>record.</Squiggle></Emph></>}
+            lead="Each part of AskMira works on its own, and better together — because they all read and write the same record."
+          />
+          <OneRecordHub className="max-w-[26rem] sm:max-w-[30rem]" />
+        </div>
         <Stagger className="mt-12 grid grid-flow-dense gap-4 sm:mt-16 md:grid-cols-2 lg:grid-cols-4">
           {TILES.map((tile) => {
             const feature = featureBySlug(tile.slug);

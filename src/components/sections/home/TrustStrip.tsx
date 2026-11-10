@@ -66,12 +66,12 @@ export function TrustStrip() {
   const heading =
     CUSTOMER_LOGOS.length > 0 ? "HR teams that run on AskMira" : "Built for the way Indian companies pay and comply";
   return (
-    // Tilted like a ribbon laid across the page; the wrapper clips its ends so
-    // the page never scrolls sideways.
-    <div className="relative z-10 -mt-10 -mb-6 overflow-hidden py-6 sm:-mt-12">
+    // A straight, solid band between the hero and the page, with a Marigold rule
+    // top and bottom.
+    <div className="relative z-10">
       <section
         aria-labelledby="trust-heading"
-        className="relative -mx-6 -rotate-[1.6deg] border-y-4 border-marigold-400 bg-gradient-to-r from-brand-900 via-brand-700 to-marigold-700 py-7 text-white shadow-frame sm:py-9"
+        className="relative border-y-[3px] border-marigold-400 bg-gradient-to-r from-brand-950 via-brand-800 to-brand-950 py-7 text-white sm:py-9"
       >
         <div className="container-site">
           <h2 id="trust-heading" className="text-center text-base font-semibold text-white/90 sm:text-lg">
