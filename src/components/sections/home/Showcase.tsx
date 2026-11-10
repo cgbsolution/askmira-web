@@ -1,3 +1,4 @@
+import { Emph } from "@/components/motion/Doodles";
 import { SpotCalendarClock, SpotChart, SpotDashboard, SpotPayslip, SpotRecruit, SpotTeam, SpotTile, type SpotIcon } from "@/components/illustrations/spots";
 import { AppWindow } from "@/components/product/AppWindow";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -83,7 +84,8 @@ export function Showcase() {
           id="showcase-heading"
           tone="dark"
           eyebrow="Product tour"
-          title="See the screens your team will use every day"
+          note="real screens, not mock-ups"
+          title={<>See the screens your team will <Emph tone="dark">use every day</Emph></>}
           lead="The real AskMira screens, from a demo workspace with sample data."
         />
 

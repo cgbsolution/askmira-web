@@ -4,6 +4,7 @@ import { DemoSection } from "@/components/sections/DemoSection";
 import { AudienceCards } from "@/components/sections/home/AudienceCards";
 import { ConnectedTeaser } from "@/components/sections/home/ConnectedTeaser";
 import { FeatureMosaic } from "@/components/sections/home/FeatureMosaic";
+import { FlowRoute } from "@/components/sections/home/FlowRoute";
 import { Hero } from "@/components/sections/home/Hero";
 import { IntegrationsCloud } from "@/components/sections/home/IntegrationsCloud";
 import { MiraSection } from "@/components/sections/home/MiraSection";
@@ -38,6 +39,7 @@ export default function HomePage() {
       <PlatformTabs />
       <Showcase />
       <FeatureMosaic />
+      <FlowRoute />
       <ConnectedTeaser />
       <MiraSection />
       <PayrollBand />

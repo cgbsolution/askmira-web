@@ -155,9 +155,7 @@ function AppStage({
         )}
 
         <p className={cn("mt-auto text-xs", dark ? "text-white/50" : "text-ink-400")}>
-          {app === "procureflow" || app === "saleinx"
-            ? "The app's own sign-in page. We'll add screens of the app itself once its connection to AskMira is built."
-            : "Real screen from a demo workspace. Names and figures are sample data."}
+          Real screen from a demo workspace. Names and figures are sample data.
         </p>
       </div>
 

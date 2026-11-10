@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
+import { Emph, HandNote, Sparkle, Squiggle } from "@/components/motion/Doodles";
 import { Reveal } from "@/components/motion/Reveal";
 import { AppWindow, MacBook } from "@/components/product/AppWindow";
 import { Button } from "@/components/ui/button";
@@ -18,6 +19,28 @@ function FloatingApp({ screen, label, className }: { screen: Screen; label: stri
         {label}
       </span>
     </div>
+  );
+}
+
+/** A rangoli-like ring of rays and dots that turns very slowly behind the laptop. */
+function Sunburst() {
+  const rays = Array.from({ length: 24 }, (_, i) => i * 15);
+  const dots = Array.from({ length: 12 }, (_, i) => (i * Math.PI) / 6);
+  return (
+    <svg
+      aria-hidden
+      viewBox="-300 -300 600 600"
+      className="animate-spin-slow pointer-events-none absolute top-[42%] left-1/2 -z-10 w-[130%] max-w-[64rem] -translate-x-1/2 -translate-y-1/2 opacity-[0.16]"
+    >
+      {rays.map((a) => (
+        <path key={a} d="M0 -290L14 -180H-14Z" transform={`rotate(${a})`} className="fill-marigold-400" />
+      ))}
+      <circle r="170" fill="none" strokeWidth="3" strokeDasharray="3 14" strokeLinecap="round" className="stroke-marigold-300" />
+      <circle r="120" fill="none" strokeWidth="2" className="stroke-brand-300" />
+      {dots.map((a) => (
+        <circle key={a} cx={(205 * Math.sin(a)).toFixed(1)} cy={(-205 * Math.cos(a)).toFixed(1)} r="9" className="fill-blush-200" />
+      ))}
+    </svg>
   );
 }
 
@@ -45,32 +68,23 @@ export function Hero() {
           </Link>
         </Reveal>
 
-        <Reveal delay={0.05}>
-          <h1 className="mx-auto mt-7 max-w-5xl font-display text-display-1 font-semibold">
-            From punch-in to payslip,{" "}
-            <span className="text-marigold-400">
-              HR that runs on{" "}
-              <span className="relative inline-block">
-                one&nbsp;record
-                <svg
-                  aria-hidden
-                  viewBox="0 0 200 14"
-                  preserveAspectRatio="none"
-                  className="absolute -bottom-1 left-0 h-2.5 w-full text-brand-400 sm:-bottom-2 sm:h-3.5"
-                >
-                  <path
-                    d="M4 10.5C48 4.5 104 3 196 6.5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="5"
-                    strokeLinecap="round"
-                    vectorEffect="non-scaling-stroke"
-                  />
-                </svg>
-              </span>
-            </span>
-          </h1>
-        </Reveal>
+        <div className="relative mx-auto max-w-5xl">
+          <Sparkle className="top-2 left-[4%] hidden text-marigold-400 sm:block" />
+          <Sparkle className="top-[58%] right-[2%] hidden size-5 text-brand-400 sm:block" delay={-2} />
+          <Sparkle className="-bottom-4 left-[14%] hidden size-4 text-blush-300 lg:block" delay={-3.5} />
+          <div className="mt-8 flex justify-center sm:justify-start sm:pl-[12%]">
+            <HandNote tone="dark">five suites, one record</HandNote>
+          </div>
+          <Reveal delay={0.05}>
+            <h1 className="mt-2 font-display text-display-1 font-semibold">
+              From punch-in to payslip,{" "}
+              <br className="hidden sm:block" />
+              <Emph tone="dark" underline={false}>
+                HR that runs on <Squiggle>one&nbsp;record.</Squiggle>
+              </Emph>
+            </h1>
+          </Reveal>
+        </div>
         <Reveal delay={0.1}>
           <p className="mx-auto mt-6 max-w-2xl text-lead text-white/75">
             AskMira brings employee records, attendance and leave, Indian statutory payroll and people analytics into one
@@ -99,6 +113,7 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.25} y={48} amount={0.05} className="relative mx-auto mt-14 max-w-6xl pb-16 text-left sm:mt-16 sm:pb-24">
+          <Sunburst />
           <MacBook screen={screens.amHome} priority sizes="(min-width: 1280px) 1000px, 100vw" />
 
           <FloatingApp

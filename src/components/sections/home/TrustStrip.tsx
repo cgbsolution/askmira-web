@@ -66,18 +66,25 @@ export function TrustStrip() {
   const heading =
     CUSTOMER_LOGOS.length > 0 ? "HR teams that run on AskMira" : "Built for the way Indian companies pay and comply";
   return (
-    <section aria-labelledby="trust-heading" className="relative overflow-hidden bg-gradient-to-r from-brand-900 via-brand-700 to-marigold-700 py-10 text-white sm:py-12">
-      <div className="container-site">
-        <h2 id="trust-heading" className="text-center text-base font-semibold text-white/90 sm:text-lg">
-          {heading}
-        </h2>
-      </div>
-      <div className={cn("mask-fade-x mt-6 flex overflow-hidden")}>
-        <div className="animate-marquee flex w-max [--marquee-duration:55s] hover:[animation-play-state:paused]">
-          <Row />
-          <Row hidden />
+    // Tilted like a ribbon laid across the page; the wrapper clips its ends so
+    // the page never scrolls sideways.
+    <div className="relative z-10 -mt-10 -mb-6 overflow-hidden py-6 sm:-mt-12">
+      <section
+        aria-labelledby="trust-heading"
+        className="relative -mx-6 -rotate-[1.6deg] border-y-4 border-marigold-400 bg-gradient-to-r from-brand-900 via-brand-700 to-marigold-700 py-7 text-white shadow-frame sm:py-9"
+      >
+        <div className="container-site">
+          <h2 id="trust-heading" className="text-center text-base font-semibold text-white/90 sm:text-lg">
+            {heading}
+          </h2>
         </div>
-      </div>
-    </section>
+        <div className={cn("mask-fade-x mt-5 flex overflow-hidden")}>
+          <div className="animate-marquee flex w-max [--marquee-duration:55s] hover:[animation-play-state:paused]">
+            <Row />
+            <Row hidden />
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

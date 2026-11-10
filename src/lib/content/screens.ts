@@ -19,8 +19,12 @@ import egReports from "@/assets/screens/eg-reports.jpg";
 import hdAssets from "@/assets/screens/hd-assets.jpg";
 import hdDash from "@/assets/screens/hd-dash.jpg";
 import hdTickets from "@/assets/screens/hd-tickets.jpg";
-import pfLogin from "@/assets/screens/pf-login.jpg";
-import sxLogin from "@/assets/screens/sx-login.jpg";
+import pfAnalytics from "@/assets/screens/pf-analytics.jpg";
+import pfDash from "@/assets/screens/pf-dash.jpg";
+import pfPos from "@/assets/screens/pf-pos.jpg";
+import sxDash from "@/assets/screens/sx-dash.jpg";
+import sxPipeline from "@/assets/screens/sx-pipeline.jpg";
+import sxReports from "@/assets/screens/sx-reports.jpg";
 
 import amDirectoryImg from "@/assets/screens/am-directory.jpg";
 import amProfileImg from "@/assets/screens/am-profile.jpg";
@@ -182,11 +186,11 @@ export const screens = {
     id: "ath-dash",
     app: "anytimehire",
     title: "Dashboard",
-    alt: "AnytimeHire dashboard: active jobs, interviews scheduled, hire rate and a monthly hiring funnel chart.",
+    alt: "AnytimeHire dashboard: active jobs, interviews scheduled, hire rate, a monthly hiring funnel and jobs created per month.",
     image: athDash,
     hotspots: [
-      { x: 60, y: 38, title: "Hiring at a glance", body: "Open jobs, interviews booked and candidates waiting on you." },
-      { x: 40, y: 76, title: "Funnel by month", body: "Applied, interviewed, offered and hired, month by month." },
+      { x: 60, y: 37, title: "Hiring at a glance", body: "Open jobs, interviews booked and candidates waiting on you." },
+      { x: 38, y: 74, title: "Funnel by month", body: "Applied, interviewed, offered and hired, month by month." },
     ],
   },
   athPipeline: {
@@ -196,9 +200,9 @@ export const screens = {
     alt: "AnytimeHire candidates for one job: AI round, panel round and offer stages, with interview score, trust score and résumé fit.",
     image: athPipeline,
     hotspots: [
-      { x: 44, y: 19, title: "Stages you can see", body: "From AI round to panel round to offer, with a count at every step." },
-      { x: 66, y: 43, title: "Scored AI interviews", body: "Each candidate's interview score and trust score from proctoring." },
-      { x: 79, y: 43, title: "Résumé fit", body: "High, medium or low fit against the job, before the interview." },
+      { x: 60, y: 37, title: "Stages you can see", body: "From AI round to panel round to offer, with a count at every step." },
+      { x: 68, y: 71, title: "Scored AI interviews", body: "Each candidate's interview score and trust score from proctoring." },
+      { x: 80, y: 71, title: "Résumé fit", body: "High, medium or low fit against the job, before the interview." },
     ],
   },
   athJobs: {
@@ -212,9 +216,8 @@ export const screens = {
     id: "eg-dash",
     app: "expense-genie",
     title: "Dashboard",
-    alt: "Expense Genie admin dashboard in dark mode: this month's volume, pending and approved spend, a spending trend and a category breakdown.",
+    alt: "Expense Genie admin dashboard: this month's volume, pending and approved spend, a spending trend and a category breakdown.",
     image: egDash,
-    theme: "dark",
     hotspots: [
       { x: 63, y: 42, title: "This month's spend", body: "Submitted, pending and approved, in rupees." },
       { x: 40, y: 68, title: "Spend against reimbursed", body: "See what has been claimed and what has been paid back." },
@@ -225,18 +228,16 @@ export const screens = {
     id: "eg-approvals",
     app: "expense-genie",
     title: "Approvals",
-    alt: "Expense Genie approvals queue in dark mode: claims with amounts, overdue flags and approve or reject buttons.",
+    alt: "Expense Genie approvals queue: claims with amounts, overdue flags and approve or reject buttons.",
     image: egApprovals,
-    theme: "dark",
     hotspots: [{ x: 96, y: 30, title: "Approve or reject", body: "Overdue claims are flagged so nobody waits on a reimbursement." }],
   },
   egReports: {
     id: "eg-reports",
     app: "expense-genie",
     title: "Reports",
-    alt: "Expense Genie reports in dark mode: approved and pending spend, spend by category and top spenders.",
+    alt: "Expense Genie reports: approved and pending spend, spend by category, top spenders and every claim with its status.",
     image: egReports,
-    theme: "dark",
   },
   hdDash: {
     id: "hd-dash",
@@ -264,19 +265,57 @@ export const screens = {
     alt: "CGB Helpdesk asset register: asset code, type, status and location of laptops, monitors, phones and printers.",
     image: hdAssets,
   },
-  pfLogin: {
-    id: "pf-login",
+  pfDash: {
+    id: "pf-dash",
     app: "procureflow",
-    title: "Sign in",
-    alt: "ProcureFlow's buyer portal sign-in page.",
-    image: pfLogin,
+    title: "Home",
+    alt: "ProcureFlow home for a procurement head: spend this month, open purchase orders, invoices in flight, a spend trend and what needs attention.",
+    image: pfDash,
+    hotspots: [
+      { x: 50, y: 33, title: "Spend at a glance", body: "Spend this month, open POs, invoices in flight and active vendors." },
+      { x: 50, y: 89, title: "What needs you", body: "Approvals, match exceptions and MSME payments at risk, one click away." },
+    ],
   },
-  sxLogin: {
-    id: "sx-login",
+  pfPos: {
+    id: "pf-pos",
+    app: "procureflow",
+    title: "Purchase orders",
+    alt: "ProcureFlow purchase orders: PO number, vendor, description, cost centre, how much has been received, expected date and value.",
+    image: pfPos,
+    hotspots: [{ x: 75, y: 43, title: "Received against ordered", body: "See how much of each order has arrived before the invoice does." }],
+  },
+  pfAnalytics: {
+    id: "pf-analytics",
+    app: "procureflow",
+    title: "Analytics",
+    alt: "ProcureFlow analytics: spend under management, savings realised, vendor concentration and spend by category.",
+    image: pfAnalytics,
+  },
+  sxDash: {
+    id: "sx-dash",
     app: "saleinx",
-    title: "Sign in",
-    alt: "Saleinx CRM sign-in page.",
-    image: sxLogin,
+    title: "Dashboard",
+    alt: "Saleinx sales dashboard: total and weighted pipeline, win rate, average deal size and sales cycle, with a weekly revenue trend.",
+    image: sxDash,
+    hotspots: [
+      { x: 47, y: 25, title: "Pipeline you can trust", body: "Total and weighted pipeline, win rate and sales cycle for the whole team." },
+      { x: 55, y: 62, title: "Revenue week by week", body: "New pipeline against won and lost revenue." },
+    ],
+  },
+  sxPipeline: {
+    id: "sx-pipeline",
+    app: "saleinx",
+    title: "Pipeline",
+    alt: "Saleinx pipeline board: deals in lead, qualified, proposal and negotiation columns, with value, owner and close date.",
+    image: sxPipeline,
+    hotspots: [{ x: 55, y: 27, title: "Every stage, with its value", body: "Deal count, total and weighted value in each stage; drag a deal to move it." }],
+  },
+  sxReports: {
+    id: "sx-reports",
+    app: "saleinx",
+    title: "Reports",
+    alt: "Saleinx reports: pipeline by stage, win and loss rate, stale deals, rep performance, email engagement and revenue forecast.",
+    image: sxReports,
   },
   amDirectory: {
     id: "am-directory",
@@ -452,12 +491,12 @@ export const tour: { app: ScreenApp; lead: string; screens: Screen[] }[] = [
   {
     app: "procureflow",
     lead: "Procure-to-pay with buyer and supplier portals. Opens from AskMira without a second sign-in; approvals and budgets show inside AskMira.",
-    screens: [screens.pfLogin],
+    screens: [screens.pfDash, screens.pfPos, screens.pfAnalytics],
   },
   {
     app: "saleinx",
     lead: "Sales CRM with pipeline analytics. Opens from AskMira without a second sign-in; deals and the pipeline show inside AskMira.",
-    screens: [screens.sxLogin],
+    screens: [screens.sxDash, screens.sxPipeline, screens.sxReports],
   },
 ];
 
@@ -480,6 +519,8 @@ export const appScreens = {
   anytimehire: screens.athPipeline,
   "expense-genie": screens.egDash,
   helpdesk: screens.hdTickets,
+  procureflow: screens.pfDash,
+  saleinx: screens.sxPipeline,
 } satisfies Partial<Record<ScreenApp, Screen>>;
 
 /** A part of a screenshot, zoomed in: left, top and width as % of the full image. */

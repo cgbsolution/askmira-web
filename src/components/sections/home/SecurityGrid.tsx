@@ -1,3 +1,4 @@
+import { Emph, HandNote, Squiggle } from "@/components/motion/Doodles";
 import { SpotAiTrail, SpotAuditLog, SpotIdLock, SpotKey, SpotPrivacy, SpotVault, type SpotIcon } from "@/components/illustrations/spots";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { ProductMockup } from "@/components/product/registry";
@@ -43,8 +44,9 @@ export function SecurityGrid() {
       <div className="container-site grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Eyebrow>Security & privacy</Eyebrow>
-          <h2 id="security-heading" className="mt-4 font-display text-display-2 font-semibold text-ink-950">
-            Built like payroll depends on it
+          <HandNote className="mt-5 flex w-fit">because it does</HandNote>
+          <h2 id="security-heading" className="mt-2 font-display text-display-2 font-semibold text-ink-950">
+            Built like <Emph underline={false}>payroll <Squiggle>depends on it</Squiggle></Emph>
           </h2>
           <p className="mt-5 text-lead text-ink-600">
             Salaries, bank accounts and identity numbers deserve more than a promise. These controls are part of how

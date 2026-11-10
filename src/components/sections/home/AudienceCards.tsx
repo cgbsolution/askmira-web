@@ -1,3 +1,4 @@
+import { Emph } from "@/components/motion/Doodles";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -28,7 +29,8 @@ export function AudienceCards() {
         <SectionHeading
           id="audience-heading"
           eyebrow="Who it's for"
-          title="Built for everyone who touches HR"
+          note="HR, managers and employees"
+          title={<>Built for <Emph>everyone</Emph> who touches HR</>}
           lead="The same platform, seen from each seat in the company."
         />
       </div>

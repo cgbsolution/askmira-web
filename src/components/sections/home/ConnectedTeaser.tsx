@@ -1,3 +1,4 @@
+import { Emph, Squiggle } from "@/components/motion/Doodles";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -14,7 +15,8 @@ export function ConnectedTeaser() {
         <SectionHeading
           id="connected-heading"
           eyebrow="See it for real"
-          title="One HRMS, and the apps around it"
+          note="hiring, expenses, IT and more"
+          title={<>One HRMS, <Emph underline={false}>and the apps <Squiggle>around it</Squiggle></Emph></>}
           lead="These are the actual screens. Hiring, expenses, IT support, sales and procurement all connect to AskMira."
         />
         <ScreenTour className="mt-12 sm:mt-14" />

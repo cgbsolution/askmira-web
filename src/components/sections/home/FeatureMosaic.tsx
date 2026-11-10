@@ -1,3 +1,4 @@
+import { Emph, Squiggle } from "@/components/motion/Doodles";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -130,7 +131,8 @@ export function FeatureMosaic() {
         <SectionHeading
           id="mosaic-heading"
           eyebrow="Features"
-          title="Twelve modules. One employee record."
+          note="pick what you need"
+          title={<>Twelve modules. <Emph underline={false}>One employee <Squiggle>record.</Squiggle></Emph></>}
           lead="Each part of AskMira works on its own, and better together — because they all read and write the same record."
         />
         <Stagger className="mt-12 grid grid-flow-dense gap-4 sm:mt-16 md:grid-cols-2 lg:grid-cols-4">

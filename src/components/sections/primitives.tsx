@@ -2,6 +2,7 @@ import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 
 import { SpotTile, type SpotIcon, type SpotTone } from "@/components/illustrations/spots";
+import { HandNote, type ArrowDirection } from "@/components/motion/Doodles";
 import { Reveal } from "@/components/motion/Reveal";
 import type { Accent } from "@/lib/content/types";
 import { cn } from "@/lib/utils";
@@ -40,6 +41,8 @@ export function Eyebrow({
 
 export function SectionHeading({
   eyebrow,
+  note,
+  noteArrow,
   title,
   lead,
   align = "center",
@@ -50,6 +53,9 @@ export function SectionHeading({
 }: {
   id?: string;
   eyebrow?: React.ReactNode;
+  /** A short handwritten aside above the heading, e.g. "five suites, one record". */
+  note?: string;
+  noteArrow?: ArrowDirection;
   title: React.ReactNode;
   lead?: React.ReactNode;
   align?: "center" | "left";
@@ -66,6 +72,15 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (typeof eyebrow === "string" ? <Eyebrow tone={tone === "dark" ? "dark" : "light"}>{eyebrow}</Eyebrow> : eyebrow)}
+      {note && (
+        <HandNote
+          tone={tone}
+          arrow={noteArrow ?? "down-right"}
+          className={cn("-mb-2", align === "center" ? "sm:-translate-x-[18%]" : "")}
+        >
+          {note}
+        </HandNote>
+      )}
       <Tag
         id={id}
         className={cn(

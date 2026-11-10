@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Caveat, Fraunces, Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -14,8 +14,12 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   display: "swap",
+  style: ["normal", "italic"],
   axes: ["SOFT", "opsz"],
 });
+
+// The handwritten notes beside headings — the human voice of the site.
+const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
 
 // Only the product previews use Inter (it is the portal's face), and they sit
 // below the fold, so it is not preloaded.
@@ -71,7 +75,7 @@ const organizationJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${jakarta.variable} ${fraunces.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={`${jakarta.variable} ${fraunces.variable} ${inter.variable} ${caveat.variable}`}>
       <body>
         <a
           href="#main"

@@ -1,3 +1,4 @@
+import { Emph, Squiggle } from "@/components/motion/Doodles";
 import { integrations } from "@/lib/content/integrations";
 
 import { IntegrationPill, StatusDot } from "../IntegrationTile";
@@ -15,7 +16,8 @@ export function IntegrationsCloud() {
         <SectionHeading
           id="integrations-heading"
           eyebrow="Integrations"
-          title="Works with what you already run"
+          note="no rip and replace"
+          title={<>Works with <Emph underline={false}>what you <Squiggle>already run</Squiggle></Emph></>}
           lead="Biometric devices, banks, accounting, identity, messaging and AI assistants — plus an API and webhooks for everything else."
         />
       </div>

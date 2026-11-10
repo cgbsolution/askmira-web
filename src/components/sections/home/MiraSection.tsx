@@ -1,3 +1,4 @@
+import { Emph, HandNote, Squiggle } from "@/components/motion/Doodles";
 import { SpotBook, SpotConnected, SpotToggle } from "@/components/illustrations/spots";
 import { Reveal } from "@/components/motion/Reveal";
 import { ProductMockup } from "@/components/product/registry";
@@ -29,8 +30,14 @@ export function MiraSection() {
         <div>
           <Reveal>
             <Eyebrow tone="marigold">Ask Mira</Eyebrow>
-            <h2 id="mira-heading" className="mt-4 font-display text-display-2 font-semibold text-ink-950">
-              Ask a question. Get the answer, and where it came from.
+            <HandNote className="mt-5 flex w-fit" arrow="down-right">
+              with the source, every time
+            </HandNote>
+            <h2 id="mira-heading" className="mt-2 font-display text-display-2 font-semibold text-ink-950">
+              Ask a question. Get the answer,{" "}
+              <Emph underline={false}>
+                and where it <Squiggle>came from.</Squiggle>
+              </Emph>
             </h2>
             <p className="mt-5 text-lead text-ink-600">
               Ask Mira is the HR companion in every employee&apos;s sidebar. It answers in plain language from your

@@ -1,3 +1,4 @@
+import { Emph } from "@/components/motion/Doodles";
 import Link from "next/link";
 
 import { ProductMockup } from "@/components/product/registry";
@@ -106,7 +107,8 @@ export function PlatformTabs() {
         <SectionHeading
           id="platform-heading"
           eyebrow="The platform"
-          title="Everything HR runs on, in one place"
+          note="switch on what you need"
+          title={<>Everything HR runs on, <Emph>in one place</Emph></>}
           lead="Five suites on one employee record. Switch on the ones you need today and add the rest as you grow."
         />
 
