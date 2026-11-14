@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
   /** This website's public address — canonical URLs, sitemap, Open Graph. */
   url: trimSlash(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3200"),
   /** The AskMiraa portal ("Sign in"). */
-  appUrl: trimSlash(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
+  appUrl: trimSlash(process.env.NEXT_PUBLIC_APP_URL || "https://app.askmiraa.com"),
   locale: "en_IN",
 
   /** Shown in the footer and on /contact when set. */
