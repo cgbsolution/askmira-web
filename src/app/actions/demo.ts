@@ -34,11 +34,8 @@ export async function submitDemoRequest(input: unknown): Promise<DemoResult> {
   // A bot filled the hidden field. Say thank you and send nothing.
   if (data.website) return { ok: true };
 
-  const apiBase = process.env.ASKMIRA_API_BASE?.replace(/\/+$/, "");
-  if (!apiBase) {
-    console.error("[demo-request] ASKMIRA_API_BASE is not set; the request was not sent.");
-    return { ok: false, message: GENERIC_ERROR };
-  }
+  // The live AskMiraa API unless the environment names another (local dev: .env.local).
+  const apiBase = (process.env.ASKMIRA_API_BASE || "https://hrms.epfassist.com").replace(/\/+$/, "");
 
   const requestHeaders = await headers();
   const forwarded: Record<string, string> = {};
