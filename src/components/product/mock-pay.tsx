@@ -134,7 +134,7 @@ export function PayslipMock({ className }: { className?: string }) {
     ["Special allowance", 18500],
   ] as const;
   const deductions = [
-    ["Provident Fund", 1800],
+    ["Provident Fund", 3000],
     ["Professional tax", 200],
     ["Income tax (TDS)", 4350],
   ] as const;
